@@ -11,6 +11,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test:cov": "yarn test --coverage",
+    "eject": "react-scripts eject",
+    "codecov": "codecov -t $CODECOV_TOKEN"
+  },
+  "devDependencies": {
+    "codecov": "^3.0.2"
   }
 }
