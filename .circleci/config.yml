@@ -40,5 +40,5 @@ workflows:
     jobs:
       - build
       - test
-#      - lint
-#      - flow
+      - lint
+      - flow

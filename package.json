@@ -15,8 +15,9 @@
     "test:cov": "yarn test --coverage",
     "lint": "yarn eslint .",
     "lint:fix": "yarn eslint --fix .",
-    "eject": "react-scripts eject",
-    "codecov": "codecov -t $CODECOV_TOKEN"
+    "flow": "flow",
+    "codecov": "codecov -t $CODECOV_TOKEN",
+    "eject": "react-scripts eject"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
