@@ -5,17 +5,30 @@
   "dependencies": {
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "styled-components": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "test:cov": "yarn test --coverage",
+    "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint --fix .",
     "eject": "react-scripts eject",
     "codecov": "codecov -t $CODECOV_TOKEN"
   },
   "devDependencies": {
-    "codecov": "^3.0.2"
+    "babel-eslint": "^8.2.3",
+    "codecov": "^3.0.2",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.48.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.8.2",
+    "flow-bin": "^0.73.0",
+    "prettier": "^1.13.3",
+    "react-testing-library": "^3.1.3"
   }
 }
