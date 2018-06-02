@@ -7,9 +7,3 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
 `
-
-export const Text = styled.div`
-  font-size: 16px;
-`
-
-export const Input = styled.input``

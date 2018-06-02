@@ -1,6 +1,7 @@
 // @flow
 import React, { Fragment } from 'react'
-import type { Todo } from '../type'
+import { Text } from 'element'
+import type { Todo } from '../../type'
 
 type Props = {
   todo: Todo
@@ -8,6 +9,6 @@ type Props = {
 
 export const Item = (props: Props) => (
   <Fragment>
-    <div>{props.todo.text}</div>
+    <Text>{props.todo.text}</Text>
   </Fragment>
 )
