@@ -5,3 +5,5 @@ export const Text = styled.div`
 `
 
 export const Input = styled.input``
+
+export const Button = styled.button``
