@@ -11,3 +11,5 @@ export const Container = styled.div`
 export const Text = styled.div`
   font-size: 16px;
 `
+
+export const Input = styled.input``

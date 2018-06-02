@@ -1,12 +1,15 @@
 // @flow
 import React, { Component } from 'react'
-import { Container, Text } from './style'
+import { Input } from 'element'
+import { Container } from './style'
+import TodoList from './TodoList'
 
-class App extends Component<{||}> {
+class App extends Component<void> {
   render() {
     return (
       <Container>
-        <Text>HHHHHHHHHHwhiow</Text>
+        <Input />
+        <TodoList data={[{ id: 'fjiewfjoa', text: 'fioweajfioa;' }]} />
       </Container>
     )
   }
