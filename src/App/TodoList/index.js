@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { TodoListContainer } from './style'
+import { Container } from './style'
 import { Item } from './item'
 import type { Todo, TodoList } from '../../type'
 import { UserAppLayerError } from '../../UserAppLayerError'
@@ -19,7 +19,7 @@ class TodoListComponent extends Component<Props> {
       <Item key={i} todo={v} />
     ))
 
-    return <TodoListContainer>{items}</TodoListContainer>
+    return <Container>{items}</Container>
   }
 }
 
