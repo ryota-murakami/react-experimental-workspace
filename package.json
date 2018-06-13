@@ -11,14 +11,14 @@
     "styled-components": "^3.3.0"
   },
   "scripts": {
-    "start": "NODE_PATH=src/ react-app-rewired start",
-    "build": "NODE_PATH=src/ react-app-rewired build",
-    "test": "NODE_PATH=src/ react-app-rewired test --env=jsdom",
-    "test:watch": "NODE_PATH=src/ react-app-rewired test --watch --env=jsdom",
-    "test:cov": "NODE_PATH=src/ yarn test --coverage",
-    "lint": "NODE_PATH=src/ yarn eslint .",
-    "lint:fix": "NODE_PATH=src/ yarn eslint --fix .",
-    "flow": "NODE_PATH=src/ flow",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "test:watch": "react-app-rewired test --watch --env=jsdom",
+    "test:cov": "yarn test --coverage",
+    "lint": "yarn eslint .",
+    "lint:fix": "yarn eslint --fix .",
+    "flow": "flow",
     "codecov": "codecov -t $CODECOV_TOKEN",
     "eject": "react-scripts eject"
   },

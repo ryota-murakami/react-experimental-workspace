@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { Input, Button } from 'element'
+import { Input, Button } from '../element'
 import { Container } from './style'
 import TodoList from './TodoList'
 

@@ -1,6 +1,6 @@
 // @flow
 import React, { Fragment } from 'react'
-import { Text } from 'element'
+import { Text } from '../../element'
 import type { Todo } from '../../type'
 
 type Props = {
