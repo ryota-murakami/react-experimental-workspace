@@ -10,17 +10,20 @@ type State = {
 }
 
 class App extends Component<void, State> {
-  state = { todos: [] }
+  inputRef: ?HTMLInputElement = React.createRef()
+  state: State = { todos: [] }
 
   addTodo = () => {
-    // ref
+    // inputRefのvalue取得
+    console.log(this.inputRef.current.value)
+    // TODO styled-componentsのelementからthis.inputRef.current.valueどうやって取得すんの
   }
 
   render() {
     return (
       <Container>
         <InputSlice style={{ height: '30%' }}>
-          <Input />
+          <input ref={this.inputRef} />
           <Button onClick={this.addTodo}>push</Button>
         </InputSlice>
         {this.state.todos.length < 1 ? (
