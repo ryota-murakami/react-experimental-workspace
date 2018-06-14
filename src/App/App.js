@@ -12,12 +12,16 @@ type State = {
 class App extends Component<void, State> {
   state = { todos: [] }
 
+  addTodo = () => {
+    // ref
+  }
+
   render() {
     return (
       <Container>
         <InputSlice style={{ height: '30%' }}>
           <Input />
-          <Button>push</Button>
+          <Button onClick={this.addTodo}>push</Button>
         </InputSlice>
         {this.state.todos.length < 1 ? (
           <Text>let's enter todo!</Text>
