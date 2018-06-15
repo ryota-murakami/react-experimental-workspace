@@ -15,7 +15,6 @@ class App extends Component<void, State> {
   state: State = { todos: [], currentInput: '' }
 
   addTodo = () => {
-    console.log(this.state.currentInput)
     const text = this.state.currentInput
     const newTodo: Todo = { id: ID(), text: text }
     this.setState({ todos: [...this.state.todos, newTodo], currentInput: '' })
