@@ -2,20 +2,9 @@
 import React, { Component } from 'react'
 import { Input, Button, Text } from '../element'
 import { Container, InputSlice } from './style'
+import { ID } from '../function'
 import TodoList from './TodoList'
 import type { Todo, TodoList as TodoListType } from '../type'
-
-const ID = function() {
-  // Math.random should be unique because of its seeding algorithm.
-  // Convert it to base 36 (numbers + letters), and grab the first 9 characters
-  // after the decimal.
-  return (
-    '_' +
-    Math.random()
-      .toString(36)
-      .substr(2, 9)
-  )
-}
 
 type State = {
   todos: TodoListType,
