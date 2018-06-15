@@ -12,7 +12,6 @@ type State = {
 }
 
 class App extends Component<void, State> {
-  inputRef: ?HTMLInputElement = React.createRef()
   state: State = { todos: [], currentInput: '' }
 
   addTodo = () => {
@@ -22,7 +21,8 @@ class App extends Component<void, State> {
     this.setState({ todos: [...this.state.todos, newTodo], currentInput: '' })
   }
 
-  _onChange = e => {
+  _onChange = (e: SyntheticEvent<>) => {
+    // $FlowFixMe
     this.setState({ currentInput: e.target.value })
   }
 
