@@ -8,5 +8,7 @@ node_modules/styled-components
 [lints]
 
 [options]
+suppress_comment=.*\\$FlowFixMe
+suppress_comment=.*\\$FlowIssue
 
 [strict]

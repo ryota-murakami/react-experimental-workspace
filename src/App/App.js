@@ -1,23 +1,39 @@
 // @flow
 import React, { Component } from 'react'
+import { Dispatch } from 'redux'
+import { connect } from 'react-redux'
 import { Input, Button, Text } from '../element'
 import { Container, InputSlice } from './style'
 import { ID } from '../function'
 import TodoList from './TodoList'
 import type { Todo, TodoList as TodoListType } from '../type'
+import type { AddTodoAction, ReduxState } from '../index'
+
+type StateToProps = {
+  todos: TodoListType
+}
+
+type Props = {
+  dispatch: Dispatch<AddTodoAction>
+} & StateToProps
 
 type State = {
-  todos: TodoListType,
   currentInput: string
 }
 
-class App extends Component<void, State> {
-  state: State = { todos: [], currentInput: '' }
+class App extends Component<Props, State> {
+  state: State = { currentInput: '' }
 
   addTodo = () => {
+    const { dispatch } = this.props
     const text = this.state.currentInput
+
+    this.setState({ currentInput: '' })
     const newTodo: Todo = { id: ID(), text: text }
-    this.setState({ todos: [...this.state.todos, newTodo], currentInput: '' })
+    dispatch({
+      type: 'ADD_TODO',
+      newTodo: newTodo
+    })
   }
 
   _onChange = (e: SyntheticEvent<>) => {
@@ -26,20 +42,26 @@ class App extends Component<void, State> {
   }
 
   render() {
+    const { todos } = this.props
+
     return (
       <Container>
         <InputSlice style={{ height: '30%' }}>
           <Input value={this.state.currentInput} onChange={this._onChange} />
           <Button onClick={this.addTodo}>push</Button>
         </InputSlice>
-        {this.state.todos.length < 1 ? (
+        {todos.length < 1 ? (
           <Text>let's enter todo!</Text>
         ) : (
-          <TodoList data={this.state.todos} style={{ height: '70%' }} />
+          <TodoList data={todos} style={{ height: '70%' }} />
         )}
       </Container>
     )
   }
 }
 
-export default App
+const MapStateToProps = (state: ReduxState): MapStateToProps => {
+  return { todos: state.todos }
+}
+
+export default connect(MapStateToProps)(App)
