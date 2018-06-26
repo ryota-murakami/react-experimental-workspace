@@ -10,11 +10,11 @@ import TodoList from './TodoList'
 import type { Todo, TodoList as TodoListType } from '../type'
 import type { AddTodoAction, ReduxState } from '../index'
 
-type StateToProps = {
+type StateProps = {
   todos: TodoListType
 }
 
-type Props = StateToProps & {
+type Props = StateProps & {
   dispatch: Dispatch<AddTodoAction>
 }
 
@@ -61,11 +61,11 @@ class App extends Component<Props, State> {
   }
 }
 
-const MapStateToProps = (state: ReduxState): MapStateToProps => {
+const mapStateToProps = (state: ReduxState): StateProps => {
   return { todos: state.todos }
 }
 
 export default compose(
-  connect(MapStateToProps),
+  connect(mapStateToProps),
   pure
 )(App)
