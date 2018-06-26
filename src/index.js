@@ -36,12 +36,10 @@ const reducer = (
   }
 }
 
-const devToolsExtension =
-  window.__REDUX_DEVTOOLS_EXTENSION__ !== undefined
-    ? window.__REDUX_DEVTOOLS_EXTENSION__()
-    : f => f
-
-const store = createStore(reducer, devToolsExtension)
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
   <Provider store={store}>
