@@ -8,7 +8,7 @@ import { Container, InputSlice } from './index.style'
 import { ID } from '../../functions'
 import TodoList from './TodoList/index'
 import type { Todo, TodoList as TodoListType } from '../../types'
-import type { AddTodoAction} from '../../reducer'
+import type { AddTodoAction } from '../../reducer'
 import type { ReduxState } from '../../reducer'
 
 type StateProps = {
