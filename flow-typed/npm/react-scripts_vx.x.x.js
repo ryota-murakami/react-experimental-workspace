@@ -152,10 +152,10 @@ declare module 'react-scripts/scripts/utils/createJestConfig.js' {
   declare module.exports: $Exports<'react-scripts/scripts/utils/createJestConfig'>;
 }
 declare module 'react-scripts/template/src/App.js' {
-  declare module.exports: $Exports<'react-scripts/template/src/App'>;
+  declare module.exports: $Exports<'react-scripts/template/src/Todo'>;
 }
 declare module 'react-scripts/template/src/App.test.js' {
-  declare module.exports: $Exports<'react-scripts/template/src/App.test'>;
+  declare module.exports: $Exports<'react-scripts/template/src/Todo.test'>;
 }
 declare module 'react-scripts/template/src/index.js' {
   declare module.exports: $Exports<'react-scripts/template/src/index'>;

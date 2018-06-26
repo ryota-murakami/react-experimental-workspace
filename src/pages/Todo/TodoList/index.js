@@ -2,8 +2,8 @@
 import React, { Component } from 'react'
 import { Container } from './style'
 import { Item } from './item'
-import type { Todo, TodoList } from '../../types'
-import { UserAppLayerError } from '../../UserAppLayerError'
+import type { Todo, TodoList } from '../../../types'
+import { UserAppLayerError } from '../../../UserAppLayerError'
 
 type Props = {
   data: TodoList
