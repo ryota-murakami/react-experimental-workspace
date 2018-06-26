@@ -1,31 +1,32 @@
 // @flow
 import React, { Component, Fragment } from 'react'
-import type { ContextRouter } from 'react-router-dom'
-import Child from './child'
+import { pure } from 'recompose'
 
 type Props = {
-  ...$Exact<ContextRouter>
+  count: number
 }
 
 type State = {
   count: number
 }
 
-class Rerender extends Component<Props, State> {
+class Child extends Component<Props, State> {
   state = {
     count: 0
   }
 
   render() {
+    console.log(this.props)
     return (
       <Fragment>
+        <div>prop count: {this.props.count}</div>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-          increment
+          state increment
         </button>
-        <Child count={this.state.count} />
+        <div>state count: {this.state.count}</div>
       </Fragment>
     )
   }
 }
 
-export default Rerender
+export default pure(Child)
