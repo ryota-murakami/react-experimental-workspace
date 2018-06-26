@@ -18,7 +18,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Fragment>
-        <Route exact path="/" component={Todo} />
+        <Route exact path="/todo" component={Todo} />
       </Fragment>
     </BrowserRouter>
   </Provider>,
