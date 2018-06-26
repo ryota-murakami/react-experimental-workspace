@@ -6,6 +6,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import './index.css'
 import Todo from './pages/Todo'
+import Rerender from './pages/Rerender'
 import registerServiceWorker from './registerServiceWorker'
 import { reducer } from './reducer'
 
@@ -19,6 +20,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Fragment>
         <Route exact path="/todo" component={Todo} />
+        <Route exact path="/rerender" component={Rerender} />
       </Fragment>
     </BrowserRouter>
   </Provider>,
