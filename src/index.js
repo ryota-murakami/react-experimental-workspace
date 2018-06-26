@@ -1,13 +1,14 @@
 // @flow
-import React from 'react'
+import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import type { TodoList } from './type'
+import type { TodoList } from './types'
 import './index.css'
 import App from './App/App'
 import registerServiceWorker from './registerServiceWorker'
-import type { Todo } from './type'
+import type { Todo } from './types'
 
 export type ReduxState = {
   todos: TodoList
@@ -43,7 +44,11 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <Fragment>
+        <Route exact path="/" component={App} />
+      </Fragment>
+    </BrowserRouter>
   </Provider>,
   // $FlowIssue
   document.getElementById('root')
