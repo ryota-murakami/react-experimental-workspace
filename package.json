@@ -22,7 +22,6 @@
     "lint": "yarn eslint .",
     "lint:fix": "yarn eslint --fix .",
     "flow": "flow",
-    "codecov": "codecov -t $CODECOV_TOKEN",
     "eject": "react-scripts eject"
   },
   "jest": {
@@ -39,7 +38,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
-    "codecov": "^3.0.2",
     "eslint-config-react-app": "^2.1.0",
     "eslint-plugin-flowtype": "^2.48.0",
     "eslint-plugin-import": "^2.12.0",
