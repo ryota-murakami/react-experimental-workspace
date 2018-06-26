@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { Dispatch } from 'redux'
+import type { Dispatch } from 'redux'
 import { pure, compose } from 'recompose'
 import { connect } from 'react-redux'
 import { Input, Button, Text } from '../element'
@@ -14,9 +14,9 @@ type StateToProps = {
   todos: TodoListType
 }
 
-type Props = {
+type Props = StateToProps & {
   dispatch: Dispatch<AddTodoAction>
-} & StateToProps
+}
 
 type State = {
   currentInput: string
