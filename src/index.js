@@ -5,6 +5,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import './index.css'
+import App from './pages/App'
 import Todo from './pages/Todo'
 import Rerender from './pages/Rerender'
 import registerServiceWorker from './registerServiceWorker'
@@ -19,6 +20,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Fragment>
+        <Route exact path="/" component={App} />
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/rerender" component={Rerender} />
       </Fragment>
