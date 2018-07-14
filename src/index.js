@@ -8,6 +8,7 @@ import './index.css'
 import App from './pages/App'
 import Todo from './pages/Todo'
 import Rerender from './pages/Rerender'
+import Form from './pages/Form'
 import registerServiceWorker from './registerServiceWorker'
 import { reducer } from './reducer'
 
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Route exact path="/" component={App} />
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/rerender" component={Rerender} />
+        <Route exact path="/form" component={Form} />
       </Fragment>
     </BrowserRouter>
   </Provider>,
