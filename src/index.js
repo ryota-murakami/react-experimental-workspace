@@ -9,6 +9,7 @@ import App from './pages/App'
 import Todo from './pages/Todo'
 import Rerender from './pages/Rerender'
 import Form from './pages/Form'
+import Anime from './pages/Anime'
 import registerServiceWorker from './registerServiceWorker'
 import { reducer } from './reducer'
 
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/rerender" component={Rerender} />
         <Route exact path="/form" component={Form} />
+        <Route exact path="/anime" component={Anime} />
       </Fragment>
     </BrowserRouter>
   </Provider>,

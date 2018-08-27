@@ -19,6 +19,9 @@ class App extends Component<Props> {
         <LinkContainer>
           <Link to="/form">Form</Link>
         </LinkContainer>
+        <LinkContainer>
+          <Link to="/anime">CSS Animation</Link>
+        </LinkContainer>
       </Container>
     )
   }
