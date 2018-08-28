@@ -1,17 +1,37 @@
 // @flow
 import React, { Fragment } from 'react'
 import ReactDOM from 'react-dom'
+import Loadable from 'react-loadable'
+import { Loading } from './shared/Loading'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import './index.css'
-import App from './pages/App'
-import Todo from './pages/Todo'
-import Rerender from './pages/Rerender'
-import Form from './pages/Form'
-import Anime from './pages/Anime'
 import registerServiceWorker from './registerServiceWorker'
 import { reducer } from './reducer'
+
+/* prettier-ignore */
+const App = Loadable({ loader: () => import('./pages/App'/* webpackChunkName: "App" */), loading: Loading })
+/* prettier-ignore */
+const Todo = Loadable({
+  loader: () => import('./pages/Todo'/* webpackChunkName: "Todo" */),
+  loading: Loading
+})
+/* prettier-ignore */
+const Rerender = Loadable({
+  loader: () => import('./pages/Rerender'/* webpackChunkName: "Rerender" */),
+  loading: Loading
+})
+/* prettier-ignore */
+const Form = Loadable({
+  loader: () => import('./pages/Form'/* webpackChunkName: "Form" */),
+  loading: Loading
+})
+/* prettier-ignore */
+const Anime = Loadable({
+  loader: () => import('./pages/Anime'/* webpackChunkName: "Anime" */),
+  loading: Loading
+})
 
 const store = createStore(
   reducer,
