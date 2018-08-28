@@ -6,7 +6,8 @@ import {
   Header,
   Background,
   WhiteBoard,
-  ElementContainer
+  ElementContainer,
+  ElementItem
 } from './index.style'
 import { Grow } from './Grow'
 
@@ -21,7 +22,7 @@ class Anime extends Component<Props> {
         </Header>
         <Background>
           <WhiteBoard>
-            <Grow />
+            <ElementItem title={'Grow'} component={<Grow />} />
             <ElementContainer />
             <ElementContainer />
             <ElementContainer />

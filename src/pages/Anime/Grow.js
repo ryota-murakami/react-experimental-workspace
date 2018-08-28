@@ -1,9 +1,8 @@
 // @flow
 import React from 'react'
 import styled from 'styled-components'
-import { Canvas, ElementContainer, Title } from './index.style'
 
-const Box = styled.div`
+const GrowBox = styled.div`
   width: 100px;
   height: 10px;
   border-radius: 5px;
@@ -17,14 +16,5 @@ const Box = styled.div`
 `
 
 export const Grow = () => {
-  return (
-    <ElementContainer>
-      <Title>
-        <div>Grow</div>
-      </Title>
-      <Canvas>
-        <Box />
-      </Canvas>
-    </ElementContainer>
-  )
+  return <GrowBox />
 }

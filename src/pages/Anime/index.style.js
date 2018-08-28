@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -60,3 +61,14 @@ export const Canvas = styled.div`
   justify-content: center;
   align-items: center;
 `
+
+export const ElementItem = ({ title, component }) => {
+  return (
+    <ElementContainer>
+      <Title>
+        <div>{title}</div>
+      </Title>
+      <Canvas>{component}</Canvas>
+    </ElementContainer>
+  )
+}
