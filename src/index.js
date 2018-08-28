@@ -1,4 +1,3 @@
-// @flow
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux'
@@ -17,7 +16,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Routes />
   </Provider>,
-  // $FlowIssue
   document.getElementById('root')
 )
 registerServiceWorker()
