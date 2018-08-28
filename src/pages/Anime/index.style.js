@@ -34,7 +34,7 @@ export const WhiteBoard = styled.div`
   flex-wrap: wrap;
 `
 
-export const ElementItem = styled.div`
+export const ElementContainer = styled.div`
   margin: 60px;
   box-sizing: border-box;
   height: 600px;
