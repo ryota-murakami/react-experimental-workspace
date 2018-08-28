@@ -66,9 +66,9 @@ export const ElementItem = ({ title, component }) => {
   return (
     <ElementContainer>
       <Title>
-        <div>{title}</div>
+        <div>{title ? title : 'Title'}</div>
       </Title>
-      <Canvas>{component}</Canvas>
+      <Canvas>{component ? component : null}</Canvas>
     </ElementContainer>
   )
 }
