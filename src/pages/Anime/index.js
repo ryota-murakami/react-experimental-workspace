@@ -24,7 +24,7 @@ class Anime extends Component<Props> {
         <Background>
           <WhiteBoard>
             <ElementItem title={'Grow'} component={<Grow />} />
-            <ElementItem title={'HideShow'} component={<HideShow />} />
+            <ElementItem title={'Hide/Show'} component={<HideShow />} />
             <ElementContainer />
             <ElementContainer />
             <ElementContainer />
