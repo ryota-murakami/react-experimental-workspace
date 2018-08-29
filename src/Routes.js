@@ -5,7 +5,7 @@ import { Loading } from './shared/Loading'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 /* prettier-ignore */
-const App = Loadable({ loader: () => import('./pages/App'/* webpackChunkName: "App" */), loading: Loading })
+const Index = Loadable({ loader: () => import('./pages/Index'/* webpackChunkName: "Index" */), loading: Loading })
 /* prettier-ignore */
 const Todo = Loadable({
   loader: () => import('./pages/Todo'/* webpackChunkName: "Todo" */),
@@ -26,7 +26,7 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Fragment>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={Index} />
         <Route exact path="/todo" component={Todo} />
         <Route exact path="/form" component={Form} />
         <Route exact path="/anime" component={Anime} />

@@ -166,10 +166,10 @@ declare module 'react-scripts/scripts/utils/verifyPackageTree.js' {
   declare module.exports: $Exports<'react-scripts/scripts/utils/verifyPackageTree'>;
 }
 declare module 'react-scripts/template/src/App.js' {
-  declare module.exports: $Exports<'react-scripts/template/src/App'>;
+  declare module.exports: $Exports<'react-scripts/template/src/Index'>;
 }
 declare module 'react-scripts/template/src/App.test.js' {
-  declare module.exports: $Exports<'react-scripts/template/src/App.test'>;
+  declare module.exports: $Exports<'react-scripts/template/src/Index.test'>;
 }
 declare module 'react-scripts/template/src/index.js' {
   declare module.exports: $Exports<'react-scripts/template/src/index'>;

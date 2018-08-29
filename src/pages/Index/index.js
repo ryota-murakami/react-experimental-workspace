@@ -12,7 +12,7 @@ import {
 
 type Props = {}
 
-class App extends Component<Props> {
+class Index extends Component<Props> {
   render() {
     return (
       <Container>
@@ -35,4 +35,4 @@ class App extends Component<Props> {
   }
 }
 
-export default pure(App)
+export default pure(Index)
