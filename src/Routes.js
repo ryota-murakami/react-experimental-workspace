@@ -12,11 +12,6 @@ const Todo = Loadable({
   loading: Loading
 })
 /* prettier-ignore */
-const Rerender = Loadable({
-  loader: () => import('./pages/Rerender'/* webpackChunkName: "Rerender" */),
-  loading: Loading
-})
-/* prettier-ignore */
 const Form = Loadable({
   loader: () => import('./pages/Form'/* webpackChunkName: "Form" */),
   loading: Loading
@@ -33,7 +28,6 @@ const Routes = () => {
       <Fragment>
         <Route exact path="/" component={App} />
         <Route exact path="/todo" component={Todo} />
-        <Route exact path="/rerender" component={Rerender} />
         <Route exact path="/form" component={Form} />
         <Route exact path="/anime" component={Anime} />
       </Fragment>
