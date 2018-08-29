@@ -10,6 +10,7 @@ import {
   ElementItem
 } from './index.style'
 import { Grow } from './Grow'
+import { HideShow } from './HideShow'
 
 type Props = {}
 
@@ -23,7 +24,7 @@ class Anime extends Component<Props> {
         <Background>
           <WhiteBoard>
             <ElementItem title={'Grow'} component={<Grow />} />
-            <ElementItem title={'HideShow'} component={null} />
+            <ElementItem title={'HideShow'} component={<HideShow />} />
             <ElementContainer />
             <ElementContainer />
             <ElementContainer />
