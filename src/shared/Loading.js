@@ -14,7 +14,7 @@ const Container = styled.div`
 export const Loading = () => {
   return (
     <Container>
-      <CircleLoader sizeUnit={'px'} size={150} />
+      <CircleLoader sizeUnit={'px'} size={150} color={'#36D7B7'} />
     </Container>
   )
 }
