@@ -1,13 +1,12 @@
 // @flow
 import React, { Component } from 'react'
 import { pure } from 'recompose'
-import { Link } from 'react-router-dom'
 import {
   Container,
-  LinkWrapper,
   Header,
+  LinkContainer,
   HeaderContainer,
-  LinkContainer
+  Link
 } from './index.style'
 
 type Props = {}
@@ -20,15 +19,9 @@ class Index extends Component<Props> {
           <Header>React Workspace</Header>
         </HeaderContainer>
         <LinkContainer>
-          <LinkWrapper>
-            <Link to="/todo">・Todo</Link>
-          </LinkWrapper>
-          <LinkWrapper>
-            <Link to="/form">・Form</Link>
-          </LinkWrapper>
-          <LinkWrapper>
-            <Link to="/anime">・CSS Animation</Link>
-          </LinkWrapper>
+          <Link to="/todo">・Todo</Link>
+          <Link to="/form">・Form</Link>
+          <Link to="/anime">・CSS Animation</Link>
         </LinkContainer>
       </Container>
     )

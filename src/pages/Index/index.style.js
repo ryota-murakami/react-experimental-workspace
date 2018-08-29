@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+import { Link as PureLink } from 'react-router-dom'
 
 export const Container = styled.div`
   display: flex;
@@ -13,6 +15,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 10px;
 `
 
 export const Header = styled.h1`
@@ -26,8 +29,24 @@ export const LinkContainer = styled.div`
   justify-content: center;
 `
 
-export const LinkWrapper = styled.div`
+const LinkWrapper = styled.div`
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
 `
+
+const StyledLink = styled(PureLink)`
+  font-size: 24px;
+  transition: color 0.15s ease-out;
+  &:hover {
+    color: #e6e6e9;
+  }
+`
+
+export const Link = ({ to, children }) => {
+  return (
+    <LinkWrapper>
+      <StyledLink to={to}>{children}</StyledLink>
+    </LinkWrapper>
+  )
+}
