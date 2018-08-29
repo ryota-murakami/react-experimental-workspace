@@ -14,19 +14,19 @@ const Button = styled.button`
   padding: 15px;
   max-height: 70px;
   width: 120px;
-  color: #00ff00;
+  color: #37da24;
   font-size: 24px;
   background-color: white;
   border-radius: 5px;
-  border: #00ff00 2px solid;
+  border: #37da24 2px solid;
+  transition: 0.2s ease-out;
+
   &:focus {
     outline: 0;
   }
   &:hover {
-    background-color: rgba(8, 226, 30, 0.15);
+    background-color: rgba(55, 218, 36, 0.2);
   }
-
-  transition: background-color 1s;
 `
 
 export class HideShow extends Component<{}> {

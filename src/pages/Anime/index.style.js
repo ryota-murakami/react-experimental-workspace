@@ -68,7 +68,7 @@ export const ElementItem = ({ title, component }) => {
       <Title>
         <div>{title ? title : 'Title'}</div>
       </Title>
-      <Canvas>{component ? component : null}</Canvas>
+      <Canvas>{component ? React.Children.only(component) : null}</Canvas>
     </ElementContainer>
   )
 }
