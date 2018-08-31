@@ -10,6 +10,15 @@ const Container = styled.div`
   align-items: center;
 `
 
+const ButtonContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+`
+
 const Button = styled.button`
   padding: 15px;
   max-height: 70px;
@@ -29,11 +38,35 @@ const Button = styled.button`
   }
 `
 
-export class HideShow extends Component<{}> {
+const Circle = styled.div`
+  width: 200px;
+  height: 200px;
+  background-color: #434343;
+  border-radius: 50%;
+  opacity: ${props => (props.toggle ? 1 : 0)};
+  transition: opacity 0.3s linear;
+`
+
+type State = {
+  toggle: boolean
+}
+
+export class HideShow extends Component<{}, State> {
+  state = {
+    toggle: false
+  }
+
+  handleClick = () => {
+    this.setState({ toggle: !this.state.toggle })
+  }
+
   render() {
     return (
       <Container>
-        <Button>Toggle</Button>
+        <ButtonContainer>
+          <Button onClick={this.handleClick}>Toggle</Button>
+        </ButtonContainer>
+        <Circle toggle={this.state.toggle} />
       </Container>
     )
   }
