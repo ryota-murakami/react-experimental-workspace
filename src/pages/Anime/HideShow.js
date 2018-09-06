@@ -1,6 +1,30 @@
 // @flow
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { withStyles } from '@material-ui/core/styles'
+import classNames from 'classnames'
+import PropTypes from 'prop-types'
+import Button from '@material-ui/core/Button'
+
+function MaterialStyled(Component) {
+  return (style, options) => {
+    function StyledComponent(props) {
+      const { classes, className, ...other } = props
+      return (
+        <Component className={classNames(classes.root, className)} {...other} />
+      )
+    }
+    StyledComponent.propTypes = {
+      classes: PropTypes.object.isRequired,
+      className: PropTypes.string
+    }
+    const styles =
+      typeof style === 'function'
+        ? theme => ({ root: style(theme) })
+        : { root: style }
+    return withStyles(styles, options)(StyledComponent)
+  }
+}
 
 const Container = styled.div`
   width: 100%;
@@ -19,24 +43,11 @@ const ButtonContainer = styled.div`
   padding-bottom: 30px;
 `
 
-const Button = styled.button`
-  padding: 15px;
-  max-height: 70px;
-  width: 120px;
-  color: #37da24;
-  font-size: 24px;
-  background-color: white;
-  border-radius: 5px;
-  border: #37da24 2px solid;
-  transition: 0.2s ease-out;
-
-  &:focus {
-    outline: 0;
-  }
-  &:hover {
-    background-color: rgba(55, 218, 36, 0.2);
-  }
-`
+const StyledButton = MaterialStyled(Button)({
+  borderRadius: '5px',
+  border: '#37da24 2px solid',
+  color: '#37da24'
+})
 
 const Circle = styled.div`
   width: 200px;
@@ -64,7 +75,7 @@ export class HideShow extends Component<{}, State> {
     return (
       <Container>
         <ButtonContainer>
-          <Button onClick={this.handleClick}>Toggle</Button>
+          <StyledButton onClick={this.handleClick}>Toggle</StyledButton>
         </ButtonContainer>
         <Circle toggle={this.state.toggle} />
       </Container>
