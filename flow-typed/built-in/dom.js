@@ -3568,7 +3568,7 @@ declare class ClientRectList { // extension
   [index: number]: ClientRect;
 }
 
-// TODO: HTML*Element
+// TODO: HTML*Container
 
 declare class DOMImplementation {
   createDocumentType(qualifiedName: string, publicId: string, systemId: string): DocumentType;

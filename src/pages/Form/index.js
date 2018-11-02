@@ -1,18 +1,18 @@
 // @flow
 import React, { Component } from 'react'
 import { pure } from 'recompose'
-import { Container, Element, Title } from './style'
+import { FullScreen, Container, Title } from './style'
 
 type Props = {}
 
 class Form extends Component<Props> {
   render() {
     return (
-      <Container>
-        <Element>
+      <FullScreen>
+        <Container>
           <Title>Form</Title>
-        </Element>
-      </Container>
+        </Container>
+      </FullScreen>
     )
   }
 }

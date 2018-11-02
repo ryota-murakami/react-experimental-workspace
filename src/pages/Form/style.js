@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const FullScreen = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
 `
 
-export const Element = styled.div`
+export const Container = styled.div`
   width: 70%;
   height: 500px;
   border-style: solid;
