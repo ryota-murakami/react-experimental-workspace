@@ -67,6 +67,6 @@ const mapStateToProps = (state: ReduxState): StateProps => {
 }
 
 export default compose(
-  connect(mapStateToProps),
+  connect<_, _, Object, _, Object, _>(mapStateToProps),
   pure
 )(App)

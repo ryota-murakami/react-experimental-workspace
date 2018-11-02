@@ -35,4 +35,4 @@ class Anime extends Component<Props> {
   }
 }
 
-export default compose(pure)(Anime)
+export default pure<*>(Anime)

@@ -17,4 +17,4 @@ class Form extends Component<Props> {
   }
 }
 
-export default pure(Form)
+export default pure<*>(Form)

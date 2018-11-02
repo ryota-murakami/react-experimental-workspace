@@ -28,4 +28,4 @@ class Index extends Component<Props> {
   }
 }
 
-export default pure(Index)
+export default pure<*>(Index)
