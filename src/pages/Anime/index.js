@@ -1,6 +1,6 @@
 // @flow
 import React, { Component } from 'react'
-import { compose, pure } from 'recompose'
+import { pure } from 'recompose'
 import {
   Container,
   Header,
