@@ -1,4 +1,3 @@
-// @flow
 import React, { Component } from 'react'
 import { pure } from 'recompose'
 import {
@@ -9,9 +8,7 @@ import {
   Link
 } from './index.style'
 
-type Props = {}
-
-class Index extends Component<Props> {
+class Index extends Component {
   render() {
     return (
       <Container>
@@ -19,6 +16,7 @@ class Index extends Component<Props> {
           <Header>React Workspace</Header>
         </HeaderContainer>
         <LinkContainer>
+          <Link to="/context">・Context</Link>
           <Link to="/todo">・Todo</Link>
           <Link to="/form">・Form</Link>
           <Link to="/anime">・CSS Animation</Link>
@@ -28,4 +26,4 @@ class Index extends Component<Props> {
   }
 }
 
-export default pure<*>(Index)
+export default pure(Index)

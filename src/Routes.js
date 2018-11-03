@@ -6,6 +6,7 @@ const Index = lazy(() => import('./pages/Index'))
 const Todo = lazy(() => import('./pages/Todo'))
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
+const Context = lazy(() => import('./pages/Context'))
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
           <Route exact path="/todo" component={Todo} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
+          <Route exact path="/context" component={Context} />
         </Switch>
       </Suspense>
     </BrowserRouter>
