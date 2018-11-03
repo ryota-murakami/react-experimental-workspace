@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import React from 'react'
+import styled, { keyframes } from 'styled-components'
 
 export const FullScreen = styled.div`
   width: 100%;
@@ -27,3 +28,29 @@ export const Title = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
 `
+
+const FlashMessageWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  background-color: ${props =>
+    props.flashMessage === 'Error' ? 'crimson' : 'green'};
+  opacity: ${props => (props.flashMessage.length ? 0.6 : 0)};
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.3s ease-in-out;
+`
+
+export const FlashMessage = ({ state }) => {
+  return (
+    <FlashMessageWrapper flashMessage={state.flashMessage}>
+      {state.flashMessage}
+    </FlashMessageWrapper>
+  )
+}

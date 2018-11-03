@@ -1,7 +1,7 @@
 // @flow
 import React, { Component, Fragment } from 'react'
 import { pure } from 'recompose'
-import { FullScreen, Container, Title } from './style'
+import { FullScreen, Container, Title, FlashMessage } from './style'
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -23,13 +23,7 @@ class Form extends Component<{}, State> {
   }
 
   showFlashMessage = () => {
-    const { flashMessage } = this.state
-
-    if (flashMessage.length > 0) {
-      setTimeout(() => this.setState({ flashMessage: '' }), 1000)
-      return <h2>{flashMessage}</h2>
-    }
-    return null
+    return <FlashMessage state={this.state} />
   }
 
   handleEmailInput = (e: SyntheticInputEvent<HTMLInputElement>) => {
@@ -74,10 +68,13 @@ class Form extends Component<{}, State> {
     // no error
     if (!emailErrorFlag && !passwordErrorFlag) {
       this.setState({ flashMessage: 'Success!', email: '', password: '' })
+      setTimeout(() => this.setState({ flashMessage: '' }), 1000)
       return
     } else {
       // show error message
       this.setState({ flashMessage: 'Error' })
+      setTimeout(() => this.setState({ flashMessage: '' }), 1000)
+      return
     }
   }
 
