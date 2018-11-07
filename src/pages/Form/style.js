@@ -24,9 +24,11 @@ export const Container = styled.div`
 `
 
 export const Title = styled.div`
-  font-size: 24px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 30px;
+  margin-bottom: 30px;
 `
 
 const FlashMessageWrapper = styled.div`
@@ -54,3 +56,35 @@ export const FlashMessage = ({ state }) => {
     </FlashMessageWrapper>
   )
 }
+
+export const FormGroup = styled.div`
+  width: 600px;
+  height: 100px;
+  border: #778899 1px solid;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+`
+
+export const Label = styled.div`
+  font-weight: bold;
+  margin-bottom: 10px;
+`
+
+export const TextInput = styled.input`
+  padding: 0.5rem;
+  font-size: 16px;
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+
+  &:focus {
+    border-color: #007eff;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 0 3px rgba(0, 126, 255, 0.1);
+    outline: none;
+  }
+`

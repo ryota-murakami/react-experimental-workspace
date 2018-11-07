@@ -1,7 +1,15 @@
 // @flow
 import React, { Component, Fragment } from 'react'
 import { pure } from 'recompose'
-import { FullScreen, Container, Title, FlashMessage } from './style'
+import {
+  TextInput,
+  Label,
+  FormGroup,
+  FullScreen,
+  Container,
+  Title,
+  FlashMessage
+} from './style'
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 
@@ -92,16 +100,30 @@ class Form extends Component<{}, State> {
         <FullScreen>
           <Container>
             <Title>Form</Title>
-            <label>Email</label>
-            <input onChange={this.handleEmailInput} type="text" value={email} />
-            <div>{emailErrorMessage}</div>
-            <label>Password</label>
-            <input
-              onChange={this.handlePasswordInput}
-              type="text"
-              value={password}
-            />
-            <div>{passwordErrorMessage}</div>
+            <FormGroup>
+              <Label>Email</Label>
+              <TextInput
+                onChange={this.handleEmailInput}
+                type="text"
+                value={email}
+                style={
+                  passwordErrorMessage.length ? { borderColor: 'red' } : {}
+                }
+              />
+              <div>{emailErrorMessage}</div>
+            </FormGroup>
+            <FormGroup>
+              <Label>Password</Label>
+              <TextInput
+                onChange={this.handlePasswordInput}
+                type="text"
+                value={password}
+                style={
+                  passwordErrorMessage.length ? { borderColor: 'red' } : {}
+                }
+              />
+              <div>{passwordErrorMessage}</div>
+            </FormGroup>
             <button onClick={this.handleSubmit}>Submit</button>
           </Container>
         </FullScreen>
