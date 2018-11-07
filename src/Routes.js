@@ -18,6 +18,21 @@ const Routes = () => {
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
+          <Route
+            component={() => (
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+              >
+                <h1>404 Not Found</h1>
+              </div>
+            )}
+          />
         </Switch>
       </Suspense>
     </BrowserRouter>
