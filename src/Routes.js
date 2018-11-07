@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { Loading } from './shared/Loading'
+import { Loading } from './components/Loading'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 const Index = lazy(() => import('./pages/Index'))
