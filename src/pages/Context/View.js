@@ -4,6 +4,7 @@ import { css } from 'emotion'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
+import { pure } from 'recompose'
 
 const styles = {
   root: {
@@ -46,4 +47,4 @@ function View(props) {
   )
 }
 
-export default withStyles(styles)(View)
+export default pure(withStyles(styles)(View))
