@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
 
-const styleds = {
+const styles = {
   root: {
     height: 58
   }
@@ -46,4 +46,4 @@ function View(props) {
   )
 }
 
-export default withStyles(styleds)(View)
+export default withStyles(styles)(View)

@@ -8,7 +8,9 @@ import {
   FullScreen,
   Container,
   Title,
-  FlashMessage
+  FlashMessage,
+  ErrorMessage,
+  SubmitButton
 } from './style'
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -110,7 +112,9 @@ class Form extends Component<{}, State> {
                   passwordErrorMessage.length ? { borderColor: 'red' } : {}
                 }
               />
-              <div>{emailErrorMessage}</div>
+              {emailErrorMessage.length > 0 && (
+                <ErrorMessage>{emailErrorMessage}</ErrorMessage>
+              )}
             </FormGroup>
             <FormGroup>
               <Label>Password</Label>
@@ -122,9 +126,11 @@ class Form extends Component<{}, State> {
                   passwordErrorMessage.length ? { borderColor: 'red' } : {}
                 }
               />
-              <div>{passwordErrorMessage}</div>
+              {passwordErrorMessage.length > 0 && (
+                <ErrorMessage>{passwordErrorMessage}</ErrorMessage>
+              )}
             </FormGroup>
-            <button onClick={this.handleSubmit}>Submit</button>
+            <SubmitButton onClick={this.handleSubmit}>Submit</SubmitButton>
           </Container>
         </FullScreen>
       </Fragment>
