@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import View from './View'
 import StoreProvider from './Store'
+import Friends from './Friends'
 
 const store = {
   name: 'jack',
@@ -12,7 +13,16 @@ class Context extends Component {
   render() {
     return (
       <StoreProvider initialState={store}>
-        <View />
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center'
+          }}
+        >
+          <Friends />
+          <View />
+        </div>
       </StoreProvider>
     )
   }
