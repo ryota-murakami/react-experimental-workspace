@@ -10,8 +10,7 @@ import {
   Container,
   Title,
   FlashMessage,
-  ErrorMessage,
-  SubmitButton
+  ErrorMessage
 } from './style'
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
