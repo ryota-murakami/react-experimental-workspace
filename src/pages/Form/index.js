@@ -1,6 +1,7 @@
 // @flow
 import React, { Component, Fragment } from 'react'
 import { pure } from 'recompose'
+import Button from '@material-ui/core/Button'
 import {
   TextInput,
   Label,
@@ -130,7 +131,14 @@ class Form extends Component<{}, State> {
                 <ErrorMessage>{passwordErrorMessage}</ErrorMessage>
               )}
             </FormGroup>
-            <SubmitButton onClick={this.handleSubmit}>Submit</SubmitButton>
+            <Button
+              variant="contained"
+              size="large"
+              color="primary"
+              onClick={this.handleSubmit}
+            >
+              Submit
+            </Button>
           </Container>
         </FullScreen>
       </Fragment>

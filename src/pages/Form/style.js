@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
-import { withStyles } from '@material-ui/core/styles'
-import classNames from 'classnames'
 
 export const FullScreen = styled.div`
   width: 100%;
@@ -96,21 +93,3 @@ export const TextInput = styled.input`
 export const ErrorMessage = styled.div`
   color: red;
 `
-
-const styles = {
-  root: {
-    height: 58,
-    width: 120,
-    border: 'blue 1px solid',
-    color: 'blue'
-  }
-}
-
-export const SubmitButton = withStyles(styles)(props => (
-  <Button
-    className={classNames(props.classes.root, props.className)}
-    {...props}
-  >
-    {props.children}
-  </Button>
-))
