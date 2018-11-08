@@ -1,19 +1,19 @@
-import React, { Component, createContext } from 'react'
+import React, { Component } from 'react'
 import View from './View'
+import StoreProvider from './Store'
 
-export const MyContext = createContext()
+const store = {
+  name: 'jack',
+  age: 34,
+  friends: ['mark', 'james', 'martin']
+}
 
 class Context extends Component {
-  state = {
-    count: 0,
-    increment: () => this.setState({ count: this.state.count + 1 })
-  }
-
   render() {
     return (
-      <MyContext.Provider value={this.state}>
+      <StoreProvider initialState={store}>
         <View />
-      </MyContext.Provider>
+      </StoreProvider>
     )
   }
 }

@@ -1,10 +1,10 @@
-import React, { Fragment } from 'react'
-import { MyContext } from './index'
+import React, { Fragment, useContext } from 'react'
 import { css } from 'emotion'
 import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
 import { pure } from 'recompose'
+import StoreContext from './StoreContext'
 
 const styles = {
   root: {
@@ -25,24 +25,28 @@ const layout = css`
 
 function View(props) {
   const { classes, className } = props
+  const { store, setStore } = useContext(StoreContext)
+
+  const MyButton = props => (
+    <Button
+      variant="outlined"
+      size="large"
+      className={classNames(classes.root, className)}
+      {...props}
+    >
+      {props.children}
+    </Button>
+  )
 
   return (
     <div className={layout}>
-      <MyContext.Consumer>
-        {context => (
-          <Fragment>
-            <h1>count: {context.count}</h1>
-            <Button
-              variant="outlined"
-              size="large"
-              className={classNames(classes.root, className)}
-              onClick={context.increment}
-            >
-              increment
-            </Button>
-          </Fragment>
-        )}
-      </MyContext.Consumer>
+      <Fragment>
+        <h1>Age: {store.age}</h1>
+      </Fragment>
+      <MyButton onClick={() => setStore({ age: store.age + 1 })}>
+        Increase Age
+      </MyButton>
+      <MyButton onClick={() => setStore({ name: null })}>Name Null</MyButton>
     </div>
   )
 }
