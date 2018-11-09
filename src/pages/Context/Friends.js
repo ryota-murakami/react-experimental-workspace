@@ -19,7 +19,7 @@ function Friends() {
     store: { friends },
     setStore
   } = useContext(StoreContext)
-  friends.push(rand())
+
   return (
     <div className={layout}>
       <ul>
@@ -29,7 +29,7 @@ function Friends() {
         variant="contained"
         color="primary"
         size="large"
-        onClick={() => setStore({ friends: friends })}
+        onClick={() => friends.push(rand()) && setStore({ friends: friends })}
       >
         Add Frineds
       </Button>
