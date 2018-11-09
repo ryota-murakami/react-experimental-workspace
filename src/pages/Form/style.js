@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 export const FullScreen = styled.div`
   width: 100%;
@@ -34,8 +34,7 @@ export const Title = styled.div`
 const FlashMessageWrapper = styled.div`
   position: fixed;
   top: 0;
-  background-color: ${props =>
-    props.flashMessage === 'Error' ? 'crimson' : 'green'};
+  background-color: ${props => (props.hasError ? 'crimson' : 'green')};
   opacity: ${props => (props.flashMessage.length ? 0.6 : 0)};
   width: 100%;
   height: 80px;
@@ -49,9 +48,13 @@ const FlashMessageWrapper = styled.div`
   transition: opacity 0.3s ease-in-out;
 `
 
-export const FlashMessage = ({ state }) => {
+export const FlashMessage = props => {
+  const { state } = props
   return (
-    <FlashMessageWrapper flashMessage={state.flashMessage}>
+    <FlashMessageWrapper
+      flashMessage={state.flashMessage}
+      hasError={state.hasError}
+    >
       {state.flashMessage}
     </FlashMessageWrapper>
   )
@@ -81,8 +84,11 @@ export const TextInput = styled.input`
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-bottom: 8px;
-
-  &:focus {
+  ${props =>
+    props.hasError &&
+    css`
+      border-color: red;
+    `} &:focus {
     border-color: #007eff;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 0 3px rgba(0, 126, 255, 0.1);

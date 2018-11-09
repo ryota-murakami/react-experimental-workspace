@@ -1,6 +1,5 @@
 // @flow
 import React, { Component, Fragment } from 'react'
-import { pure } from 'recompose'
 import Button from '@material-ui/core/Button'
 import {
   TextInput,
@@ -13,14 +12,16 @@ import {
   ErrorMessage
 } from './style'
 
-const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
+const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i /* eslint-disable-line */
 
 type State = {
   email: string,
   emailErrorMessage: string,
   password: string,
   passwordErrorMessage: string,
-  flashMessage: string
+  flashMessage: string,
+  hasError: boolean,
+  showFlash: boolean
 }
 
 class Form extends Component<{}, State> {
@@ -29,7 +30,9 @@ class Form extends Component<{}, State> {
     emailErrorMessage: '',
     password: '',
     passwordErrorMessage: '',
-    flashMessage: ''
+    flashMessage: '',
+    hasError: false,
+    showFlash: false
   }
 
   showFlashMessage = () => {
@@ -76,14 +79,21 @@ class Form extends Component<{}, State> {
     }
 
     // no error
-    if (!emailErrorFlag && !passwordErrorFlag) {
-      this.setState({ flashMessage: 'Success!', email: '', password: '' })
-      setTimeout(() => this.setState({ flashMessage: '' }), 1000)
+    if (emailErrorFlag === false && passwordErrorFlag === false) {
+      this.setState({
+        flashMessage: 'Success!',
+        email: '',
+        password: '',
+        hasError: false,
+        showFlash: true
+      })
+      setTimeout(() => this.setState({ flashMessage: '', showFlash: false }), 1000) /* prettier-ignore */
       return
     } else {
       // show error message
-      this.setState({ flashMessage: 'Error' })
-      setTimeout(() => this.setState({ flashMessage: '' }), 1000)
+      this.setState({ flashMessage: 'Error', hasError: true, showFlash: true })
+      setTimeout(() => this.setState({ flashMessage: '', showFlash: false }), 1000) /* prettier-ignore */
+
       return
     }
   }
@@ -95,6 +105,9 @@ class Form extends Component<{}, State> {
       emailErrorMessage,
       passwordErrorMessage
     } = this.state
+
+    const hasEmailError: boolean = emailErrorMessage.length > 0
+    const hasPasswordError: boolean = passwordErrorMessage.length > 0
 
     return (
       <Fragment>
@@ -108,11 +121,9 @@ class Form extends Component<{}, State> {
                 onChange={this.handleEmailInput}
                 type="text"
                 value={email}
-                style={
-                  passwordErrorMessage.length ? { borderColor: 'red' } : {}
-                }
+                hasError={hasEmailError}
               />
-              {emailErrorMessage.length > 0 && (
+              {hasEmailError && (
                 <ErrorMessage>{emailErrorMessage}</ErrorMessage>
               )}
             </FormGroup>
@@ -122,11 +133,9 @@ class Form extends Component<{}, State> {
                 onChange={this.handlePasswordInput}
                 type="text"
                 value={password}
-                style={
-                  passwordErrorMessage.length ? { borderColor: 'red' } : {}
-                }
+                hasError={hasPasswordError}
               />
-              {passwordErrorMessage.length > 0 && (
+              {hasPasswordError && (
                 <ErrorMessage>{passwordErrorMessage}</ErrorMessage>
               )}
             </FormGroup>
@@ -145,4 +154,4 @@ class Form extends Component<{}, State> {
   }
 }
 
-export default pure<*>(Form)
+export default Form
