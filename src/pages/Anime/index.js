@@ -1,6 +1,5 @@
 // @flow
 import React, { Component } from 'react'
-import { pure } from 'recompose'
 import {
   Container,
   Header,
@@ -35,4 +34,4 @@ class Anime extends Component<Props> {
   }
 }
 
-export default pure<*>(Anime)
+export default Anime

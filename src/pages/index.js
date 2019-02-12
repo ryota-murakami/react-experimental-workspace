@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { pure } from 'recompose'
 import {
   Container,
   Header,
@@ -27,4 +26,4 @@ class Index extends Component {
   }
 }
 
-export default pure(Index)
+export default Index

@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react'
 import type { Dispatch } from 'redux'
-import { pure, compose } from 'recompose'
 import { connect } from 'react-redux'
 import { Input, Button, Text } from '../../elements'
 import { Container, InputSlice } from './index.style'
@@ -66,7 +65,4 @@ const mapStateToProps = (state: ReduxState): StateProps => {
   return { todos: state.todos }
 }
 
-export default compose(
-  connect<_, _, Object, _, Object, _>(mapStateToProps),
-  pure
-)(App)
+export default connect<_, _, Object, _, Object, _>(mapStateToProps)(App)
