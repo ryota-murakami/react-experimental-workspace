@@ -1,6 +1,25 @@
-// @flow
-import React from 'react'
+import React, { Component } from 'react'
+import {
+  Container,
+  Header,
+  LinkContainer,
+  HeaderContainer
+} from './index.style'
+import { Link } from '../../components/Link'
 
-export default function Hooks() {
-  return <h1>Hi</h1>
+class Index extends Component {
+  render() {
+    return (
+      <Container>
+        <HeaderContainer>
+          <Header>Hooks</Header>
+        </HeaderContainer>
+        <LinkContainer>
+          <Link to="/useReducer">・useReducer</Link>
+        </LinkContainer>
+      </Container>
+    )
+  }
 }
+
+export default Index
