@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from 'react'
 import { Loading } from './components/Loading'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
-const Index = lazy(() => import('./pages/Index'))
+const Index = lazy(() => import('./pages'))
 const Todo = lazy(() => import('./pages/Todo'))
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
