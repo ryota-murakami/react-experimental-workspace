@@ -15,7 +15,7 @@ class Index extends Component {
           <Header>Hooks</Header>
         </HeaderContainer>
         <LinkContainer>
-          <Link to="/useReducer">・useReducer</Link>
+          <Link to="hooks/usereducer">・useReducer</Link>
         </LinkContainer>
       </Container>
     )

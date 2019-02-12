@@ -8,6 +8,7 @@ const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
 const Context = lazy(() => import('./pages/Context'))
 const Hooks = lazy(() => import('./pages/Hooks'))
+const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
           <Route exact path="/hooks" component={Hooks} />
+          <Route exact path="/hooks/usereducer" component={UseReducer} />
           <Route
             component={() => (
               <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }} /* eslint-disable-line prettier/prettier */>
