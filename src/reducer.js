@@ -1,5 +1,5 @@
 // @flow
-import type { Todo, TodoList } from './types'
+import type { Todo, TodoList } from './pages/Todo/types'
 
 export type ReduxState = {
   todos: TodoList

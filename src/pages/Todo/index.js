@@ -7,7 +7,7 @@ import { Input, Button, Text } from '../../elements'
 import { Container, InputSlice } from './index.style'
 import { ID } from '../../functions'
 import TodoList from './TodoList/index'
-import type { Todo as TodoType, TodoList as TodoListType } from '../../types'
+import type { Todo as TodoType, TodoList as TodoListType } from './types'
 import type { AddTodoAction } from '../../reducer'
 import type { ReduxState } from '../../reducer'
 
