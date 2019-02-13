@@ -1,6 +1,6 @@
 // @flow
 import React, { useReducer } from 'react'
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 
 const layout = css`
   width: 100%;

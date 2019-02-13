@@ -1,5 +1,5 @@
 import React, { useContext, memo } from 'react'
-import { css } from 'emotion'
+import { css } from '@emotion/core'
 import StoreContext from './StoreContext'
 import ViewChild from './ViewChild'
 import MyButton from './MyButton'
