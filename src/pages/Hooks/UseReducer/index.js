@@ -1,6 +1,6 @@
-// @flow
-import React, { useReducer } from 'react'
-import { css, jsx } from '@emotion/core'
+/** @jsx jsx */
+import { useReducer } from 'react'
+import { css, jsx } from '@emotion/core' /* eslint-disable-line */
 
 const container = css`
   width: 100%;
@@ -35,8 +35,8 @@ export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <div className={container}>
-      <div className={layout}>
+    <div css={container}>
+      <div css={layout}>
         <h1>UseReducer</h1>
         <div>
           <h1>Count: {state.count}</h1>
