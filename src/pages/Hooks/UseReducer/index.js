@@ -2,7 +2,7 @@
 import React, { useReducer } from 'react'
 import { css } from '@emotion/core'
 
-const layout = css`
+const container = css`
   width: 100%;
   height: 100%;
   display: flex;
@@ -31,7 +31,7 @@ export default function UseReducer() {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (
-    <div className={layout}>
+    <div className={container}>
       <h1>UseReducer</h1>
       <div>
         <h1>Count: {state.count}</h1>
