@@ -44,15 +44,30 @@ export default function UseReducer() {
   return (
     <div css={container}>
       <div css={layout}>
-        <h1>UseReducer</h1>
-        <h1>Count: {state.count}</h1>
+        <h1
+          css={css`
+            text-align: center;
+          `}
+        >
+          UseReducer
+        </h1>
+        <h1
+          css={css`
+            text-align: center;
+          `}
+        >
+          Count: {state.count}
+        </h1>
         <div
           css={css`
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
           `}
         >
           <Button
+            css={css`
+              text-align: center;
+            `}
             variant="contained"
             size="large"
             color="default"
@@ -63,9 +78,13 @@ export default function UseReducer() {
           <div
             css={css`
               margin-left: 30px;
+              text-align: center;
             `}
           >
             <Button
+              css={css`
+                text-align: center;
+              `}
               variant="contained"
               size="large"
               color="secondary"
