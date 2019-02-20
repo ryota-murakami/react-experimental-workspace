@@ -7,15 +7,15 @@ import { Container, InputSlice } from './index.style'
 import { ID } from '../../functions'
 import TodoList from './TodoList/index'
 import type { Todo as TodoType, TodoList as TodoListType } from './types'
-import type { AddTodoAction } from '../../reducer'
-import type { ReduxState } from '../../reducer'
+import type { AddTodoReduxAction } from './reducer'
+import type { ReduxState } from './../../reducer'
 
 type StateProps = {
   todos: TodoListType
 }
 
 type Props = StateProps & {
-  dispatch: Dispatch<AddTodoAction>
+  dispatch: Dispatch<AddTodoReduxAction>
 }
 
 type State = {
@@ -62,7 +62,7 @@ class App extends Component<Props, State> {
 }
 
 const mapStateToProps = (state: ReduxState): StateProps => {
-  return { todos: state.todos }
+  return { todos: state.TodoStore.todos }
 }
 
 export default connect<_, _, Object, _, Object, _>(mapStateToProps)(App)
