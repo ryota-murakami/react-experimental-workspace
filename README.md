@@ -1,7 +1,7 @@
 # React Workspace
 My personal sandbox.
 
-## Setup
+## Installation
 
 ```
 git clone git@github.com:lainviola/react-workspace.git
