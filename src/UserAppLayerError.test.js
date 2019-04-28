@@ -1,19 +1,19 @@
-import { UserAppLayerError } from './UserAppLayerError'
+import { AppLayerError } from './AppLayerError'
 
-describe('UserAppLayerError', () => {
+describe('AppLayerError', () => {
   it('should extend Error', () => {
-    expect(UserAppLayerError.__proto__.name).toBe('Error')
+    expect(AppLayerError.__proto__.name).toBe('Error')
   })
 
   it('should throw correctly', () => {
     expect(() => {
-      throw new UserAppLayerError()
+      throw new AppLayerError()
     }).toThrow()
   })
 
   it('should dispayed passing message', () => {
     expect(() => {
-      throw new UserAppLayerError('foo')
+      throw new AppLayerError('foo')
     }).toThrowError('foo')
   })
 })
