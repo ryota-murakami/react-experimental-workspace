@@ -10,6 +10,7 @@ const Anime = lazy(() => import('./pages/Anime'))
 const Context = lazy(() => import('./pages/Context'))
 const Hooks = lazy(() => import('./pages/Hooks'))
 const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
+const Modal = lazy(() => import('./pages/Modal'))
 
 const Routes = () => {
   return (
@@ -23,6 +24,7 @@ const Routes = () => {
           <Route exact path="/context" component={Context} />
           <Route exact path="/hooks" component={Hooks} />
           <Route exact path="/hooks/usereducer" component={UseReducer} />
+          <Route exact path="/modal" component={Modal} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>
