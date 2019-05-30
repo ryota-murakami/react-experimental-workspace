@@ -8,7 +8,7 @@ import { ID } from '../../functions'
 import TodoList from './TodoList/index'
 import type { Todo as TodoType, TodoList as TodoListType } from './types'
 import type { AddTodoReduxAction } from './reducer'
-import type { ReduxState } from './../../reducer'
+import type { RootReduxState } from './../../reducer'
 
 type StateProps = {
   todos: TodoListType
@@ -61,7 +61,7 @@ class App extends Component<Props, State> {
   }
 }
 
-const mapStateToProps = (state: ReduxState): StateProps => {
+const mapStateToProps = (state: RootReduxState): StateProps => {
   return { todos: state.TodoStore.todos }
 }
 

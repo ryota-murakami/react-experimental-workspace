@@ -18,7 +18,7 @@ const StyledLink = styled(PureLink)`
 `
 type LinkProps = {
   to: string | LocationShape,
-  children: React$Element
+  children: React$Element<*>
 }
 export const Link = ({ to, children }: LinkProps) => {
   return (
