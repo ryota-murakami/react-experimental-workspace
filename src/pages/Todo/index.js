@@ -4,7 +4,7 @@ import type { Dispatch } from 'redux'
 import { connect } from 'react-redux'
 import { Input, Button, Text } from '../../elements'
 import { Container, InputSlice } from './index.style'
-import { ID } from '../../functions'
+import { UUID } from '../../functions'
 import TodoList from './TodoList/index'
 import type { Todo as TodoType, TodoList as TodoListType } from './types'
 import type { AddTodoReduxAction } from './reducer'
@@ -30,7 +30,7 @@ class App extends Component<Props, State> {
     const text = this.state.currentInput
 
     this.setState({ currentInput: '' })
-    const newTodo: TodoType = { id: ID(), text: text }
+    const newTodo: TodoType = { id: UUID(), text: text }
     dispatch({
       type: 'ADD_TODO',
       newTodo: newTodo
