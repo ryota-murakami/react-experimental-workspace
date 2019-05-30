@@ -6,6 +6,7 @@ node_modules/styled-components
 [libs]
 
 [lints]
+deprecated-utility=off
 
 [options]
 suppress_comment=.*\\$FlowFixMe

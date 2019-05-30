@@ -53,8 +53,8 @@ const Circle = styled.div`
   width: 200px;
   height: 200px;
   background-color: #434343;
-  border-radius: 50%;
-  opacity: ${props => (props.toggle ? 1 : 0)};
+  border-radius: 50%; // $FlowFixMe
+  opacity: ${props => (props.toggle ? '1' : '0')};
   transition: opacity 0.3s linear;
 `
 
