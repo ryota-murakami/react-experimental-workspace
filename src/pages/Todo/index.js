@@ -65,4 +65,4 @@ const mapStateToProps = (state: RootReduxState): StateProps => {
   return { todos: state.TodoStore.todos }
 }
 
-export default connect<_, _, Object, _, Object, _>(mapStateToProps)(App)
+export default connect(mapStateToProps)(App)
