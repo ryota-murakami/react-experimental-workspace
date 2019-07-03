@@ -1,6 +1,12 @@
 // @flow
 import React from 'react'
+import { Layout } from './layout'
 
 export default () => {
-  return <h1>Modal</h1>
+  return (
+    <Layout>
+      <h1>Modal</h1>
+      <div />
+    </Layout>
+  )
 }
