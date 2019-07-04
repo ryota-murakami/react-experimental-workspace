@@ -11,7 +11,7 @@ export const Layout = styled.div`
     outline: 0;
     font-size: 14px;
     word-wrap: break-word;
-    line-height: 1em;
+    line-he ight: 1em;
     white-space: normal;
     min-height: 2em;
     background: #fff;
