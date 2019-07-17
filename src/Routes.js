@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Loading } from './components/Loading'
 import Pages from './pages'
 import NotFound from './pages/NotFound'
+import SelectBox from './pages/SelectBox'
 
 const Todo = lazy(() => import('./pages/Todo'))
 const Form = lazy(() => import('./pages/Form'))
@@ -25,6 +26,7 @@ const Routes = () => {
           <Route exact path="/hooks" component={Hooks} />
           <Route exact path="/hooks/usereducer" component={UseReducer} />
           <Route exact path="/modal" component={Modal} />
+          <Route exact path="/selectbox" component={SelectBox} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>

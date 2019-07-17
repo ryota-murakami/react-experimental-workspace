@@ -11,7 +11,7 @@ export const Layout = styled.div`
     outline: 0;
     font-size: 14px;
     word-wrap: break-word;
-    line-he ight: 1em;
+    line-heght: 1em;
     white-space: normal;
     min-height: 2em;
     background: #fff;
@@ -20,7 +20,7 @@ export const Layout = styled.div`
     color: rgba(0, 0, 0, 0.87);
     box-shadow: none;
     border: 1px solid rgba(34, 36, 38, 0.15);
-    borderradius: 30rem;
+    border-radius: 30rem;
     transition: box-shadow, 0.1s ease, width 0.1s ease;
     &:hover,
     &:focus {

@@ -20,7 +20,8 @@ class Index extends Component {
           <Link to="/todo">・Todo</Link>
           <Link to="/form">・Form</Link>
           <Link to="/anime">・CSS Animation</Link>
-          <Link to="modal">・Modal</Link>
+          <Link to="/modal">・Modal</Link>
+          <Link to="/selectbox">・SelectBox</Link>
         </LinkContainer>
       </Container>
     )
