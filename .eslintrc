@@ -1,0 +1,12 @@
+{
+  "extends": "react-app",
+  "parser": "babel-eslint",
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", {"singleQuote": true,"semi": false}],
+    "jsx-a11y/href-no-hash": "off",
+    no-useless-escape: "off"
+  }
+}
