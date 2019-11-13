@@ -1339,11 +1339,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@reach/auto-id@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.2.0.tgz#97f9e48fe736aa5c6f4f32cf73c1f19d005f8550"
-  integrity sha512-lVK/svL2HuQdp7jgvlrLkFsUx50Az9chAhxpiPwBqcS83I2pVWvXp98FOcSCCJCV++l115QmzHhFd+ycw1zLBg==
-
 "@svgr/babel-plugin-add-jsx-attribute@^4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-4.2.0.tgz#dadcb6218503532d6884b210e7f3c502caaa44b1"
@@ -3833,13 +3828,12 @@ dotenv@6.2.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.2.0.tgz#941c0410535d942c8becf28d3f357dbd9d476064"
   integrity sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
 
-downshift@^3.3.4:
-  version "3.3.4"
-  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.3.4.tgz#959be157e48be2ec2bbc50f184303647fc719026"
-  integrity sha512-3bM11S3p78p/moyJqDPc1j357dm/C+dN+54HKuc526k5etNXvnXyxsb+Ufd2yLL6qK4QZA62DysAgtMCIsKCNA==
+downshift@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/downshift/-/downshift-3.4.1.tgz#2de8c4865181eb6762f70478ae8c15495b5df32b"
+  integrity sha512-VD0PjXpDVQH7bQd9vtRj/4KK4aS00O0SDGtKRauQ946nmP1UmmfOc6byG0Njd5wMDgRtEZiHXKYC7vXRZeI40w==
   dependencies:
     "@babel/runtime" "^7.4.5"
-    "@reach/auto-id" "^0.2.0"
     compute-scroll-into-view "^1.0.9"
     prop-types "^15.7.2"
     react-is "^16.9.0"
