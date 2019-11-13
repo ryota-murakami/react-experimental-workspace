@@ -9,9 +9,7 @@ class TodoListComponent extends Component {
     if (!data.length)
       throw new AppLayerError('todolist must have at least one item.')
 
-    const items = data.map((v, i) => (
-      <Item key={i} todo={v} />
-    ))
+    const items = data.map((v, i) => <Item key={i} todo={v} />)
 
     return <Container>{items}</Container>
   }

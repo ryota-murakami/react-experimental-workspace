@@ -1,12 +1,40 @@
 {
-  "extends": "react-app",
-  "parser": "babel-eslint",
+  "extends": [
+    "react-app",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint"
+  ],
+  "parser": "@typescript-eslint/parser",
   "plugins": [
+    "react-hooks",
+    "@typescript-eslint",
     "prettier"
   ],
+  "globals": {
+    "context": "readonly",
+    "cy": "readonly",
+    "assert": "readonly",
+    "Cypress": "readonly"
+  },
   "rules": {
-    "prettier/prettier": ["error", {"singleQuote": true,"semi": false}],
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": false
+      }
+    ],
+    "no-unused-vars": [
+      "error"
+    ],
     "jsx-a11y/href-no-hash": "off",
-    no-useless-escape: "off"
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "no-console": "error"
   }
 }

@@ -15,7 +15,6 @@ const StyledLink = styled(PureLink)`
   }
 `
 
-
 export const Link = ({ to, children }) => {
   return (
     <LinkWrapper>

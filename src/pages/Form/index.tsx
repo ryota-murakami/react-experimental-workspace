@@ -13,13 +13,13 @@ import {
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i /* eslint-disable-line */
 
-type State = {
-  email: string,
-  emailErrorMessage: string,
-  password: string,
-  passwordErrorMessage: string,
-  flashMessage: string,
-  hasError: boolean,
+interface State {
+  email: string
+  emailErrorMessage: string
+  password: string
+  passwordErrorMessage: string
+  flashMessage: string
+  hasError: boolean
   showFlash: boolean
 }
 
@@ -35,7 +35,7 @@ class Form extends Component<{}, State> {
   }
 
   showFlashMessage = () => {
-      return <FlashMessage state={this.state} />
+    return <FlashMessage state={this.state} />
   }
 
   handleEmailInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
