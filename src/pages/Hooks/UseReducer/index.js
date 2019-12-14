@@ -27,7 +27,6 @@ const layout = css`
 const initialState = { count: 0 }
 
 const reducer = (state, action) => {
-  console.log(action)
   switch (action.type) {
     case 'increment':
       return { count: state.count + 1 }
