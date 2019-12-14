@@ -15,7 +15,7 @@ const layout = css`
   align-items: center;
 `
 
-function View(props) {
+function View() {
   const { store, setStore } = useContext(StoreContext)
 
   return (
