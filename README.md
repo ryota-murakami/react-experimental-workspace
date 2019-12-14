@@ -9,4 +9,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c43b981-1728-4102-9d7c-2fe49a9568a1/deploy-status)](https://app.netlify.com/sites/reactgarden/deploys)
 
 The repo is personal use [Create React App](https://create-react-app.dev/) based React Sandbox for experiment React's new feature, way of implementation something etc...  
+
+So I have no intention to publishing as a polite OSS Project about the repo.  
+
 Also the repo was bootstraped [Create React App TypeScript Templete](https://create-react-app.dev/docs/getting-started#creating-a-typescript-app)!! 🤗
