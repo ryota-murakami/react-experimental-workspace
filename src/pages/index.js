@@ -15,6 +15,7 @@ class Index extends Component {
           <Header>React Workspace</Header>
         </HeaderContainer>
         <LinkContainer>
+          <Link to="/play">・Play Ground</Link>
           <Link to="/hooks">・Hooks</Link>
           <Link to="/context">・Context</Link>
           <Link to="/todo">・Todo</Link>

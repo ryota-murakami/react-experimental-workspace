@@ -5,6 +5,7 @@ import Pages from './pages'
 import NotFound from './pages/NotFound'
 import SelectBox from './pages/SelectBox'
 
+const PlayGround = lazy(() => import('./pages/PlayGround'))
 const Todo = lazy(() => import('./pages/Todo'))
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
@@ -19,6 +20,7 @@ const Routes = () => {
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/" component={Pages} />
+          <Route exact path="/play" component={PlayGround} />
           <Route exact path="/todo" component={Todo} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
