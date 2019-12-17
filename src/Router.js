@@ -14,7 +14,7 @@ const Hooks = lazy(() => import('./pages/Hooks'))
 const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
 const Modal = lazy(() => import('./pages/Modal'))
 
-const Routes = () => {
+const Router = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
@@ -36,4 +36,4 @@ const Routes = () => {
   )
 }
 
-export default Routes
+export default Router
