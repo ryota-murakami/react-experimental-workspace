@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Loading } from './components/Loading'
-import Pages from './pages'
+import Index from './pages'
 import NotFound from './pages/NotFound'
 import SelectBox from './pages/SelectBox'
 
@@ -19,7 +19,7 @@ const Routes = () => {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Switch>
-          <Route exact path="/" component={Pages} />
+          <Route exact path="/" component={Index} />
           <Route exact path="/play" component={PlayGround} />
           <Route exact path="/todo" component={Todo} />
           <Route exact path="/form" component={Form} />
