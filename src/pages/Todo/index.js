@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Input, Button, Text } from '../../elements'
 import { Container, InputSlice } from './index.style'
 import { UUID } from '../../functions'
 import TodoList from './TodoList/index'
+import { Text } from '../../components/Text'
+import { Input } from '../../components/input'
+import { Button } from '../../components/Button'
 
 class App extends Component {
   state = { currentInput: '' }
