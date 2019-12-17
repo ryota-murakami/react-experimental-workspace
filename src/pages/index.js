@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
-import {
-  Container,
-  Header,
-  LinkContainer,
-  HeaderContainer
-} from './index.style'
+import { Layout } from './index.style'
 import { Link } from '../components/Link'
 
 class Index extends Component {
   render() {
     return (
-      <Container>
-        <HeaderContainer>
-          <Header>React Workspace</Header>
-        </HeaderContainer>
-        <LinkContainer>
+      <Layout>
+        <header>
+          <h1>React Workspace</h1>
+        </header>
+        <main>
           <Link to="/play">・Play Ground</Link>
           <Link to="/hooks">・Hooks</Link>
           <Link to="/context">・Context</Link>
@@ -23,8 +18,8 @@ class Index extends Component {
           <Link to="/anime">・CSS Animation</Link>
           <Link to="/modal">・Modal</Link>
           <Link to="/selectbox">・SelectBox</Link>
-        </LinkContainer>
-      </Container>
+        </main>
+      </Layout>
     )
   }
 }
