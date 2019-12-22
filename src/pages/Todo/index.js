@@ -4,7 +4,7 @@ import { Container, InputSlice } from './index.style'
 import { UUID } from '../../functions'
 import TodoList from './TodoList/index'
 import { Text } from '../../components/Text'
-import { Input } from '../../components/input'
+import { Input } from '../../components/Input'
 import { Button } from '../../components/Button'
 
 class App extends Component {
