@@ -13,7 +13,6 @@ class Index extends Component {
           <Link to="/play">・Play Ground</Link>
           <Link to="/hooks">・Hooks</Link>
           <Link to="/context">・Context</Link>
-          <Link to="/todo">・Todo</Link>
           <Link to="/form">・Form</Link>
           <Link to="/anime">・CSS Animation</Link>
           <Link to="/modal">・Modal</Link>
