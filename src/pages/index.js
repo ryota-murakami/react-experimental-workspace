@@ -7,7 +7,7 @@ class Index extends Component {
     return (
       <Layout>
         <header>
-          <h1>React Workspace</h1>
+          <h1>React Garden</h1>
         </header>
         <main>
           <Link to="/play">・Play Ground</Link>

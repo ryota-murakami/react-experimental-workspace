@@ -20,6 +20,14 @@
     "react-spinners": "^0.6.1",
     "redux": "^4.0.4"
   },
+  "devDependencies": {
+    "cypress": "^3.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,7 +35,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "cypress:open": "cypress open",
+    "cypress:run" : "cypress run --record --key 6c91982e-f03e-4b7a-b4d4-f245c515aea5"
   },
   "browserslist": {
     "production": [
@@ -40,13 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "cypress": "^3.8.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-config-typescript": "^3.0.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "prettier": "^1.19.1",
-    "typescript": "^3.7.4"
   }
 }
