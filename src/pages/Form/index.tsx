@@ -37,6 +37,7 @@ class Form extends Component<{}, State> {
   showFlashMessage = () => {
     return (
       <FlashMessage
+        showFlash={this.state.showFlash}
         flashMessage={this.state.flashMessage}
         hasError={this.state.hasError}
       />

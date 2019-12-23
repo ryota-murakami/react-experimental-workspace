@@ -32,16 +32,16 @@ export const Title = styled.div`
   margin-bottom: 30px;
 `
 
-interface FlashMessageProps {
-  flashMessage: string
+interface FlashMessageWrapperProps {
   hasError: boolean
+  showFlash: boolean
 }
 
-const FlashMessageWrapper = styled.div<FlashMessageProps>`
+const FlashMessageWrapper = styled.div<FlashMessageWrapperProps>`
   position: fixed;
   top: 0;
   background-color: ${props => (props.hasError ? 'crimson' : 'green')};
-  opacity: ${props => (props.flashMessage.length ? 0.6 : 0)};
+  opacity: ${props => (props.showFlash ? 0.6 : 0)};
   width: 100%;
   height: 80px;
   display: flex;
@@ -54,9 +54,19 @@ const FlashMessageWrapper = styled.div<FlashMessageProps>`
   transition: opacity 0.3s ease-in-out;
 `
 
-export const FlashMessage = ({ flashMessage, hasError }: FlashMessageProps) => {
+interface FlashMessageProps {
+  flashMessage: string
+  hasError: boolean
+  showFlash: boolean
+}
+
+export const FlashMessage = ({
+  flashMessage,
+  hasError,
+  showFlash
+}: FlashMessageProps) => {
   return (
-    <FlashMessageWrapper flashMessage={flashMessage} hasError={hasError}>
+    <FlashMessageWrapper showFlash={showFlash} hasError={hasError}>
       {flashMessage}
     </FlashMessageWrapper>
   )
