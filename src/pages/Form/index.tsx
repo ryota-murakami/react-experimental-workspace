@@ -35,14 +35,19 @@ class Form extends Component<{}, State> {
   }
 
   showFlashMessage = () => {
-    return <FlashMessage state={this.state} />
+    return (
+      <FlashMessage
+        flashMessage={this.state.flashMessage}
+        hasError={this.state.hasError}
+      />
+    )
   }
 
-  handleEmailInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  handleEmailInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ email: e.currentTarget.value })
   }
 
-  handlePasswordInput = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  handlePasswordInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ password: e.currentTarget.value })
   }
 

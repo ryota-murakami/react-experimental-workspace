@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import { Link as PureLink } from 'react-router-dom'
 
 const LinkWrapper = styled.div`

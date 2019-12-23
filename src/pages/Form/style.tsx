@@ -1,5 +1,6 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
 export const FullScreen = styled.div`
   width: 100%;
@@ -31,7 +32,12 @@ export const Title = styled.div`
   margin-bottom: 30px;
 `
 
-const FlashMessageWrapper = styled.div`
+interface FlashMessageProps {
+  flashMessage: string
+  hasError: boolean
+}
+
+const FlashMessageWrapper = styled.div<FlashMessageProps>`
   position: fixed;
   top: 0;
   background-color: ${props => (props.hasError ? 'crimson' : 'green')};
@@ -48,14 +54,10 @@ const FlashMessageWrapper = styled.div`
   transition: opacity 0.3s ease-in-out;
 `
 
-export const FlashMessage = props => {
-  const { state } = props
+export const FlashMessage = ({ flashMessage, hasError }: FlashMessageProps) => {
   return (
-    <FlashMessageWrapper
-      flashMessage={state.flashMessage}
-      hasError={state.hasError}
-    >
-      {state.flashMessage}
+    <FlashMessageWrapper flashMessage={flashMessage} hasError={hasError}>
+      {flashMessage}
     </FlashMessageWrapper>
   )
 }
@@ -76,7 +78,11 @@ export const Label = styled.div`
   margin-bottom: 10px;
 `
 
-export const TextInput = styled.input`
+interface TextInputProps {
+  hasError: boolean
+}
+
+export const TextInput = styled.input<TextInputProps>`
   padding: 0.5rem;
   font-size: 16px;
   width: 100%;
