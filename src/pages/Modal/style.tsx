@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
 
-
 // flex container for Row
 export const Layout = styled.div`
   width: 100%;
