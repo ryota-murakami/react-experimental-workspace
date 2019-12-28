@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { Fragment, useState, Dispatch, SetStateAction } from 'react'
 import { Layout, Row } from './style'
 import { Button } from '@material-ui/core'
+import Overlay from './Overlay'
 
-const ModalPage: React.FC = () => {
+export interface ModalState {
+  isOpen: boolean
+}
+
+const Page: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
+  setState
+}) => {
   function openModal(): void {
-    // @TODO show overlay that would be cover whole screen
-    // @TODO should be close Modal when you click overlay
+    setState(prev => {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      return { isOpen: prev.isOpen! }
+    })
   }
 
   return (
@@ -22,4 +31,15 @@ const ModalPage: React.FC = () => {
   )
 }
 
-export default ModalPage
+const App: React.FC = () => {
+  const [state, setState] = useState<ModalState>({ isOpen: false })
+
+  return (
+    <Fragment>
+      <Overlay isOpen={state.isOpen} />
+      <Page setState={setState} />
+    </Fragment>
+  )
+}
+
+export default App

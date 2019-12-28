@@ -1,9 +1,14 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { ModalState } from './index'
 
-const Screen = styled.div`
+interface Props {
+  isOpen: ModalState['isOpen']
+}
+
+const Screen = styled.div<Props>`
   position: absolute;
-  display: none;
+  display: ${props => (props.isOpen ? 'block' : 'none')};
   width: 100%;
   height: 100%;
   top: 0;
@@ -15,8 +20,8 @@ const Screen = styled.div`
 `
 
 // @TODO should be close Modal when you click overlay
-const Overlay: React.FC = () => {
-  return <Screen />
+const Overlay: React.FC<Props> = ({ isOpen }) => {
+  return <Screen isOpen />
 }
 
 export default Overlay
