@@ -21,7 +21,7 @@ const Screen = styled.div<Props>`
 
 // @TODO should be close Modal when you click overlay
 const Overlay: React.FC<Props> = ({ isOpen }) => {
-  return <Screen isOpen />
+  return <Screen isOpen={isOpen} />
 }
 
 export default Overlay
