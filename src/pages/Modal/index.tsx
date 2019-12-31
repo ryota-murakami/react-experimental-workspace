@@ -12,8 +12,7 @@ const Page: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
 }) => {
   function openModal(): void {
     setState(prev => {
-      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-      return { isOpen: prev.isOpen! }
+      return { isOpen: !prev.isOpen }
     })
   }
 
