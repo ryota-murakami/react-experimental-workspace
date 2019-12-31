@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { ModalState } from './index'
+import { ModalState } from './'
 
 interface Props {
   isOpen: ModalState['isOpen']
