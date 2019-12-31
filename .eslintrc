@@ -28,7 +28,6 @@
     "no-unused-vars": [
       "error"
     ],
-    "no-console": "error",
     "jsx-a11y/href-no-hash": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
