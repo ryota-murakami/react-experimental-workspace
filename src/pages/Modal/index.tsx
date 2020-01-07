@@ -7,7 +7,7 @@ export interface ModalState {
   isOpen: boolean
 }
 
-const Page: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
+const View: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
   setState
 }) => {
   function openModal(): void {
@@ -36,7 +36,7 @@ const App: React.FC = () => {
   return (
     <Fragment>
       <Overlay isOpen={state.isOpen} />
-      <Page setState={setState} />
+      <View setState={setState} />
     </Fragment>
   )
 }
