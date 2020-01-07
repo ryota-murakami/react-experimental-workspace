@@ -5,7 +5,7 @@ import Index from './pages'
 import NotFound from './pages/NotFound'
 import SelectBox from './pages/SelectBox'
 
-const PlayGround = lazy(() => import('./pages/PlayGround'))
+const FreeSpace = lazy(() => import('./pages/FreeSpace'))
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
 const Context = lazy(() => import('./pages/Context'))
@@ -19,7 +19,7 @@ const Router = () => {
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/play" component={PlayGround} />
+          <Route exact path="/free" component={FreeSpace} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
