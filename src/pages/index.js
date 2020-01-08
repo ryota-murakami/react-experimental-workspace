@@ -11,6 +11,7 @@ class Index extends Component {
         </header>
         <main>
           <Link to="/free">・Free Space</Link>
+          <Link to="/framer">・Framer X</Link>
           <Link to="/hooks">・Hooks</Link>
           <Link to="/context">・Context</Link>
           <Link to="/form">・Form</Link>
