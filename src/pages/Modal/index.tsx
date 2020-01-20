@@ -12,7 +12,7 @@ const View: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
 }) => {
   function openModal(): void {
     setState(prev => {
-      return { isOpen: !prev.isOpen }
+      return { isOpen: true }
     })
   }
 
