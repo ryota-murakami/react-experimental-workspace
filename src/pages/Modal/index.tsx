@@ -1,4 +1,4 @@
-import React, { Fragment, useState, Dispatch, SetStateAction } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Layout, Row } from './style'
 import { Button } from '@material-ui/core'
 import ModalKit from './ModalKit'
@@ -7,15 +7,8 @@ export interface ModalState {
   isOpen: boolean
 }
 
-const View: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
-  setState
-}) => {
-  function openModal(): void {
-    setState(() => {
-      return { isOpen: true }
-    })
-  }
-
+// @TODO give certainly type to any
+const View: React.FC<{ openModal: any }> = ({ openModal }) => {
   return (
     <Layout>
       <Row>
@@ -33,10 +26,22 @@ const View: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
 const App: React.FC = () => {
   const [state, setState] = useState<ModalState>({ isOpen: false })
 
+  function openModal(): void {
+    setState(() => {
+      return { isOpen: true }
+    })
+  }
+
+  function closeModal(): void {
+    setState(() => {
+      return { isOpen: false }
+    })
+  }
+
   return (
     <Fragment>
-      <ModalKit isOpen={state.isOpen} />
-      <View setState={setState} />
+      <ModalKit isOpen={state.isOpen} closeModal={closeModal} />
+      <View openModal={openModal} />
     </Fragment>
   )
 }
