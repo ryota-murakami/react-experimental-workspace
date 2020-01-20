@@ -1,7 +1,7 @@
 import React, { Fragment, useState, Dispatch, SetStateAction } from 'react'
 import { Layout, Row } from './style'
 import { Button } from '@material-ui/core'
-import Overlay from './Overlay'
+import Overlay from './ModalKit/Overlay'
 
 export interface ModalState {
   isOpen: boolean
@@ -11,7 +11,7 @@ const View: React.FC<{ setState: Dispatch<SetStateAction<ModalState>> }> = ({
   setState
 }) => {
   function openModal(): void {
-    setState(prev => {
+    setState(() => {
       return { isOpen: true }
     })
   }
