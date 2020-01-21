@@ -10,7 +10,7 @@ interface Props {
 const ModalKit: React.FC<Props> = ({ isOpen, closeModal }) => {
   return (
     <>
-      <Overlay isOpen={isOpen} colseModal={closeModal} />
+      <Overlay isOpen={isOpen} closeModal={closeModal} />
     </>
   )
 }
