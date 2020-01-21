@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { ModalState } from '../index'
+import { closeModal, ModalState } from '../index'
 
 const Screen = styled.div<{ isOpen: ModalState['isOpen'] }>`
   position: absolute;
@@ -17,8 +17,7 @@ const Screen = styled.div<{ isOpen: ModalState['isOpen'] }>`
 
 interface Props {
   isOpen: ModalState['isOpen']
-  // @TODO give certainly type to any
-  colseModal: any
+  colseModal: closeModal
 }
 
 // @TODO should be close Modal when you click overlay

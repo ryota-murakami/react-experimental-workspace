@@ -1,11 +1,10 @@
 import React from 'react'
-import { ModalState } from '../index'
+import { closeModal, ModalState } from '../index'
 import Overlay from './Overlay'
 
 interface Props {
   isOpen: ModalState['isOpen']
-  // @TODO give certainly type to any
-  closeModal: any
+  closeModal: closeModal
 }
 
 const ModalKit: React.FC<Props> = ({ isOpen, closeModal }) => {

@@ -7,8 +7,7 @@ export interface ModalState {
   isOpen: boolean
 }
 
-// @TODO give certainly type to any
-const View: React.FC<{ openModal: any }> = ({ openModal }) => {
+const View: React.FC<{ openModal: openModal }> = ({ openModal }) => {
   return (
     <Layout>
       <Row>
@@ -23,16 +22,19 @@ const View: React.FC<{ openModal: any }> = ({ openModal }) => {
   )
 }
 
+type openModal = () => void
+export type closeModal = () => void
+
 const App: React.FC = () => {
   const [state, setState] = useState<ModalState>({ isOpen: false })
 
-  function openModal(): void {
+  const openModal: openModal = () => {
     setState(() => {
       return { isOpen: true }
     })
   }
 
-  function closeModal(): void {
+  const closeModal: closeModal = () => {
     setState(() => {
       return { isOpen: false }
     })
