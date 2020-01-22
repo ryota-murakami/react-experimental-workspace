@@ -59,7 +59,7 @@ interface Props {
 
 const Modal: React.FC<Props> = ({ isOpen, closeModal }) => {
   return (
-    <Layout isOpen={isOpen}>
+    <Layout isOpen={isOpen} data-cy="modal">
       <Head>Modal</Head>
       <Content>
         <p>
@@ -78,7 +78,12 @@ const Modal: React.FC<Props> = ({ isOpen, closeModal }) => {
         </p>
       </Content>
       <Bottom>
-        <Button variant="contained" color="primary" onClick={closeModal}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={closeModal}
+          data-cy="modal-close-button"
+        >
           Close
         </Button>
       </Bottom>

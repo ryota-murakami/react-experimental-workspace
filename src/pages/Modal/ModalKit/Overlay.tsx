@@ -25,7 +25,7 @@ interface Props {
 }
 
 const Overlay: React.FC<Props> = ({ isOpen, closeModal }) => (
-  <Styled isOpen={isOpen} onClick={closeModal} />
+  <Styled isOpen={isOpen} onClick={closeModal} data-cy="overlay" />
 )
 
 export default Overlay

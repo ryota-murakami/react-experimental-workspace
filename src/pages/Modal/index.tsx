@@ -14,7 +14,12 @@ const View: React.FC<{ openModal: openModal }> = ({ openModal }) => {
         <h1>Modal</h1>
       </Row>
       <Row>
-        <Button variant="contained" color="primary" onClick={openModal}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={openModal}
+          data-cy="open-modal-button"
+        >
           Open
         </Button>
       </Row>
