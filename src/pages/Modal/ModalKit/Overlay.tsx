@@ -2,7 +2,6 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { closeModal, ModalState } from '../index'
 
-// @todo refactor unnecessary
 const OverlayStyledComponent = styled.div<{ isOpen: ModalState['isOpen'] }>`
   position: absolute;
   display: ${props => (props.isOpen ? 'block' : 'none')};
