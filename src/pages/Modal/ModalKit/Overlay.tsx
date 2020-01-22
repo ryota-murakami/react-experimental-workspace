@@ -2,7 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { closeModal, ModalState } from '../index'
 
-const OverlayStyledComponent = styled.div<{ isOpen: ModalState['isOpen'] }>`
+interface StyledProps {
+  isOpen: ModalState['isOpen']
+}
+
+const OverlayStyledComponent = styled.div<StyledProps>`
   position: absolute;
   display: ${props => (props.isOpen ? 'block' : 'none')};
   width: 100%;
