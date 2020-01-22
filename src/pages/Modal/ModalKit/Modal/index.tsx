@@ -45,12 +45,9 @@ const Modal: React.FC<Props> = ({ isOpen, closeModal }) => {
       <Head>Modal</Head>
       <Content>I'm content.</Content>
       <Bottom>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={closeModal}
-        ></Button>
-        Close
+        <Button variant="contained" color="primary" onClick={closeModal}>
+          Close
+        </Button>
       </Bottom>
     </Layout>
   )
