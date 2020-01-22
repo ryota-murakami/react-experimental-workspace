@@ -6,7 +6,7 @@ interface StyledProps {
   isOpen: ModalState['isOpen']
 }
 
-const OverlayStyledComponent = styled.div<StyledProps>`
+const Styled = styled.div<StyledProps>`
   position: absolute;
   display: ${props => (props.isOpen ? 'block' : 'none')};
   width: 100%;
@@ -25,7 +25,7 @@ interface Props {
 }
 
 const Overlay: React.FC<Props> = ({ isOpen, closeModal }) => (
-  <OverlayStyledComponent isOpen={isOpen} onClick={closeModal} />
+  <Styled isOpen={isOpen} onClick={closeModal} />
 )
 
 export default Overlay
