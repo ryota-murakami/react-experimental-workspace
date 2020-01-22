@@ -4,7 +4,6 @@ import { jsx } from '@emotion/core'
 import styled from '@emotion/styled'
 import { Button } from '@material-ui/core'
 import { closeModal, ModalState } from '../../index'
-// @TODO show Modal itself that contain contents, close Button
 
 interface LayoutProps {
   isOpen: boolean
