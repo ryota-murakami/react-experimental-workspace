@@ -10,7 +10,6 @@ class Index extends Component {
           <h1>React Garden</h1>
         </header>
         <main>
-          <Link to="/free">・Free Space</Link>
           <Link to="/framer">・Framer X</Link>
           <Link to="/hooks">・Hooks</Link>
           <Link to="/context">・Context</Link>
