@@ -8,7 +8,7 @@ interface Props {
   closeModal: closeModal
 }
 
-const ModalKit: React.FC<Props> = ({ isOpen, closeModal }) => {
+const ModalOverlay: React.FC<Props> = ({ isOpen, closeModal }) => {
   return (
     <>
       <Modal isOpen={isOpen} closeModal={closeModal} />
@@ -17,4 +17,4 @@ const ModalKit: React.FC<Props> = ({ isOpen, closeModal }) => {
   )
 }
 
-export default ModalKit
+export default ModalOverlay

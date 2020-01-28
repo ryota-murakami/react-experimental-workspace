@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { Layout, Row } from './style'
 import { Button } from '@material-ui/core'
-import ModalKit from './ModalKit'
+import ModalOverlay from './ModalOverlay'
 
 export interface ModalState {
   isOpen: boolean
@@ -47,7 +47,7 @@ const App: React.FC = () => {
 
   return (
     <Fragment>
-      <ModalKit isOpen={state.isOpen} closeModal={closeModal} />
+      <ModalOverlay isOpen={state.isOpen} closeModal={closeModal} />
       <View openModal={openModal} />
     </Fragment>
   )

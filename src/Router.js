@@ -5,8 +5,6 @@ import Index from './pages'
 import NotFound from './pages/NotFound'
 import SelectBox from './pages/SelectBox'
 
-const FreeSpace = lazy(() => import('./pages/FreeSpace'))
-const Framer = lazy(() => import('./pages/Framer'))
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
 const Context = lazy(() => import('./pages/Context'))
@@ -20,8 +18,6 @@ const Router = () => {
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/framer" component={Framer} />
-          <Route exact path="/free" component={FreeSpace} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
