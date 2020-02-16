@@ -11,13 +11,13 @@ const Container = styled.div`
   border-radius: 10px;
 `
 
-const FunctionalComponent: React.FC = () => {
-  console.log('rendered: FunctionalComponent')
+const FunctionComponent: React.FC = () => {
+  console.log('rendered: FunctionComponent')
   return (
     <Container>
-      <p>Functional Component</p>
+      <p>Function Component</p>
     </Container>
   )
 }
 
-export default FunctionalComponent
+export default FunctionComponent

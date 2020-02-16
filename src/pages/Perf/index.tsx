@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Row } from './style'
-import FunctionalComponent from './FunctionCompoment'
+import FunctionComponent from './FunctionCompoment'
 import Menu from './Menu'
 
-const MemoFunctionalComponent = React.memo(FunctionalComponent)
+const MemoFunctionComponent = React.memo(FunctionComponent)
 
 interface State {
   number: number
@@ -21,10 +21,10 @@ const Perf: React.FC = () => {
     <Container>
       <Menu incrementNumber={incrementNumber} />
       <Row>
-        <FunctionalComponent />
+        <FunctionComponent />
       </Row>
       <Row>
-        <MemoFunctionalComponent />
+        <MemoFunctionComponent />
       </Row>
     </Container>
   )
