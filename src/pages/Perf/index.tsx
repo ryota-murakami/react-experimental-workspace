@@ -1,14 +1,15 @@
 import React from 'react'
 import { Container, Row } from './style'
+import FunctionalComponent from './FunctionCompoment'
 
 const Perf: React.FC = () => {
   return (
     <Container>
       <Row>
-        <h1>aaaaa</h1>
+        <FunctionalComponent />
       </Row>
-      <Row>
-        <h2>iojoiji</h2>
+      <Row style={{ marginTop: '10px' }}>
+        <FunctionalComponent />
       </Row>
     </Container>
   )
