@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { Container, Row } from './style'
 import FunctionComponent from './FunctionCompoment'
+import MemoFunctionComponent from './MemoFunctionComponent'
 import Menu from './Menu'
-
-const MemoFunctionComponent = React.memo(FunctionComponent)
 
 interface State {
   number: number
@@ -13,6 +12,7 @@ interface State {
 const Perf: React.FC = () => {
   const [state, setState] = useState<State>({ number: 0, text: 'hello' })
 
+  // cause Perf component re-render
   function incrementNumber(): void {
     setState({ number: state.number + 1, ...state })
   }
