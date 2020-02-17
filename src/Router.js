@@ -11,6 +11,7 @@ const Anime = lazy(() => import('./pages/Anime'))
 const Context = lazy(() => import('./pages/Context'))
 const Hooks = lazy(() => import('./pages/Hooks'))
 const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
+const UseMemo = lazy(() => import('./pages/Hooks/UseMemo'))
 const Modal = lazy(() => import('./pages/Modal'))
 
 const Router = () => {
@@ -25,6 +26,7 @@ const Router = () => {
           <Route exact path="/context" component={Context} />
           <Route exact path="/hooks" component={Hooks} />
           <Route exact path="/hooks/usereducer" component={UseReducer} />
+          <Route exact path="/hooks/usememo" component={UseMemo} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/selectbox" component={SelectBox} />
           <Route component={NotFound} />
