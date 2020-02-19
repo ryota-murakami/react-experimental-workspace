@@ -23,7 +23,12 @@ interface Props {
 const Menu: React.FC<Props> = ({ incrementNumber }) => {
   return (
     <Container>
-      <Button style={{height: "40px", paddingLeft: "20px"}} variant="contained" color="primary" onClick={incrementNumber}>
+      <Button
+        style={{ height: '40px', paddingLeft: '20px' }}
+        variant="contained"
+        color="primary"
+        onClick={incrementNumber}
+      >
         Increment
       </Button>
     </Container>
