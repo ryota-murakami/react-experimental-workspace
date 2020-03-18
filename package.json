@@ -19,12 +19,7 @@
     "react-spinners": "^0.8.1"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "babel-plugin-emotion": "^10.0.27",
-    "cypress": "^4.0.2",
-=======
     "cypress": "^4.2.0",
->>>>>>> ad14a9194de82484ed1be6215831b5e2dd04efc4
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.2",
