@@ -4,7 +4,6 @@ import { Loading } from './components/Loading'
 import Index from './pages'
 import NotFound from './pages/NotFound'
 import SelectBox from './pages/SelectBox'
-import Perf from './pages/Perf'
 
 const Form = lazy(() => import('./pages/Form'))
 const Anime = lazy(() => import('./pages/Anime'))
@@ -20,7 +19,6 @@ const Router = () => {
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/" component={Index} />
-          <Route exact path="/perf" component={Perf} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
