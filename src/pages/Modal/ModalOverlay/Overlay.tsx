@@ -8,7 +8,7 @@ interface StyledProps {
 
 const Styled = styled.div<StyledProps>`
   position: absolute;
-  display: ${props => (props.isOpen ? 'block' : 'none')};
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
   width: 100%;
   height: 100%;
   top: 0;

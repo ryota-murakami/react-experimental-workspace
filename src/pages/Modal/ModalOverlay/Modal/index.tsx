@@ -22,9 +22,9 @@ const Layout = styled.div<LayoutProps>(
     marginLeft: '-300px',
     top: '50%',
     marginTop: '-180px',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
-  props => ({ display: props.isOpen ? 'flex' : 'none' })
+  (props) => ({ display: props.isOpen ? 'flex' : 'none' })
 )
 
 const Head = styled.div`

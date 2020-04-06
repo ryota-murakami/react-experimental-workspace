@@ -40,8 +40,8 @@ interface FlashMessageWrapperProps {
 const FlashMessageWrapper = styled.div<FlashMessageWrapperProps>`
   position: fixed;
   top: 0;
-  background-color: ${props => (props.hasError ? 'crimson' : 'green')};
-  opacity: ${props => (props.showFlash ? 0.6 : 0)};
+  background-color: ${(props) => (props.hasError ? 'crimson' : 'green')};
+  opacity: ${(props) => (props.showFlash ? 0.6 : 0)};
   width: 100%;
   height: 80px;
   display: flex;
@@ -63,7 +63,7 @@ interface FlashMessageProps {
 export const FlashMessage = ({
   flashMessage,
   hasError,
-  showFlash
+  showFlash,
 }: FlashMessageProps) => {
   return (
     <FlashMessageWrapper showFlash={showFlash} hasError={hasError}>
@@ -100,7 +100,7 @@ export const TextInput = styled.input<TextInputProps>`
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-bottom: 8px;
-  ${props =>
+  ${(props) =>
     props.hasError &&
     css`
       border-color: red;

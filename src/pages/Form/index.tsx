@@ -8,7 +8,7 @@ import {
   Container,
   Title,
   FlashMessage,
-  ErrorMessage
+  ErrorMessage,
 } from './style'
 
 const EmailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i /* eslint-disable-line */
@@ -31,7 +31,7 @@ class Form extends Component<{}, State> {
     passwordErrorMessage: '',
     flashMessage: '',
     hasError: false,
-    showFlash: false
+    showFlash: false,
   }
 
   showFlashMessage = () => {
@@ -71,12 +71,12 @@ class Form extends Component<{}, State> {
     // password validate
     if (password.length === 0) {
       this.setState({
-        passwordErrorMessage: 'password is requred'
+        passwordErrorMessage: 'password is requred',
       })
       passwordErrorFlag = true
     } else if (password.length < 8) {
       this.setState({
-        passwordErrorMessage: 'password must be longer than 8 character'
+        passwordErrorMessage: 'password must be longer than 8 character',
       })
       passwordErrorFlag = true
     } else {
@@ -90,7 +90,7 @@ class Form extends Component<{}, State> {
         email: '',
         password: '',
         hasError: false,
-        showFlash: true
+        showFlash: true,
       })
       setTimeout(() => this.setState({ flashMessage: '', showFlash: false }), 1000) /* prettier-ignore */
       return
@@ -108,7 +108,7 @@ class Form extends Component<{}, State> {
       email,
       password,
       emailErrorMessage,
-      passwordErrorMessage
+      passwordErrorMessage,
     } = this.state
 
     const hasEmailError: boolean = emailErrorMessage.length > 0
