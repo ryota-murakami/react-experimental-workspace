@@ -5,7 +5,7 @@ import {
   Background,
   WhiteBoard,
   ElementContainer,
-  ElementItem
+  ElementItem,
 } from './index.style'
 import { Grow } from './Grow'
 import { HideShow } from './HideShow'

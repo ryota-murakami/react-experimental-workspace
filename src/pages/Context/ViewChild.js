@@ -15,7 +15,7 @@ const Container = styled.div`
 const ViewChild = () => {
   const {
     store: { age },
-    setStore
+    setStore,
   } = useContext(StoreConext)
   return (
     <Container>

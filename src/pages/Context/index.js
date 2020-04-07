@@ -6,7 +6,7 @@ import Friends from './Friends'
 const store = {
   name: 'jack',
   age: 34,
-  friends: ['mark', 'james', 'martin']
+  friends: ['mark', 'james', 'martin'],
 }
 
 class Context extends Component {
@@ -17,7 +17,7 @@ class Context extends Component {
           style={{
             display: 'flex',
             flexDirection: 'row',
-            alignItems: 'center'
+            alignItems: 'center',
           }}
         >
           <Friends />

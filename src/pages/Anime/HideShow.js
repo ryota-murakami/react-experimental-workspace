@@ -15,11 +15,11 @@ function MaterialStyled(Component) {
     }
     StyledComponent.propTypes = {
       classes: PropTypes.object.isRequired,
-      className: PropTypes.string
+      className: PropTypes.string,
     }
     const styles =
       typeof style === 'function'
-        ? theme => ({ root: style(theme) })
+        ? (theme) => ({ root: style(theme) })
         : { root: style }
     return withStyles(styles, options)(StyledComponent)
   }
@@ -45,7 +45,7 @@ const ButtonContainer = styled.div`
 const StyledButton = MaterialStyled(Button)({
   borderRadius: '5px',
   border: '#37da24 2px solid',
-  color: '#37da24'
+  color: '#37da24',
 })
 
 const Circle = styled.div`
@@ -53,13 +53,13 @@ const Circle = styled.div`
   height: 200px;
   background-color: #434343;
   border-radius: 50%;
-  opacity: ${props => (props.toggle ? '1' : '0')};
+  opacity: ${(props) => (props.toggle ? '1' : '0')};
   transition: opacity 0.3s linear;
 `
 
 export class HideShow extends Component {
   state = {
-    toggle: false
+    toggle: false,
   }
 
   handleClick = () => {

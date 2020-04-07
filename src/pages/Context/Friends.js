@@ -17,7 +17,7 @@ const layout = css`
 function Friends() {
   const {
     store: { friends },
-    setStore
+    setStore,
   } = useContext(StoreContext)
 
   return (

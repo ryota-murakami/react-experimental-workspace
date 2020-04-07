@@ -3,7 +3,7 @@ import {
   Container,
   Header,
   LinkContainer,
-  HeaderContainer
+  HeaderContainer,
 } from './index.style'
 import { Link } from '../../components/Link'
 

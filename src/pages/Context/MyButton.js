@@ -5,11 +5,11 @@ import { withStyles } from '@material-ui/core/styles'
 
 const styles = {
   root: {
-    height: 58
-  }
+    height: 58,
+  },
 }
 
-const MyButton = props => {
+const MyButton = (props) => {
   const { classes, className } = props
   return (
     <Button
