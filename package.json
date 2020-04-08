@@ -35,7 +35,8 @@
     "lint:fix": "eslint . --ext .js.,.ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --record --key 6c91982e-f03e-4b7a-b4d4-f245c515aea5"
+    "cypress:run": "cypress run  --headed",
+    "cypress:run:headless": "cypress run"
   },
   "browserslist": {
     "production": [
