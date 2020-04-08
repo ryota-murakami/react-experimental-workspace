@@ -1,6 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled'
-import { css } from '@emotion/core'
+import styled, { css } from 'styled-components'
 
 export const FullScreen = styled.div`
   width: 100%;

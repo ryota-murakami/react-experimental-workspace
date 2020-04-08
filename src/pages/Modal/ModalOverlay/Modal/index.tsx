@@ -1,7 +1,5 @@
-/** @jsx jsx */
 import React from 'react'
-import { jsx } from '@emotion/core'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { Button } from '@material-ui/core'
 import { closeModal, ModalState } from '../../index'
 

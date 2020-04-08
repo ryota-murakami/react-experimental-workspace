@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import { CircleLoader } from 'react-spinners'
 
 const Container = styled.div`

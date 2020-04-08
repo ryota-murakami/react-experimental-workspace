@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { useReducer } from 'react'
-import { css, jsx } from '@emotion/core' /* eslint-disable-line */
+import React, { useReducer } from 'react'
+import { css } from 'styled-components'
 import Button from '@material-ui/core/Button'
 
 const container = css`

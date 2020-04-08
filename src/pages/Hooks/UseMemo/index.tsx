@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react'
-import styled from '@emotion/styled'
+import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 
 const Container = styled.div`
