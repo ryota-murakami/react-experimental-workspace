@@ -12,6 +12,7 @@ const Hooks = lazy(() => import('./pages/Hooks'))
 const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
 const UseMemo = lazy(() => import('./pages/Hooks/UseMemo'))
 const Modal = lazy(() => import('./pages/Modal'))
+const Recoil = lazy(() => import('./pages/Recoil'))
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
       <Suspense fallback={<Loading />}>
         <Switch>
           <Route exact path="/" component={Index} />
+          <Route exact path="/recoil" component={Recoil} />
           <Route exact path="/form" component={Form} />
           <Route exact path="/anime" component={Anime} />
           <Route exact path="/context" component={Context} />
