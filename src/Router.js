@@ -14,6 +14,7 @@ const UseMemo = lazy(() => import('./pages/Hooks/UseMemo'))
 const Modal = lazy(() => import('./pages/Modal'))
 const Recoil = lazy(() => import('./pages/Recoil'))
 const DnD = lazy(() => import('./pages/DnD'))
+const Tooltip = lazy(() => import('./pages/Tooltip'))
 
 const Router = () => {
   return (
@@ -31,6 +32,7 @@ const Router = () => {
           <Route exact path="/hooks/usememo" component={UseMemo} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/selectbox" component={SelectBox} />
+          <Route exact path="/tooltip" component={Tooltip} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>

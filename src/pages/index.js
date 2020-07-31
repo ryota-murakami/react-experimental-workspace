@@ -18,6 +18,7 @@ class Index extends Component {
           <Link to="/anime">・CSS Animation</Link>
           <Link to="/modal">・Modal</Link>
           <Link to="/selectbox">・SelectBox</Link>
+          <Link to="/tooltip">・Tooltip</Link>
         </main>
       </Layout>
     )
