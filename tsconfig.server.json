@@ -3,7 +3,9 @@
   "compilerOptions": {
     "module": "CommonJS",
     "noEmit": false,
-    "outDir": "backend/dist"
+    "outDir": "backend/dist",
+    "types": ["node", "jest", "express"],
+    "allowJs": false
   },
   "include": [
     "backend/**/*"

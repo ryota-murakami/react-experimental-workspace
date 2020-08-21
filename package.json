@@ -1,8 +1,6 @@
 {
   "name": "react-experimental-workspace",
-  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -21,7 +19,9 @@
     "react-scripts": "3.4.3",
     "react-spinners": "^0.9.0",
     "recoil": "^0.0.10",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.59"
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.2",
@@ -38,6 +38,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server-build": "tsc -p tsconfig.server.json",
+    "server-start": "ts-node --project tsconfig.server.json backend/server.ts",
+    "server-watch": "ts-node-dev -- backend/server.ts",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js.,.ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
