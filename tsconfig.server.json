@@ -5,7 +5,8 @@
     "noEmit": false,
     "outDir": "backend/dist",
     "types": ["node", "jest", "express"],
-    "allowJs": false
+    "allowJs": false,
+    "sourceMap": true
   },
   "include": [
     "backend/**/*"
