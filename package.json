@@ -29,6 +29,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
     "prettier": "^2.0.5",
     "typescript": "^3.9.7"
   },
@@ -38,8 +39,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "server-build": "tsc -p tsconfig.server.json",
-    "server-start": "ts-node --project tsconfig.server.json backend/server.ts",
-    "server-watch": "ts-node-dev -- backend/server.ts",
+    "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.server.json ./backend/server.ts",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js.,.ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
