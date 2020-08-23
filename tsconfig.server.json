@@ -16,6 +16,7 @@
     "backend/**/*"
   ],
   "exclude": [
-    "src/**/*"
+    "src/**/*",
+    "node_modules"
   ]
 }
