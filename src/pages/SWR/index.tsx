@@ -6,7 +6,8 @@ import { Layout, Contents } from './index.style'
 const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
 const SWRPage: React.FC = () => {
-  const { data, error } = useSWR('http://localhost:4000/', fetcher)
+  // @ts-ignore
+  const { data, error } = useSWR(process.env.REACT_APP_DEV_SERVER_URL, fetcher)
   if (error) return <div>ERROR!</div>
   if (!data) return <div>LOADING...</div>
 
