@@ -40,7 +40,11 @@ const DnDPage = () => {
       <Container>
         <h1>drag and drop</h1>
         <main>
-          <DropZone isDrop={isDrop} onDrop={(e) => onDrop(e)}>Drop Here!</DropZone>
+          <DropZone
+            isDrop={state.isDrop}
+            onDrop={(e) => onDrop(e)}
+            massage="Drop Here!"
+          />
           {state.isDrop ? null : <MeatIcon />}
         </main>
       </Container>
