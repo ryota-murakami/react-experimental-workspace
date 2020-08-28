@@ -1,10 +1,8 @@
 export class AppLayerError extends Error {
-  constructor(...args) {
-    super(...args)
+  constructor(msg: string) {
+    super(msg)
     this.name = 'AppLayerError'
-    this.message = args[0]
+    this.message = msg
     Error.captureStackTrace(this, AppLayerError)
   }
 }
-
-AppLayerError.__proto__ = undefined
