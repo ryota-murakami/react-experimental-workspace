@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { Layout, Container } from './index.style'
-import MeatIcon from './MeatIcon'
+import Icon from './Icon'
 import DropZone from './DropZone'
 
 interface DragState {
@@ -45,7 +45,7 @@ const DnDPage = () => {
             onDrop={(e) => onDrop(e)}
             massage="Drop Here!"
           />
-          {state.isDrop ? null : <MeatIcon />}
+          {state.isDrop ? null : <Icon />}
         </main>
       </Container>
     </Layout>
