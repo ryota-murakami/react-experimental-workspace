@@ -21,14 +21,16 @@
     "ts-node-dev": "^1.0.0-pre.59"
   },
   "devDependencies": {
-    "@types/styled-components": "^5.1.2",
+    "@testing-library/cypress": "^6.0.1",
     "@types/cors": "^2.8.7",
     "@types/express": "^4.17.7",
     "@types/jest": "^26.0.10",
     "@types/node": "^14.6.1",
     "@types/react": "^16.9.48",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.2",
     "cypress": "^5.0.0",
+    "cypress-react-unit-test": "^4.11.2",
     "eslint-config-prettier": "^6.11.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.4",
@@ -49,6 +51,11 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run  --headed",
     "cypress:run:headless": "cypress run"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.spec.js"
+    ]
   },
   "browserslist": {
     "production": [

@@ -25,6 +25,7 @@ yarn-error.log*
 #cypress
 cypress/videos
 cypress/screenshots
+.nyc_output
 
 #backend
 backend/dist
