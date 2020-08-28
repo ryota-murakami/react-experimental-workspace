@@ -1,5 +1,6 @@
 import React from 'react'
-import { Layout } from './index.style'
+import { Layout } from './style'
+import Icon from '../Icon'
 
 interface Props {
   isDrop: boolean
@@ -12,6 +13,7 @@ const DropZone: React.FC<Props & React.AllHTMLAttributes<HTMLDivElement>> = ({
 }) => {
   return (
     <Layout>
+      {isDrop ? <Icon /> : null}
       <div>{massage}</div>
     </Layout>
   )
