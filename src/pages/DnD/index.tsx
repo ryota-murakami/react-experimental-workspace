@@ -7,7 +7,13 @@ import { ActionType, defaulState, reducer } from './reducer'
 const DnDPage = () => {
   const [state, dispatch] = useReducer(reducer, defaulState)
 
-  const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
+  const onDragStart = (e: React.DragEvent) => {
+    console.log('onDragStart')
+    dispatch({ type: ActionType.ON_DRAG_START, payload: null })
+  }
+
+  const onDrop = (e: React.DragEvent) => {
+    console.log('onDrop')
     dispatch({ type: ActionType.ON_DROP, payload: null })
   }
 
@@ -18,10 +24,11 @@ const DnDPage = () => {
         <main>
           <DropZone
             isDrop={state.isDrop}
-            onDrop={(e) => onDrop(e)}
+            onDragStart={onDragStart}
+            onDrop={onDrop}
             massage="Drop Here!"
           />
-          {state.isDrop ? null : <Icon />}
+          {state.isDrop ? null : <Icon onDragStart={onDragStart} />}
         </main>
       </Container>
     </Layout>
