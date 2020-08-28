@@ -6,3 +6,5 @@ export class AppLayerError extends Error {
     Error.captureStackTrace(this, AppLayerError)
   }
 }
+
+AppLayerError.__proto__ = undefined
