@@ -84,12 +84,12 @@ export function reducer(
       return { ...state, dragEventState: ActionType.ON_DRAG }
     case ActionType.ON_DRAG_START:
       return { ...state, dragEventState: ActionType.ON_DRAG_START }
+    case ActionType.ON_DRAG_ENTER:
+      return { ...state, dragEventState: ActionType.ON_DRAG_ENTER }
     case ActionType.ON_DRAG_END:
       return { ...state, dragEventState: ActionType.ON_DRAG_END }
     case ActionType.ON_DRAG_OVER:
       return { ...state, dragEventState: ActionType.ON_DRAG_OVER }
-    case ActionType.ON_DRAG_ENTER:
-      return { ...state, dragEventState: ActionType.ON_DRAG_ENTER }
     case ActionType.ON_DRAG_LEAVE:
       return {
         ...state,

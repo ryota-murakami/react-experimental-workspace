@@ -12,6 +12,17 @@ const DnDPage = () => {
     dispatch({ type: ActionType.ON_DRAG_START, payload: null })
   }
 
+  const onDragEnter = (e: React.DragEvent) => {
+    console.log('onDragEnter')
+    dispatch({ type: ActionType.ON_DRAG_ENTER, payload: null })
+  }
+
+  const onDragOver = (e: React.DragEvent) => {
+    e.preventDefault()
+    console.log('onDragOver')
+    dispatch({ type: ActionType.ON_DRAG_OVER, payload: null })
+  }
+
   const onDrop = (e: React.DragEvent) => {
     console.log('onDrop')
     dispatch({ type: ActionType.ON_DROP, payload: null })
@@ -25,6 +36,8 @@ const DnDPage = () => {
           <DropZone
             isDrop={state.isDrop}
             onDragStart={onDragStart}
+            onDragEnter={onDragEnter}
+            onDragOver={onDragOver}
             onDrop={onDrop}
             massage="Drop Here!"
           />
