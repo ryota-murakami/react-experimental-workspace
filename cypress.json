@@ -1,6 +1,6 @@
 {
   "experimentalComponentTesting": true,
   "experimentalFetchPolyfill": true,
-  "testFiles": "**/*cy-unit.js",
+  "testFiles": "cypress/unit/**/*.cy-unit.js",
   "componentFolder": "src"
 }
