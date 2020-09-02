@@ -16,8 +16,9 @@ yarn install
 ```bash
 # start frontend dev server
 yarn start
+
 # start Express backend server
-yarn yarn server-start
+yarn server-start
 ```
 
 # LICENSE
