@@ -18,7 +18,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "types": ["@types/jest", "@types/testing-library__cypress", "cypress"]
+    "types": ["@types/jest", "@testing-library/cypress", "cypress"]
   },
   "include": [
     "src"
