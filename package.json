@@ -49,7 +49,7 @@
     "lint:fix": "eslint . --ext .js.,.ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run  --headed",
+    "cypress:run": "cypress run --headed",
     "cypress:run:headless": "cypress run"
   },
   "browserslist": {
