@@ -7,7 +7,7 @@ interface Props {
   openModal: openModal
 }
 
-export const View: React.FC<Props> = ({ openModal }) => {
+export const WebPage: React.FC<Props> = ({ openModal }) => {
   return (
     <Layout>
       <Row>

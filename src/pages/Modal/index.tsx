@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import ModalOverlay from './ModalOverlay'
-import { View } from './View'
+import { WebPage } from './WebPage'
 
 export interface ModalState {
   isOpen: boolean
@@ -27,7 +27,7 @@ const App: React.FC = () => {
   return (
     <Fragment>
       <ModalOverlay isOpen={state.isOpen} closeModal={closeModal} />
-      <View openModal={openModal} />
+      <WebPage openModal={openModal} />
     </Fragment>
   )
 }
