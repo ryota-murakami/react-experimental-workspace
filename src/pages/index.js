@@ -19,7 +19,7 @@ class Index extends Component {
           <Link to="/modal">・Modal</Link>
           <Link to="/selectbox">・SelectBox</Link>
           <Link to="/tooltip">・Tooltip</Link>
-          <Link to="/swr">・SWR</Link>
+          <Link to="/backend">・Backend</Link>
         </main>
       </Layout>
     )

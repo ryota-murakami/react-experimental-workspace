@@ -15,7 +15,7 @@ const Modal = lazy(() => import('./pages/Modal'))
 const Recoil = lazy(() => import('./pages/Recoil'))
 const DnD = lazy(() => import('./pages/DnD'))
 const Tooltip = lazy(() => import('./pages/Tooltip'))
-const SWR = lazy(() => import('./pages/SWR'))
+const Backend = lazy(() => import('./pages/Backend'))
 
 const Router = () => {
   return (
@@ -34,7 +34,7 @@ const Router = () => {
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/selectbox" component={SelectBox} />
           <Route exact path="/tooltip" component={Tooltip} />
-          <Route exact path="/swr" component={SWR} />
+          <Route exact path="/backend" component={Backend} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>
