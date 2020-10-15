@@ -16,7 +16,7 @@ const BackendPage: React.FC = () => {
       <Contents>
         <h1>Backend Page</h1>
         <section>
-          <h1>{data.msg}</h1>
+          <h1>data.msg: {data.msg}</h1>
         </section>
         <p>
           text field. <br />
