@@ -14,7 +14,7 @@ const BackendPage: React.FC = () => {
   return (
     <Layout>
       <Contents>
-        <h1>Fake Text</h1>
+        <h1>Backend Page</h1>
         <section>
           <h1>{data.msg}</h1>
         </section>
