@@ -19,9 +19,8 @@ const BackendPage: React.FC = () => {
           <h1>{data.msg}</h1>
         </section>
         <p>
-          wfjewfjwef;wjfewijfw;jfwjb
-          <br />
-          fiowefojew;fjwfwfwjoiehvdji
+          text field. <br />
+          this will be show something fetch from backend.
         </p>
       </Contents>
     </Layout>
