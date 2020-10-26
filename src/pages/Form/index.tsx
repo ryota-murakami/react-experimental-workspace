@@ -23,7 +23,7 @@ interface State {
   showFlash: boolean
 }
 
-class Form extends Component<{}, State> {
+class Form extends Component<Record<string, unknown>, State> {
   state: State = {
     email: '',
     emailErrorMessage: '',
