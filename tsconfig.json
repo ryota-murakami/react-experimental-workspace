@@ -18,7 +18,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "types": ["@types/jest", "@testing-library/cypress", "cypress"]
+    "types": [
+      "@types/jest",
+      "@testing-library/cypress",
+      "cypress"
+    ],
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "src"
