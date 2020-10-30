@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import View from './View'
 import StoreProvider from './Store'
 import Friends from './Friends'

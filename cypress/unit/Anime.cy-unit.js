@@ -1,4 +1,3 @@
-import React from 'react'
 import { mount } from 'cypress-react-unit-test'
 
 it('hello world', () => {

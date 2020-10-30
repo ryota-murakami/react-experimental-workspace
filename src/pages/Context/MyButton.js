@@ -1,5 +1,4 @@
 import Button from '@material-ui/core/Button/Button'
-import React from 'react'
 import classNames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 

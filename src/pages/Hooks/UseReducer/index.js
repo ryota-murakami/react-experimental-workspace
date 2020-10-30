@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import { useReducer } from 'react'
 import { css } from 'styled-components'
 import Button from '@material-ui/core/Button'
 

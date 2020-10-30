@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react'
+import { memo, useContext } from 'react'
 import { css } from '@emotion/core'
 import StoreContext from './StoreContext'
 import Button from '@material-ui/core/Button'

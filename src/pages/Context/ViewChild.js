@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react'
+import { memo, useContext } from 'react'
 import styled from 'styled-components'
 import StoreConext from './StoreContext'
 import MyButton from './MyButton'

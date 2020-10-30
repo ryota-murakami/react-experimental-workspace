@@ -1,4 +1,4 @@
-import React from 'react'
+import { Children } from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -68,7 +68,7 @@ export const ElementItem = ({ title, component }) => {
       <Title>
         <div>{title ? title : 'Title'}</div>
       </Title>
-      <Canvas>{component ? React.Children.only(component) : null}</Canvas>
+      <Canvas>{component ? Children.only(component) : null}</Canvas>
     </ElementContainer>
   )
 }

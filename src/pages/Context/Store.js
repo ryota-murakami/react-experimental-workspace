@@ -1,4 +1,4 @@
-import React, { useState, Children } from 'react'
+import { useState, Children } from 'react'
 import StoreContext from './StoreContext'
 
 export default function Provider({ initialState, children }) {

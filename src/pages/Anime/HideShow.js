@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import styled from 'styled-components'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
