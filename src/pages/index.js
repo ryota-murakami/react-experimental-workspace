@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { Layout } from './index.style'
 import { Link } from '../components/Link'
 
