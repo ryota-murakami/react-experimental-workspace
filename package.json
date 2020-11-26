@@ -4,7 +4,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.1",
     "@material-ui/icons": "^4.9.1",
-    "@testing-library/cypress": "^7.0.1",
+    "@testing-library/cypress": "^7.0.2",
     "classnames": "^2.2.6",
     "copy-to-clipboard": "^3.3.1",
     "cors": "^2.8.5",
