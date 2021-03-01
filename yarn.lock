@@ -5927,15 +5927,6 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-dnd-core@12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-12.0.0.tgz#b5b243121538279782a8ca35c4e55234a621f1ed"
-  integrity sha512-7GQTkQfNmmdFBN85hN0aHKXeP6Vf4yFUZQBT02+yHKbR82C80N504onI4Av5ZKm2goY1ppQr3wdDp5pa5tlaYA==
-  dependencies:
-    "@react-dnd/asap" "^4.0.0"
-    "@react-dnd/invariant" "^2.0.0"
-    redux "^4.0.5"
-
 dnd-core@12.0.1:
   version "12.0.1"
   resolved "https://registry.yarnpkg.com/dnd-core/-/dnd-core-12.0.1.tgz#2263391d6de218801770df4d345294a5f1eccc48"
@@ -11972,14 +11963,14 @@ react-dnd-html5-backend@^12.1.1:
   dependencies:
     dnd-core "12.0.1"
 
-react-dnd@^12.0.0:
-  version "12.0.0"
-  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-12.0.0.tgz#4f89a44ceec5ef105342cb37e338bf023db83bec"
-  integrity sha512-fxz6sZO3+rMDWpYXqsYWUeUL7OzuyWun26d+1cDBDwvFPbs0hgS5qDnDV68TIssw+yiIHt0r/GVhN1XWIXRkBw==
+react-dnd@^13.1.1:
+  version "13.1.1"
+  resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-13.1.1.tgz#ea6d3f15cccf542a3ebfb978c097b2e3b1d1c962"
+  integrity sha512-oxQW8846omV1l3Pm2zY/atvNxryx+blW1rxnSmoGvFMgmxXpOHulaXrlXgxRH+OLRvLt2cfVTSxZ4ykbzBypaw==
   dependencies:
     "@react-dnd/invariant" "^2.0.0"
     "@react-dnd/shallowequal" "^2.0.0"
-    dnd-core "12.0.0"
+    dnd-core "12.0.1"
     hoist-non-react-statics "^3.3.2"
 
 react-dom@^17.0.1:
