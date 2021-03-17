@@ -33,7 +33,7 @@
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.2",
     "@types/styled-components": "^5.1.8",
-    "cypress": "^6.5.0",
+    "cypress": "^6.7.1",
     "cypress-react-unit-test": "^4.17.2",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-typescript": "^3.0.0",
