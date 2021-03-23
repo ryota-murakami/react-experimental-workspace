@@ -20,7 +20,7 @@
     "react-spinners": "^0.10.6",
     "recoil": "^0.1.2",
     "styled-components": "^5.2.1",
-    "swr": "^0.5.3",
+    "swr": "^0.5.4",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.0.0-pre.59"
   },
