@@ -1,5 +1,4 @@
 {
-  "experimentalComponentTesting": true,
   "experimentalFetchPolyfill": true,
   "componentFolder": "cypress/unit"
 }
