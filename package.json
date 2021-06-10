@@ -10,7 +10,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "faker": "^5.5.3",
-    "immer": "^9.0.2",
+    "immer": "^9.0.3",
     "react": "^17.0.2",
     "react-dnd": "^14.0.2",
     "react-dnd-html5-backend": "^12.1.0",
