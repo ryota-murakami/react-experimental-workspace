@@ -1,4 +1,5 @@
 {
   "experimentalFetchPolyfill": true,
-  "componentFolder": "cypress/unit"
+  "componentFolder": "cypress/unit",
+  "watchForFileChanges": false
 }
