@@ -12,7 +12,5 @@
 // the project's config changing)
 
 module.exports = (on, config) => {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  require('cypress-react-unit-test/plugins/react-scripts')(on, config)
   return config
 }
