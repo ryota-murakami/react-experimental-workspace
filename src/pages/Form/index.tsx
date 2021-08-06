@@ -104,12 +104,7 @@ class Form extends Component<Record<string, unknown>, State> {
   }
 
   render() {
-    const {
-      email,
-      password,
-      emailErrorMessage,
-      passwordErrorMessage,
-    } = this.state
+    const { email, password, emailErrorMessage, passwordErrorMessage } = this.state
 
     const hasEmailError: boolean = emailErrorMessage.length > 0
     const hasPasswordError: boolean = passwordErrorMessage.length > 0
@@ -128,9 +123,7 @@ class Form extends Component<Record<string, unknown>, State> {
                 value={email}
                 hasError={hasEmailError}
               />
-              {hasEmailError && (
-                <ErrorMessage>{emailErrorMessage}</ErrorMessage>
-              )}
+              {hasEmailError && <ErrorMessage>{emailErrorMessage}</ErrorMessage>}
             </FormGroup>
             <FormGroup>
               <Label>Password</Label>
@@ -140,16 +133,9 @@ class Form extends Component<Record<string, unknown>, State> {
                 value={password}
                 hasError={hasPasswordError}
               />
-              {hasPasswordError && (
-                <ErrorMessage>{passwordErrorMessage}</ErrorMessage>
-              )}
+              {hasPasswordError && <ErrorMessage>{passwordErrorMessage}</ErrorMessage>}
             </FormGroup>
-            <Button
-              variant="contained"
-              size="large"
-              color="primary"
-              onClick={this.handleSubmit}
-            >
+            <Button variant="contained" size="large" color="primary" onClick={this.handleSubmit}>
               Submit
             </Button>
           </Container>

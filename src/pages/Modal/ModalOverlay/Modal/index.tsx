@@ -61,18 +61,17 @@ const Modal: React.FC<Props> = ({ isOpen, closeModal }) => {
       <Head>Modal</Head>
       <Content>
         <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
+          in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
         </p>
         <p>
-          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-          Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+          Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus
+          vel augue laoreet rutrum faucibus dolor auctor.
         </p>
         <p>
-          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus
-          magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec
-          ullamcorper nulla non metus auctor fringilla.
+          Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel
+          scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus
+          auctor fringilla.
         </p>
       </Content>
       <Bottom>
