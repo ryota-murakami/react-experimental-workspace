@@ -1,5 +1,6 @@
 {
   "experimentalFetchPolyfill": true,
-  "componentFolder": "cypress/unit",
-  "watchForFileChanges": false
+  "componentFolder": "./cypress/component",
+  "watchForFileChanges": false,
+  "testFiles": "*.test.{js,ts,jsx,tsx}"
 }

@@ -4523,6 +4523,11 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
+cypress-real-events@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.5.1.tgz#5eeb86d2a7aad9aa6d5271e288a23e46373915cd"
+  integrity sha512-Jwi/IJePcZrKyhdtVddaf+mqJrj3y1vpREMDgtWwz+oxvj5FbBpeU0ASu9zpB3bMbsMo7g//buopZIe4jx3iSA==
+
 cypress@^8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-8.2.0.tgz#1e4e9f6218324e82a95c1b9cad7f3965ba663d7f"

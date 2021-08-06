@@ -14,5 +14,5 @@ const GrowBox = styled.div`
 `
 
 export const Grow = () => {
-  return <GrowBox />
+  return <GrowBox data-cy="grow" />
 }

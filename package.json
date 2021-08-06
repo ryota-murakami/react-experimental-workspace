@@ -37,6 +37,7 @@
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@typescript-eslint/parser": "^4.28.3",
     "cypress": "^8.2.0",
+    "cypress-real-events": "^1.5.1",
     "eslint-config-prettier": "^7.2.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-cypress": "^2.11.3",
@@ -60,7 +61,10 @@
     "typecheck": "tsc --noEmit",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --headed",
-    "cypress:run:headless": "cypress run"
+    "cypress:run:headless": "cypress run",
+    "cypress:open-ct": "cypress open-ct",
+    "cypress:run-ct": "cypress run-ct",
+    "cypress:run-ct:headless": "cypress run-ct --headed"
   },
   "browserslist": {
     "production": [
