@@ -4,15 +4,15 @@ import Icon from './Icon'
 import DropZone from './DropZone'
 import { ActionType, defaulState, reducer } from './reducer'
 
-const DnDPage = () => {
+const DnDPage: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, defaulState)
 
-  const onDragStart = (e: React.DragEvent) => {
+  const onDragStart = () => {
     console.log('onDragStart')
     dispatch({ type: ActionType.ON_DRAG_START, payload: null })
   }
 
-  const onDragEnter = (e: React.DragEvent) => {
+  const onDragEnter = () => {
     console.log('onDragEnter')
     dispatch({ type: ActionType.ON_DRAG_ENTER, payload: null })
   }
@@ -23,7 +23,7 @@ const DnDPage = () => {
     dispatch({ type: ActionType.ON_DRAG_OVER, payload: null })
   }
 
-  const onDrop = (e: React.DragEvent) => {
+  const onDrop = () => {
     console.log('onDrop')
     dispatch({ type: ActionType.ON_DROP, payload: null })
   }

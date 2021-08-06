@@ -6,7 +6,7 @@ const counterState = atom({
   default: 0,
 })
 
-const Counter = () => {
+const Counter: React.FC = () => {
   const [count, setCount] = useRecoilState(counterState)
   const onClick = () => {
     setCount(count + 1)

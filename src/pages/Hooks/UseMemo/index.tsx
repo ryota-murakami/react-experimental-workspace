@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react'
+import type { ReactNode } from 'react'
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button'
 
@@ -40,7 +41,7 @@ const reducer = (state: { count: number }, action: { type: any }) => {
   }
 }
 
-export default function UseReducer() {
+export default function UseReducer(): ReactNode {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   return (

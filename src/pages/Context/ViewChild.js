@@ -20,9 +20,7 @@ const ViewChild = () => {
   return (
     <Container>
       <div style={{ marginBottom: 10 }}>Age: {age}</div>
-      <MyButton onClick={() => setStore({ age: age + 1 })}>
-        Inc Age From ViewChild
-      </MyButton>
+      <MyButton onClick={() => setStore({ age: age + 1 })}>Inc Age From ViewChild</MyButton>
     </Container>
   )
 }

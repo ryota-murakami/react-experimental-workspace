@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment, ReactNode } from 'react'
 import Button from '@material-ui/core/Button'
 import {
   TextInput,
@@ -34,7 +34,7 @@ class Form extends Component<Record<string, unknown>, State> {
     showFlash: false,
   }
 
-  showFlashMessage = () => {
+  showFlashMessage = (): ReactNode => {
     return (
       <FlashMessage
         showFlash={this.state.showFlash}
@@ -44,15 +44,15 @@ class Form extends Component<Record<string, unknown>, State> {
     )
   }
 
-  handleEmailInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handleEmailInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
     this.setState({ email: e.currentTarget.value })
   }
 
-  handlePasswordInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+  handlePasswordInput = (e: React.ChangeEvent<HTMLInputElement>): void => {
     this.setState({ password: e.currentTarget.value })
   }
 
-  handleSubmit = () => {
+  handleSubmit = (): void => {
     const { email, password } = this.state
     let emailErrorFlag = false
     let passwordErrorFlag = false
@@ -103,7 +103,7 @@ class Form extends Component<Record<string, unknown>, State> {
     }
   }
 
-  render() {
+  render(): ReactNode {
     const { email, password, emailErrorMessage, passwordErrorMessage } = this.state
 
     const hasEmailError: boolean = emailErrorMessage.length > 0

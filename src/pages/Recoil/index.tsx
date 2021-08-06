@@ -3,7 +3,7 @@ import { RecoilRoot } from 'recoil'
 import { Layout, Container } from './index.style'
 import Counter from './Counter'
 
-const RecoilPage = () => {
+const RecoilPage: React.FC = () => {
   return (
     <RecoilRoot>
       <Layout>

@@ -2,13 +2,19 @@
 import { useState, useCallback, useEffect } from 'react'
 import copy from 'copy-to-clipboard'
 
+interface ReturnType {
+  value: string
+  onCopy: () => void
+  hasCopied: boolean
+}
+
 /**
  * React hook to copy content to clipboard
  *
  * @param text the text or value to copy
  * @param timeout delay (in ms) to switch back to initial state once copied.
  */
-export function useClipboard(text: string, timeout = 1500) {
+export function useClipboard(text: string, timeout = 1500): ReturnType {
   const [hasCopied, setHasCopied] = useState(false)
 
   const onCopy = useCallback(() => {

@@ -21,9 +21,7 @@ function View() {
   return (
     <div className={layout}>
       <h1>Age: {store.age}</h1>
-      <MyButton onClick={() => setStore({ age: store.age + 1 })}>
-        Increase Age
-      </MyButton>
+      <MyButton onClick={() => setStore({ age: store.age + 1 })}>Increase Age</MyButton>
       <MyButton onClick={() => setStore({ name: null })}>Name Null</MyButton>
       <ViewChild />
     </div>

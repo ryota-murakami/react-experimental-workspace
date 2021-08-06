@@ -1,4 +1,5 @@
 import React from 'react'
+import type { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
 export const FullScreen = styled.div`
@@ -39,8 +40,8 @@ interface FlashMessageWrapperProps {
 const FlashMessageWrapper = styled.div<FlashMessageWrapperProps>`
   position: fixed;
   top: 0;
-  background-color: ${(props) => (props.hasError ? 'crimson' : 'green')};
-  opacity: ${(props) => (props.showFlash ? 0.6 : 0)};
+  background-color: ${({ hasError }) => (hasError ? 'crimson' : 'green')};
+  opacity: ${({ showFlash }) => (showFlash ? 0.6 : 0)};
   width: 100%;
   height: 80px;
   display: flex;
@@ -59,9 +60,13 @@ interface FlashMessageProps {
   showFlash: boolean
 }
 
-export const FlashMessage = ({ flashMessage, hasError, showFlash }: FlashMessageProps) => {
+export const FlashMessage = ({
+  flashMessage,
+  hasError,
+  showFlash,
+}: FlashMessageProps): ReactNode => {
   return (
-    <FlashMessageWrapper showFlash={showFlash} hasError={hasError}>
+    <FlashMessageWrapper hasError={hasError} showFlash={showFlash}>
       {flashMessage}
     </FlashMessageWrapper>
   )
