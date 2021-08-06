@@ -64,8 +64,7 @@
     "cypress:run:headless": "cypress run",
     "cypress:open-ct": "cypress open-ct",
     "cypress:run-ct": "cypress run-ct --headed",
-    "cypress:run-ct:headless": "cypress run-ct",
-
+    "cypress:run-ct:headless": "cypress run-ct"
   },
   "browserslist": {
     "production": [
