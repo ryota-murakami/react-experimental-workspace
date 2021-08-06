@@ -1,4 +1,5 @@
-import React, { Component, Fragment, ReactNode } from 'react'
+import React, { Component, Fragment } from 'react'
+import type { ReactElement } from 'react'
 import Button from '@material-ui/core/Button'
 import {
   TextInput,
@@ -34,7 +35,7 @@ class Form extends Component<Record<string, unknown>, State> {
     showFlash: false,
   }
 
-  showFlashMessage = (): ReactNode => {
+  showFlashMessage = (): ReactElement => {
     return (
       <FlashMessage
         showFlash={this.state.showFlash}
@@ -103,7 +104,7 @@ class Form extends Component<Record<string, unknown>, State> {
     }
   }
 
-  render(): ReactNode {
+  render(): ReactElement {
     const { email, password, emailErrorMessage, passwordErrorMessage } = this.state
 
     const hasEmailError: boolean = emailErrorMessage.length > 0

@@ -1,5 +1,5 @@
 import React from 'react'
-import type { ReactNode } from 'react'
+import type { ReactElement } from 'react'
 import styled, { css } from 'styled-components'
 
 export const FullScreen = styled.div`
@@ -64,7 +64,7 @@ export const FlashMessage = ({
   flashMessage,
   hasError,
   showFlash,
-}: FlashMessageProps): ReactNode => {
+}: FlashMessageProps): ReactElement => {
   return (
     <FlashMessageWrapper hasError={hasError} showFlash={showFlash}>
       {flashMessage}
