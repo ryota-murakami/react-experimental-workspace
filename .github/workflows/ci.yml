@@ -17,9 +17,13 @@ jobs:
       - run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       - run: yarn install
       - run: yarn build
-#      - run: yarn test
+      - run: yarn test
       - run: yarn lint
       - run: yarn typecheck
       - uses: cypress-io/github-action@v2
         with:
           start: yarn start
+      - uses: cypress-io/github-action@v2
+        with:
+          install: false
+          command: yarn cypress:run-ct:headless
