@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import { Loading } from './components/Loading'
 import Index from './pages'
 import NotFound from './pages/NotFound'

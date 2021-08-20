@@ -1,5 +1,5 @@
-import styled from 'styled-components'
 import { Link as PureLink } from 'react-router-dom'
+import styled from 'styled-components'
 
 const LinkWrapper = styled.div`
   font-size: 24px;

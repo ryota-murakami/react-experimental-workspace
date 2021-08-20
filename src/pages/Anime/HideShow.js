@@ -1,9 +1,9 @@
-import { Component } from 'react'
-import styled from 'styled-components'
+import Button from '@material-ui/core/Button'
 import { withStyles } from '@material-ui/core/styles'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
-import Button from '@material-ui/core/Button'
+import { Component } from 'react'
+import styled from 'styled-components'
 
 function MaterialStyled(Component) {
   return (style, options) => {

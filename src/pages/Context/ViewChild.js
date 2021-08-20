@@ -1,7 +1,8 @@
 import { memo, useContext } from 'react'
 import styled from 'styled-components'
-import StoreConext from './StoreContext'
+
 import MyButton from './MyButton'
+import StoreConext from './StoreContext'
 
 const Container = styled.div`
   margin: 30px;

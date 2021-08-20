@@ -1,4 +1,7 @@
 import { Component } from 'react'
+
+import { Grow } from './Grow'
+import { HideShow } from './HideShow'
 import {
   Container,
   Header,
@@ -7,8 +10,6 @@ import {
   ElementContainer,
   ElementItem,
 } from './index.style'
-import { Grow } from './Grow'
-import { HideShow } from './HideShow'
 
 class Anime extends Component {
   render() {

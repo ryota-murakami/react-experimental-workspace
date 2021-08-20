@@ -1,7 +1,9 @@
-import React from 'react'
 import { mount } from '@cypress/react'
-import TestScreen from './TestScreen'
+import React from 'react'
+
 import { Grow } from '../../src/pages/Anime/Grow'
+
+import TestScreen from './TestScreen'
 
 describe('<Grow/> Component test', () => {
   beforeEach(() => {

@@ -1,7 +1,8 @@
 import { Component } from 'react'
-import View from './View'
-import StoreProvider from './Store'
+
 import Friends from './Friends'
+import StoreProvider from './Store'
+import View from './View'
 
 const store = {
   name: 'jack',

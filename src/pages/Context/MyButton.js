@@ -1,6 +1,6 @@
 import Button from '@material-ui/core/Button/Button'
-import classNames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
+import classNames from 'classnames'
 
 const styles = {
   root: {

@@ -1,6 +1,8 @@
 import { Component } from 'react'
-import { Layout } from './index.style'
+
 import { Link } from '../components/Link'
+
+import { Layout } from './index.style'
 
 class Index extends Component {
   render() {

@@ -1,4 +1,5 @@
 import { CircleLoader } from 'react-spinners'
+
 import Container from './Container'
 
 export const Loading = () => {
