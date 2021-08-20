@@ -3,25 +3,27 @@ import React from 'react'
 
 import { Grow } from '../../src/pages/Anime/Grow'
 
-import TestScreen from '../TestScreen'
+import ComponentTestScreen from './ComponentTestScreen'
 
 describe('<Grow/> Component test', () => {
   beforeEach(() => {
     mount(
-      <TestScreen>
+      <ComponentTestScreen>
         <Grow />
-      </TestScreen>
+      </ComponentTestScreen>
     )
   })
 
   it('show component', () => {
-    cy.wait(5000)
+    cy.wait(1000)
     cy.get('[data-cy=grow]').should('exist')
+    cy.wait(1000)
   })
 
   it('grow height while hovering', () => {
+    cy.wait(1000)
     cy.get('[data-cy=grow]').realHover()
     cy.get('[data-cy=grow]').should('have.css', 'height', '200px')
-    cy.wait(5000)
+    cy.wait(1000)
   })
 })

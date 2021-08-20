@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const TestScreen = styled.div`
+const ComponentTestScreen = styled.div`
   height: 100vh;
   width: 100vh;
   display: flex;
@@ -8,4 +8,4 @@ const TestScreen = styled.div`
   align-items: center;
 `
 
-export default TestScreen
+export default ComponentTestScreen
