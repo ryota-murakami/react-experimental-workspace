@@ -3,7 +3,7 @@ import React from 'react'
 
 import { Grow } from '../../src/pages/Anime/Grow'
 
-import TestScreen from './TestScreen'
+import TestScreen from '../TestScreen'
 
 describe('<Grow/> Component test', () => {
   beforeEach(() => {
