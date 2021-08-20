@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { closeModal, ModalState } from '../index'
+
+import type { closeModal, ModalState } from '../index'
 
 interface StyledProps {
   isOpen: ModalState['isOpen']

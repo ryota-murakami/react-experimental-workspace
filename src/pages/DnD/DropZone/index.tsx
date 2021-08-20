@@ -1,6 +1,8 @@
 import React from 'react'
-import { Layout } from './style'
+
 import Icon from '../Icon'
+
+import { Layout } from './style'
 
 interface Props {
   isDrop: boolean

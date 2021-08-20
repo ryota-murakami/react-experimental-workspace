@@ -1,5 +1,6 @@
-import Express, { Request, Response } from 'express'
 import cors from 'cors'
+import type { Request, Response } from 'express'
+import Express from 'express'
 
 const app = Express()
 app.use(cors())

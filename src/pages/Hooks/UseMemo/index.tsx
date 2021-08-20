@@ -1,7 +1,7 @@
+import Button from '@material-ui/core/Button'
 import React, { useReducer } from 'react'
 import type { ReactNode } from 'react'
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
 
 const Container = styled.div`
   width: 100%;

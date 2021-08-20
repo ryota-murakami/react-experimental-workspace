@@ -1,7 +1,8 @@
 import React from 'react'
 import { RecoilRoot } from 'recoil'
-import { Layout, Container } from './index.style'
+
 import Counter from './Counter'
+import { Layout, Container } from './index.style'
 
 const RecoilPage: React.FC = () => {
   return (

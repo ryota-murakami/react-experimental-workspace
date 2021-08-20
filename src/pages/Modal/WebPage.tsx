@@ -1,7 +1,9 @@
-import React from 'react'
-import { Layout, Row } from './style'
 import { Button } from '@material-ui/core'
-import { openModal } from './index'
+import React from 'react'
+
+import { Layout, Row } from './style'
+
+import type { openModal } from './index'
 
 interface Props {
   openModal: openModal

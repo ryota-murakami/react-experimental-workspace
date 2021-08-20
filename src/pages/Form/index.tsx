@@ -1,6 +1,7 @@
+import Button from '@material-ui/core/Button'
 import React, { Component, Fragment } from 'react'
 import type { ReactElement } from 'react'
-import Button from '@material-ui/core/Button'
+
 import {
   TextInput,
   Label,

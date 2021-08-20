@@ -1,5 +1,6 @@
 import React from 'react'
 import useSWR from 'swr'
+
 import { Layout, Contents } from './index.style'
 
 // @ts-ignore

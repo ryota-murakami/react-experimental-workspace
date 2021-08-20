@@ -1,6 +1,6 @@
 /* Copy from https://github.com/modulz/stitches-site/blob/master/utils/useClipboard.ts */
-import { useState, useCallback, useEffect } from 'react'
 import copy from 'copy-to-clipboard'
+import { useState, useCallback, useEffect } from 'react'
 
 interface ReturnType {
   value: string

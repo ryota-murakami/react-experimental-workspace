@@ -1,7 +1,8 @@
+import { Button } from '@material-ui/core'
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from '@material-ui/core'
-import { closeModal, ModalState } from '../../index'
+
+import type { closeModal, ModalState } from '../../index'
 
 interface LayoutProps {
   isOpen: boolean
