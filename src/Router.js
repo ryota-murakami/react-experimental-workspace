@@ -12,6 +12,7 @@ const Context = lazy(() => import('./pages/Context'))
 const Hooks = lazy(() => import('./pages/Hooks'))
 const UseReducer = lazy(() => import('./pages/Hooks/UseReducer'))
 const UseMemo = lazy(() => import('./pages/Hooks/UseMemo'))
+const UseEffect = lazy(() => import('./pages/Hooks/UseEffect'))
 const Modal = lazy(() => import('./pages/Modal'))
 const Recoil = lazy(() => import('./pages/Recoil'))
 const DnD = lazy(() => import('./pages/DnD'))
@@ -32,6 +33,7 @@ const Router = () => {
           <Route exact path="/hooks" component={Hooks} />
           <Route exact path="/hooks/usereducer" component={UseReducer} />
           <Route exact path="/hooks/usememo" component={UseMemo} />
+          <Route exact path="/hooks/useeffect" component={UseEffect} />
           <Route exact path="/modal" component={Modal} />
           <Route exact path="/selectbox" component={SelectBox} />
           <Route exact path="/tooltip" component={Tooltip} />
