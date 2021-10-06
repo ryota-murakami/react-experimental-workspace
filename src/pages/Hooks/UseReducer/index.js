@@ -1,15 +1,15 @@
 import Button from '@material-ui/core/Button'
-import { useReducer } from 'react'
-import { css } from 'styled-components'
+import { useReducer, memo, useCallback, useMemo } from 'react'
+import styled from 'styled-components'
 
-const container = css`
+const Container = styled.div`
   width: 100%;
   height: 100%;
+  dispaly: flex;
+  justify-content: center;
 `
 
-const layout = css`
-  margin: 0 auto;
-  width: 80%;
+const Layout = styled.div`
   height: 100%;
   display: flex;
   font-size: 36px;
@@ -18,8 +18,10 @@ const layout = css`
   justify-content: center;
   align-items: center;
 
-  & > * {
-    width: 100%;
+  .btn-layout {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
   }
 `
 
@@ -36,63 +38,39 @@ const reducer = (state, action) => {
   }
 }
 
+const PlusButton = memo((props) => {
+  return (
+    <Button variant="contained" size="large" color="default" onClick={props.onClick}>
+      +
+    </Button>
+  )
+})
+
 export default function UseReducer() {
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatchOrg] = useReducer(reducer, initialState)
+  const dispatch = useMemo(() => dispatchOrg, [])
+  const increase = useCallback(() => {
+    return () => dispatch({ type: 'increment' })
+  }, [dispatch])
 
   return (
-    <div css={container}>
-      <div css={layout}>
-        <h1
-          css={css`
-            text-align: center;
-          `}
-        >
-          UseReducer
-        </h1>
-        <h1
-          css={css`
-            text-align: center;
-          `}
-        >
-          Count: {state.count}
-        </h1>
-        <div
-          css={css`
-            display: flex;
-            justify-content: center;
-          `}
-        >
+    <Container>
+      <Layout>
+        <h1>UseReducer</h1>
+        <h1>Count: {state.count}</h1>
+        <div className="btn-layout">
+          <PlusButton onClick={increase} />
+
           <Button
-            css={css`
-              text-align: center;
-            `}
             variant="contained"
             size="large"
-            color="default"
-            onClick={() => dispatch({ type: 'increment' })}
+            color="secondary"
+            onClick={() => dispatch({ type: 'decrement' })}
           >
-            +
+            -
           </Button>
-          <div
-            css={css`
-              margin-left: 30px;
-              text-align: center;
-            `}
-          >
-            <Button
-              css={css`
-                text-align: center;
-              `}
-              variant="contained"
-              size="large"
-              color="secondary"
-              onClick={() => dispatch({ type: 'decrement' })}
-            >
-              -
-            </Button>
-          </div>
         </div>
-      </div>
-    </div>
+      </Layout>
+    </Container>
   )
 }
