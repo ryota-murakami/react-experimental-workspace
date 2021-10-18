@@ -29,7 +29,7 @@
     "immer": "^9.0.6",
     "jest": "27.3.0",
     "jest-circus": "27.3.0",
-    "jest-resolve": "27.2.5",
+    "jest-resolve": "27.3.0",
     "jest-watch-typeahead": "1.0.0",
     "mini-css-extract-plugin": "2.4.2",
     "optimize-css-assets-webpack-plugin": "6.0.1",
