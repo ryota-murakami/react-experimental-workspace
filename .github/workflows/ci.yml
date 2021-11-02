@@ -7,23 +7,16 @@ on:
     branches:
       - master
 jobs:
-  build-test-lint-typecheck-e2e:
+  build-test-lint-typecheck:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2 # If you're using actions/checkout@v2 you must set persist-credentials to false in most cases for the deployment to work correctly.
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '14'
+          node-version: '16'
       - run: echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
       - run: yarn install
       - run: yarn build
       - run: yarn test
       - run: yarn lint
       - run: yarn typecheck
-      - uses: cypress-io/github-action@v2
-        with:
-          start: yarn start
-      - uses: cypress-io/github-action@v2
-        with:
-          install: false
-          command: yarn cypress:run-ct:headless

@@ -24,8 +24,6 @@
     "ts-node-dev": "^1.0.0-pre.59"
   },
   "devDependencies": {
-    "@cypress/react": "^5.10.0",
-    "@cypress/webpack-dev-server": "^1.6.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/faker": "^5.5.8",
@@ -36,8 +34,6 @@
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
-    "cypress": "^8.5.0",
-    "cypress-real-events": "^1.5.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-cypress": "^2.12.1",
@@ -58,13 +54,7 @@
     "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.server.json ./backend/server.ts",
     "lint": "eslint . --ext .js,.ts,.tsx",
     "lint:fix": "eslint . --ext .js.,.ts,.tsx --fix",
-    "typecheck": "tsc --noEmit",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run --headed",
-    "cypress:run:headless": "cypress run",
-    "cypress:open-ct": "cypress open-ct",
-    "cypress:run-ct": "cypress run-ct --headed",
-    "cypress:run-ct:headless": "cypress run-ct"
+    "typecheck": "tsc --noEmit"
   },
   "browserslist": {
     "production": [

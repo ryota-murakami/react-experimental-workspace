@@ -1,8 +1,0 @@
-{
-  "video": false,
-  "experimentalFetchPolyfill": true,
-  "component": {
-    "componentFolder": "./cypress/component",
-    "testFiles": "*.test.{js,tsx}"
-  }
-}
