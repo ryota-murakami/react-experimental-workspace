@@ -76,6 +76,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
     "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/faker": "^5.5.8",
@@ -86,6 +87,8 @@
     "@types/styled-components": "^5.1.14",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
+    "esbuild": "^0.13.12",
+    "esbuild-jest": "^0.5.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-cypress": "^2.12.1",
@@ -100,7 +103,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "test": "jest",
     "server-build": "tsc -p tsconfig.server.json",
     "server-start": "nodemon --ext ts,js,graphql --watch './backend' --ignore './src' --exec ts-node --project tsconfig.server.json ./backend/server.ts",
     "lint": "eslint . --ext .js,.ts,.tsx",
@@ -119,62 +122,9 @@
       "last 1 safari version"
     ]
   },
-  "jest": {
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
-    ],
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "setupFilesAfterEnv": [],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testRunner": "/Users/ryota.murakami/repository/react-experimental-workspace/node_modules/jest-circus/runner.js",
-    "transform": {
-      "^.+\\.(js|jsx|mjs|cjs|ts|tsx)$": "<rootDir>/config/jest/babelTransform.js",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
-    "modulePaths": [],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ],
-    "watchPlugins": [
-      "jest-watch-typeahead/filename",
-      "jest-watch-typeahead/testname"
-    ],
-    "resetMocks": true
-  },
   "babel": {
     "presets": [
       "react-app"
     ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   }
 }
