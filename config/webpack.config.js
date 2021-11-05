@@ -31,9 +31,6 @@ const paths = require('./paths')
 
 const appPackageJson = require(paths.appPackageJson)
 
-// Source maps are resource heavy and can cause out of memory issue for large source files.
-const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false'
-
 const webpackDevClientEntry = require.resolve('react-dev-utils/webpackHotDevClient')
 const reactRefreshOverlayEntry = require.resolve('react-dev-utils/refreshOverlayInterop')
 
@@ -122,7 +119,7 @@ module.exports = function (webpackEnv) {
             // which in turn let's users customize the target behavior as per their needs.
             postcssNormalize(),
           ],
-          sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+          sourceMap: true,
         },
       },
     ].filter(Boolean)
@@ -131,7 +128,7 @@ module.exports = function (webpackEnv) {
         {
           loader: require.resolve('resolve-url-loader'),
           options: {
-            sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+            sourceMap: true,
             root: paths.appSrc,
           },
         },
@@ -150,11 +147,7 @@ module.exports = function (webpackEnv) {
     mode: isEnvProduction ? 'production' : isEnvDevelopment && 'development',
     // Stop compilation early in production
     bail: isEnvProduction,
-    devtool: isEnvProduction
-      ? shouldUseSourceMap
-        ? 'source-map'
-        : false
-      : isEnvDevelopment && 'cheap-module-source-map',
+    devtool: isEnvProduction ? 'source-map' : 'cheap-module-source-map',
     // These are the "entry points" to our application.
     // This means they will be the "root" imports that are included in JS bundle.
     entry:
@@ -256,22 +249,20 @@ module.exports = function (webpackEnv) {
               ascii_only: true,
             },
           },
-          sourceMap: shouldUseSourceMap,
+          sourceMap: true,
         }),
         // This is only used in production mode
         new OptimizeCSSAssetsPlugin({
           cssProcessorOptions: {
             parser: safePostCssParser,
-            map: shouldUseSourceMap
-              ? {
-                  // `inline: false` forces the sourcemap to be output into a
-                  // separate file
-                  inline: false,
-                  // `annotation: true` appends the sourceMappingURL to the end of
-                  // the css file, helping the browser find the sourcemap
-                  annotation: true,
-                }
-              : false,
+            map: {
+              // `inline: false` forces the sourcemap to be output into a
+              // separate file
+              inline: false,
+              // `annotation: true` appends the sourceMappingURL to the end of
+              // the css file, helping the browser find the sourcemap
+              annotation: true,
+            },
           },
           cssProcessorPluginOptions: {
             preset: ['default', { minifyFontValues: { removeQuotes: false } }],
@@ -430,8 +421,8 @@ module.exports = function (webpackEnv) {
                 // Babel sourcemaps are needed for debugging into node_modules
                 // code.  Without the options below, debuggers like VSCode
                 // show incorrect code and set breakpoints on the wrong lines.
-                sourceMaps: shouldUseSourceMap,
-                inputSourceMap: shouldUseSourceMap,
+                sourceMaps: true,
+                inputSourceMap: true,
               },
             },
             // "postcss" loader applies autoprefixer to our CSS.
@@ -446,7 +437,7 @@ module.exports = function (webpackEnv) {
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+                sourceMap: true,
               }),
               // Don't consider CSS imports dead code even if the
               // containing package claims to have no side effects.
@@ -460,7 +451,7 @@ module.exports = function (webpackEnv) {
               test: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
-                sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+                sourceMap: true,
                 modules: {
                   getLocalIdent: getCSSModuleLocalIdent,
                 },
@@ -475,7 +466,7 @@ module.exports = function (webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+                  sourceMap: true,
                 },
                 'sass-loader'
               ),
@@ -492,7 +483,7 @@ module.exports = function (webpackEnv) {
               use: getStyleLoaders(
                 {
                   importLoaders: 3,
-                  sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
+                  sourceMap: true,
                   modules: {
                     getLocalIdent: getCSSModuleLocalIdent,
                   },
