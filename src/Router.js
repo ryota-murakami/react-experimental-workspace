@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import { Loading } from './components/Loading'
 import Index from './pages'
@@ -23,23 +23,21 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Switch>
-          <Route exact path="/" component={Index} />
-          <Route exact path="/dnd" component={DnD} />
-          <Route exact path="/recoil" component={Recoil} />
-          <Route exact path="/form" component={Form} />
-          <Route exact path="/anime" component={Anime} />
-          <Route exact path="/context" component={Context} />
-          <Route exact path="/hooks" component={Hooks} />
-          <Route exact path="/hooks/usereducer" component={UseReducer} />
-          <Route exact path="/hooks/usememo" component={UseMemo} />
-          <Route exact path="/hooks/useeffect" component={UseEffect} />
-          <Route exact path="/modal" component={Modal} />
-          <Route exact path="/selectbox" component={SelectBox} />
-          <Route exact path="/tooltip" component={Tooltip} />
-          <Route exact path="/backend" component={Backend} />
-          <Route component={NotFound} />
-        </Switch>
+        <Route exact path="/" component={Index} />
+        <Route exact path="/dnd" component={DnD} />
+        <Route exact path="/recoil" component={Recoil} />
+        <Route exact path="/form" component={Form} />
+        <Route exact path="/anime" component={Anime} />
+        <Route exact path="/context" component={Context} />
+        <Route exact path="/hooks" component={Hooks} />
+        <Route exact path="/hooks/usereducer" component={UseReducer} />
+        <Route exact path="/hooks/usememo" component={UseMemo} />
+        <Route exact path="/hooks/useeffect" component={UseEffect} />
+        <Route exact path="/modal" component={Modal} />
+        <Route exact path="/selectbox" component={SelectBox} />
+        <Route exact path="/tooltip" component={Tooltip} />
+        <Route exact path="/backend" component={Backend} />
+        <Route component={NotFound} />
       </Suspense>
     </BrowserRouter>
   )
