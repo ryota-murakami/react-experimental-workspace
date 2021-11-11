@@ -23,7 +23,9 @@ function Friends() {
 
   return (
     <div className={layout}>
-      <ul>{Array.isArray(friends) && friends.map((v, i) => <li key={i}>{v}</li>)}</ul>
+      <ul>
+        {Array.isArray(friends) && friends.map((v, i) => <li key={i}>{v}</li>)}
+      </ul>
       <Button
         variant="contained"
         color="primary"
@@ -38,9 +40,11 @@ function Friends() {
 
 function rand() {
   let text = ''
-  const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  const possible =
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
 
-  for (let i = 0; i < 5; i++) text += possible.charAt(Math.floor(Math.random() * possible.length))
+  for (let i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length))
 
   return text
 }

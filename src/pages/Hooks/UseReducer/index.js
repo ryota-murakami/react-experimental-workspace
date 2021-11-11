@@ -40,7 +40,12 @@ const reducer = (state, action) => {
 
 const PlusButton = memo((props) => {
   return (
-    <Button variant="contained" size="large" color="default" onClick={props.onClick}>
+    <Button
+      variant="contained"
+      size="large"
+      color="default"
+      onClick={props.onClick}
+    >
       +
     </Button>
   )

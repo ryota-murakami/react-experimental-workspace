@@ -75,7 +75,10 @@ export const defaulState: UseReducerState = {
   isDrop: false,
 }
 
-export function reducer(state: UseReducerState, action: UseReducerAction): UseReducerState {
+export function reducer(
+  state: UseReducerState,
+  action: UseReducerAction
+): UseReducerState {
   switch (action.type) {
     case ActionType.ON_DRAG:
       return { ...state, dragEventState: ActionType.ON_DRAG }

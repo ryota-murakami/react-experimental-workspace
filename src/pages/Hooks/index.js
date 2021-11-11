@@ -2,7 +2,12 @@ import { Component } from 'react'
 
 import { Link } from '../../components/Link'
 
-import { Container, Header, LinkContainer, HeaderContainer } from './index.style'
+import {
+  Container,
+  Header,
+  LinkContainer,
+  HeaderContainer,
+} from './index.style'
 
 class Index extends Component {
   render() {
