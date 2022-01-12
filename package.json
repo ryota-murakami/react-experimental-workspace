@@ -19,7 +19,7 @@
     "copy-to-clipboard": "^3.3.1",
     "cors": "^2.8.5",
     "css-loader": "6.5.1",
-    "dotenv": "8.2.0",
+    "dotenv": "11.0.0",
     "dotenv-expand": "5.1.0",
     "express": "^4.17.2",
     "faker": "^6.6.6",
