@@ -22,6 +22,7 @@ class Index extends Component {
           <Link to="/selectbox">・SelectBox</Link>
           <Link to="/tooltip">・Tooltip</Link>
           <Link to="/backend">・Backend</Link>
+          <Link to="/forwardRef">・ForwardRef</Link>
         </main>
       </Layout>
     )

@@ -18,6 +18,7 @@ const Recoil = lazy(() => import('./pages/Recoil'))
 const DnD = lazy(() => import('./pages/DnD'))
 const Tooltip = lazy(() => import('./pages/Tooltip'))
 const Backend = lazy(() => import('./pages/Backend'))
+const ForwardRef = lazy(() => import('./pages/ForwardRef'))
 
 const Router = () => {
   return (
@@ -38,6 +39,7 @@ const Router = () => {
           <Route exact path="/selectbox" component={SelectBox} />
           <Route exact path="/tooltip" component={Tooltip} />
           <Route exact path="/backend" component={Backend} />
+          <Route exact path="/forwardRef" component={ForwardRef} />
           <Route component={NotFound} />
         </Switch>
       </Suspense>
