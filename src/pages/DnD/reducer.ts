@@ -1,4 +1,5 @@
 export enum ActionType {
+  /* eslint-disable no-unused-vars */
   ON_DRAG = 'ON_DRAG',
   ON_DRAG_START = 'ON_DRAG_START',
   ON_DRAG_END = 'ON_DRAG_END',
@@ -7,6 +8,7 @@ export enum ActionType {
   ON_DRAG_LEAVE = 'ON_DRAG_LEAVE',
   ON_DROP = 'ON_DROP',
 }
+/* eslint-enable no-unused-vars */
 
 type DragEventState =
   | ActionType.ON_DRAG
@@ -75,7 +77,10 @@ export const defaulState: UseReducerState = {
   isDrop: false,
 }
 
-export function reducer(state: UseReducerState, action: UseReducerAction): UseReducerState {
+export function reducer(
+  state: UseReducerState,
+  action: UseReducerAction
+): UseReducerState {
   switch (action.type) {
     case ActionType.ON_DRAG:
       return { ...state, dragEventState: ActionType.ON_DRAG }

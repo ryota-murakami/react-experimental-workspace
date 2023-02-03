@@ -16,7 +16,12 @@ export const WebPage: React.FC<Props> = ({ openModal }) => {
         <h1>Modal</h1>
       </Row>
       <Row>
-        <Button variant="contained" color="primary" onClick={openModal} data-cy="open-modal-button">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={openModal}
+          data-cy="open-modal-button"
+        >
           Open
         </Button>
       </Row>

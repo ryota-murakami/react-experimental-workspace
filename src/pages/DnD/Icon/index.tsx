@@ -3,6 +3,7 @@ import React from 'react'
 import meatIcon from './meat.svg'
 
 interface Props {
+  // eslint-disable-next-line no-unused-vars
   onDragStart: (e: React.DragEvent) => void
 }
 
