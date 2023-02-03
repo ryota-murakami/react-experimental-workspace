@@ -19,8 +19,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": [
-      "@types/jest",
-      "cypress"
+      "@types/jest"
     ],
     "noFallthroughCasesInSwitch": true
   },
