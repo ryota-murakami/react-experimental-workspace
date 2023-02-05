@@ -39,8 +39,6 @@
     }
   },
   "rules": {
-    "no-alert": "error",
-    "no-console": "error",
     "prettier/prettier": [
       "warn",
       {
