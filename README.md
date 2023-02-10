@@ -4,7 +4,6 @@ The repo is personal use [Create React App TypeScript Templete](https://create-r
 So I have no intention to publishing as a polite OSS Project about the repo.  
 
 # Production
-[Deploy Branch](https://github.com/ryota-murakami/react-experimental-workspace/tree/deploy) on the Netlify(https://react-experimental-workspace.netlify.app/).
 
 
 # Install
