@@ -19,6 +19,7 @@ const Recoil = lazy(async () => import('./pages/Recoil'))
 const DnD = lazy(async () => import('./pages/DnD'))
 const Tooltip = lazy(async () => import('./pages/Tooltip'))
 const ForwardRef = lazy(async () => import('./pages/ForwardRef'))
+const Search = lazy(async () => import('./pages/Search'))
 
 const Router = () => {
   return (
@@ -39,6 +40,7 @@ const Router = () => {
           <Route exact path="/selectbox" element={<SelectBox />} />
           <Route exact path="/tooltip" element={<Tooltip />} />
           <Route exact path="/forwardRef" element={<ForwardRef />} />
+          <Route exact path="/search" element={<Search />} />
           <Route element={<NotFound />} />
         </Routes>
       </Suspense>

@@ -14,7 +14,7 @@ module.exports = {
         path: 'src/pages/index.jsx',
         pattern: /(.*)(<main>[\s\S]*)(<\/main>)/m,
         template:
-          '$1$2    <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
+          '$1$2  <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
         type: 'modify',
       },
       {
@@ -28,7 +28,7 @@ module.exports = {
         path: 'src/Router.jsx',
         pattern: /(<Route element={<NotFound \/>\} \/>)\n\s*<\/Routes>/g,
         template:
-          '    <Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
+          '<Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
         type: 'modify',
       },
     ]
