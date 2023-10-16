@@ -1,9 +1,9 @@
-const pageGenerator = require('./generators/pages/index');
+const pageGenerator = require('./generators/pages/index')
 
 /**
  *
  * @param {import('plop').NodePlopAPI} plop
  */
 module.exports = function (plop) {
-  plop.setGenerator('page', pageGenerator);
-};
+  plop.setGenerator('page', pageGenerator)
+}

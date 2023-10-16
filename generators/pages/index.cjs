@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+const path = require('path')
+const fs = require('fs')
 
 /**
  *
@@ -21,6 +21,6 @@ module.exports = {
         path: 'src/pages/{{properCase name}}/index.tsx',
         templateFile: 'generators/pages/index.tsx.hbs',
       },
-    ];
+    ]
   },
-};
+}
