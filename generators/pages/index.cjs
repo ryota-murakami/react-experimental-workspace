@@ -19,17 +19,16 @@ module.exports = {
       },
       {
         path: 'src/Router.jsx',
-        pattern:
-          /(const [a-zA-Z]* = lazy\(async \(\) => import\('.\/pages\/[a-zA-Z]*'\)\);)\n\n/g,
+        pattern: /(const Router = \(\) => {)/,
         template:
-          "$1\nconst {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n",
+          "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',
       },
       {
         path: 'src/Router.jsx',
         pattern: /(<Route element={<NotFound \/>\} \/>)\n\s*<\/Routes>/g,
         template:
-          '          <Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
+          '    <Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
         type: 'modify',
       },
     ]

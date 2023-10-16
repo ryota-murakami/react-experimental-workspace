@@ -5,7 +5,7 @@ import Container from './Container'
 export const Loading = () => {
   return (
     <Container>
-      <CircleLoader sizeUnit={'px'} size={150} color={'#36D7B7'} />
+      <CircleLoader size={150} color={'#36D7B7'} />
     </Container>
   )
 }
