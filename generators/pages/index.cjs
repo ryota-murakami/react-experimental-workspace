@@ -17,6 +17,21 @@ module.exports = {
           '$1$2    <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
         type: 'modify',
       },
+      {
+        path: 'src/Router.jsx',
+        pattern:
+          /(const [a-zA-Z]* = lazy\(async \(\) => import\('.\/pages\/[a-zA-Z]*'\)\);)\n\n/g,
+        template:
+          "$1\nconst {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n",
+        type: 'modify',
+      },
+      {
+        path: 'src/Router.jsx',
+        pattern: /(<Route element={<NotFound \/>\} \/>)\n\s*<\/Routes>/g,
+        template:
+          '          <Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
+        type: 'modify',
+      },
     ]
   },
   description: 'Pages Generator',
