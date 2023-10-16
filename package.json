@@ -1,6 +1,9 @@
 {
   "name": "react-experimental-workspace",
   "version": "0.4.0",
+  "engines": {
+    "node": "18.x"
+  },
   "license": "MIT",
   "msw": {
     "workerDirectory": "public"
@@ -76,5 +79,8 @@
   },
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
+  },
+  "volta": {
+    "node": "18.18.2"
   }
 }
