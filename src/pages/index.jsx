@@ -9,7 +9,7 @@ class Index extends Component {
     return (
       <Layout>
         <header>
-          <h1>React Garden</h1>
+          <h1>React Experimental Workspace</h1>
         </header>
         <main>
           <Link to="/dnd">DnD</Link>
