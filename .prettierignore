@@ -9,3 +9,4 @@ dist-ssr
 .all-contributorsrc
 .vscode
 .idea
+generators/pages/index.tsx.hbs
