@@ -10,20 +10,20 @@ interface LayoutProps {
 
 const Layout = styled.div<LayoutProps>(
   {
-    zIndex: 3,
-    width: '600px',
-    height: '360px',
     backgroundColor: 'white',
-    margin: 'auto 0',
-    fontSize: 20,
-    position: 'absolute',
-    left: '50%',
-    marginLeft: '-300px',
-    top: '50%',
-    marginTop: '-180px',
     flexDirection: 'column',
+    fontSize: 20,
+    height: '360px',
+    left: '50%',
+    margin: 'auto 0',
+    marginLeft: '-300px',
+    marginTop: '-180px',
+    position: 'absolute',
+    width: '600px',
+    top: '50%',
+    zIndex: 3,
   },
-  (props) => ({ display: props.isOpen ? 'flex' : 'none' })
+  (props) => ({ display: props.isOpen ? 'flex' : 'none' }),
 )
 
 const Head = styled.div`
@@ -52,11 +52,11 @@ const Bottom = styled.div`
 `
 
 interface Props {
-  isOpen: ModalState['isOpen']
   closeModal: closeModal
+  isOpen: ModalState['isOpen']
 }
 
-const Modal: React.FC<Props> = ({ isOpen, closeModal }) => {
+const Modal: React.FC<Props> = ({ closeModal, isOpen }) => {
   return (
     <Layout isOpen={isOpen} data-cy="modal">
       <Head>Modal</Head>

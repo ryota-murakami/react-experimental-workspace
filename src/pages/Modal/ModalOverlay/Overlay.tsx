@@ -21,11 +21,11 @@ const Styled = styled.div<StyledProps>`
 `
 
 interface Props {
-  isOpen: ModalState['isOpen']
   closeModal: closeModal
+  isOpen: ModalState['isOpen']
 }
 
-const Overlay: React.FC<Props> = ({ isOpen, closeModal }) => (
+const Overlay: React.FC<Props> = ({ closeModal, isOpen }) => (
   <Styled isOpen={isOpen} onClick={closeModal} data-cy="overlay" />
 )
 

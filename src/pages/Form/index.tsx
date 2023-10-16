@@ -18,10 +18,10 @@ const EmailRegex = /^(([^<>()\[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@((
 interface State {
   email: string
   emailErrorMessage: string
-  password: string
-  passwordErrorMessage: string
   flashMessage: string
   hasError: boolean
+  password: string
+  passwordErrorMessage: string
   showFlash: boolean
 }
 
@@ -29,10 +29,10 @@ class Form extends Component<Record<string, unknown>, State> {
   state: State = {
     email: '',
     emailErrorMessage: '',
-    password: '',
-    passwordErrorMessage: '',
     flashMessage: '',
     hasError: false,
+    password: '',
+    passwordErrorMessage: '',
     showFlash: false,
   }
 
@@ -88,10 +88,10 @@ class Form extends Component<Record<string, unknown>, State> {
     // no error
     if (emailErrorFlag === false && passwordErrorFlag === false) {
       this.setState({
-        flashMessage: 'Success!',
         email: '',
-        password: '',
+        flashMessage: 'Success!',
         hasError: false,
+        password: '',
         showFlash: true,
       })
       setTimeout(() => this.setState({ flashMessage: '', showFlash: false }), 1000) /* prettier-ignore */
@@ -106,7 +106,7 @@ class Form extends Component<Record<string, unknown>, State> {
   }
 
   render(): ReactElement {
-    const { email, password, emailErrorMessage, passwordErrorMessage } =
+    const { email, emailErrorMessage, password, passwordErrorMessage } =
       this.state
 
     const hasEmailError: boolean = emailErrorMessage.length > 0

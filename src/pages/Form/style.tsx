@@ -106,7 +106,8 @@ export const TextInput = styled.input<TextInputProps>`
       border-color: red;
     `} &:focus {
     border-color: #007eff;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    box-shadow:
+      inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 0 3px rgba(0, 126, 255, 0.1);
     outline: none;
   }

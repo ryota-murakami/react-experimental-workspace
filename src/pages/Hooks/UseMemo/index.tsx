@@ -29,7 +29,6 @@ const Layout = styled.div`
 
 const initialState = { count: 0 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const reducer = (state: { count: number }, action: { type: any }) => {
   switch (action.type) {
     case 'increment':

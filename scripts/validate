@@ -1,0 +1,10 @@
+#!/bin/sh
+
+  concurrently \
+  --kill-others-on-fail \
+  --prefix "[{name}]" \
+  --names "lint:fix,typecheck,build" \
+  --prefix-colors "bgGreen.bold.white,bgBlue.bold.white,bgMagenta.bold.white" \
+    "npm run lint:fix --silent" \
+    "npm run typecheck --silent" \
+    "npm run build --silent"

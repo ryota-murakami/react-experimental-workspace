@@ -1,5 +1,4 @@
 export enum ActionType {
-  /* eslint-disable no-unused-vars */
   ON_DRAG = 'ON_DRAG',
   ON_DRAG_START = 'ON_DRAG_START',
   ON_DRAG_END = 'ON_DRAG_END',
@@ -24,38 +23,38 @@ interface DragEventHandlerAction {
 }
 
 interface OnDragAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG
   payload: null
+  type: ActionType.ON_DRAG
 }
 
 interface OnDragStartAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG_START
   payload: null
+  type: ActionType.ON_DRAG_START
 }
 
 interface OnDragEndAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG_END
   payload: null
+  type: ActionType.ON_DRAG_END
 }
 
 interface OnDragEnterAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG_ENTER
   payload: null
+  type: ActionType.ON_DRAG_ENTER
 }
 
 interface OnDragOverAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG_OVER
   payload: null
+  type: ActionType.ON_DRAG_OVER
 }
 
 interface OnDragLeaveAction extends DragEventHandlerAction {
-  type: ActionType.ON_DRAG_LEAVE
   payload: null
+  type: ActionType.ON_DRAG_LEAVE
 }
 
 interface OnDropAction extends DragEventHandlerAction {
-  type: ActionType.ON_DROP
   payload: null
+  type: ActionType.ON_DROP
 }
 
 type UseReducerAction =
@@ -79,7 +78,7 @@ export const defaulState: UseReducerState = {
 
 export function reducer(
   state: UseReducerState,
-  action: UseReducerAction
+  action: UseReducerAction,
 ): UseReducerState {
   switch (action.type) {
     case ActionType.ON_DRAG:

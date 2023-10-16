@@ -9,20 +9,20 @@ const DnDPage: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, defaulState)
 
   const onDragStart = () => {
-    dispatch({ type: ActionType.ON_DRAG_START, payload: null })
+    dispatch({ payload: null, type: ActionType.ON_DRAG_START })
   }
 
   const onDragEnter = () => {
-    dispatch({ type: ActionType.ON_DRAG_ENTER, payload: null })
+    dispatch({ payload: null, type: ActionType.ON_DRAG_ENTER })
   }
 
   const onDragOver = (e: React.DragEvent) => {
     e.preventDefault()
-    dispatch({ type: ActionType.ON_DRAG_OVER, payload: null })
+    dispatch({ payload: null, type: ActionType.ON_DRAG_OVER })
   }
 
   const onDrop = () => {
-    dispatch({ type: ActionType.ON_DROP, payload: null })
+    dispatch({ payload: null, type: ActionType.ON_DROP })
   }
 
   return (

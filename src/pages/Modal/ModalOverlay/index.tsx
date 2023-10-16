@@ -6,11 +6,11 @@ import Modal from './Modal/index'
 import Overlay from './Overlay'
 
 interface Props {
-  isOpen: ModalState['isOpen']
   closeModal: closeModal
+  isOpen: ModalState['isOpen']
 }
 
-const ModalOverlay: React.FC<Props> = ({ isOpen, closeModal }) => {
+const ModalOverlay: React.FC<Props> = ({ closeModal, isOpen }) => {
   return (
     <>
       <Modal isOpen={isOpen} closeModal={closeModal} />

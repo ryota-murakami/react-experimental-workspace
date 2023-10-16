@@ -1,29 +1,30 @@
 {
   "compilerOptions": {
-    "target": "ES2016",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "types": [
-      "@types/jest"
-    ],
-    "noFallthroughCasesInSwitch": true
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
   "include": [
-    "src"
-  ]
+    "./src",
+    "./@types",
+    "mocks",
+    "scripts",
+    "./**.js",
+    "./**.ts",
+    ".eslintrc.cjs"
+  ],
+  "exclude": ["dist"]
 }
