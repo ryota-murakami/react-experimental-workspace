@@ -1,9 +1,5 @@
 # React Experimental Workspace
 
-# Production
-
-https://react-experimental-workspace.vercel.app/
-
 # requirement
 
 - node v18
