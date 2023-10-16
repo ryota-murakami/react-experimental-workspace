@@ -1,4 +1,4 @@
-import Button from '@material-ui/core/Button'
+import Button from '@mui/material/Button'
 import React, { useReducer } from 'react'
 import type { ReactNode } from 'react'
 import styled from 'styled-components'
@@ -52,7 +52,6 @@ export default function UseReducer(): ReactNode {
           style={{ textAlign: 'center' }}
           variant="contained"
           size="large"
-          color="default"
           onClick={() => dispatch({ type: 'increment' })}
         >
           +

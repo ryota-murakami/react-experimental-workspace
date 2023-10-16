@@ -1,5 +1,5 @@
-import Button from '@material-ui/core/Button'
-import { withStyles } from '@material-ui/core/styles'
+import Button from '@mui/material/Button'
+import { withStyles } from '@mui/material/styles'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 import { Component } from 'react'
