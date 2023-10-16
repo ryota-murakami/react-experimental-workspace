@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const LinkWrapper = styled.div`
   font-size: 24px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 10px;
+  background-color: lightblue;
+  border-radius: max(0px, min(8px, calc((100vw - 4px - 100%) * 9999))) / 8px;
 `
 const StyledLink = styled(PureLink)`
   font-size: 24px;
