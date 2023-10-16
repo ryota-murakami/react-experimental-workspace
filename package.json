@@ -15,6 +15,7 @@
     "typecheck": "tsc --noEmit",
     "prettier": "prettier --write --ignore-unknown .",
     "clean": "rimraf node_modules pnpm-lock.yaml dist",
+    "generate": "plop",
     "validate": "./scripts/validate",
     "remove:tailwind": "scripts/remove_tailwind.js"
   },
@@ -58,6 +59,7 @@
     "eslint-plugin-sort-keys-custom-order": "^1.0.5",
     "jsdom": "^22.1.0",
     "msw": "^1.3.2",
+    "plop": "^4.0.0",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.6",

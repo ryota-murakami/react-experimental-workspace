@@ -19,12 +19,14 @@
   },
   "include": [
     "./src",
+    "./generators",
     "./@types",
     "mocks",
     "scripts",
     "./**.js",
     "./**.ts",
+    "plopfile.cjs",
     ".eslintrc.cjs"
   ],
-  "exclude": ["dist"]
+  "exclude": ["dist", ""]
 }
