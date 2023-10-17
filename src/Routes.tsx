@@ -26,22 +26,22 @@ const Router = () => {
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
-          <Route exact path="/" element={<Index />} />
-          <Route exact path="/dnd" element={<DnD />} />
-          <Route exact path="/recoil" element={<Recoil />} />
-          <Route exact path="/form" element={<Form />} />
-          <Route exact path="/anime" element={<Anime />} />
-          <Route exact path="/context" element={<Context />} />
-          <Route exact path="/hooks" element={<Hooks />} />
-          <Route exact path="/hooks/usereducer" element={<UseReducer />} />
-          <Route exact path="/hooks/usememo" element={<UseMemo />} />
-          <Route exact path="/hooks/useeffect" element={<UseEffect />} />
-          <Route exact path="/modal" element={<Modal />} />
-          <Route exact path="/selectbox" element={<SelectBox />} />
-          <Route exact path="/tooltip" element={<Tooltip />} />
-          <Route exact path="/forwardRef" element={<ForwardRef />} />
-          <Route exact path="/search" element={<Search />} />
-          <Route element={<NotFound />} />
+          <Route path="/" element={<Index />} />
+          <Route path="/dnd" element={<DnD />} />
+          <Route path="/recoil" element={<Recoil />} />
+          <Route path="/form" element={<Form />} />
+          <Route path="/anime" element={<Anime />} />
+          <Route path="/context" element={<Context />} />
+          <Route path="/hooks" element={<Hooks />} />
+          <Route path="/hooks/usereducer" element={<UseReducer />} />
+          <Route path="/hooks/usememo" element={<UseMemo />} />
+          <Route path="/hooks/useeffect" element={<UseEffect />} />
+          <Route path="/modal" element={<Modal />} />
+          <Route path="/selectbox" element={<SelectBox />} />
+          <Route path="/tooltip" element={<Tooltip />} />
+          <Route path="/forwardRef" element={<ForwardRef />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

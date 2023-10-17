@@ -18,17 +18,17 @@ module.exports = {
         type: 'modify',
       },
       {
-        path: 'src/Router.jsx',
-        pattern: /(const Router = \(\) => {)/,
+        path: 'src/Routes.tsx',
+        pattern: /(const Routes = \(\) => {)/,
         template:
           "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',
       },
       {
-        path: 'src/Router.jsx',
+        path: 'src/Routes.tsx',
         pattern: /(<Route element={<NotFound \/>\} \/>)\n\s*<\/Routes>/g,
         template:
-          '<Route exact path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
+          '<Route path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
         type: 'modify',
       },
     ]

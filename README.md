@@ -2,7 +2,6 @@
 
 ![Screenshot 2023-10-16 at 21 37 52](https://github.com/ryota-murakami/react-experimental-workspace/assets/5501268/38f5424b-0681-456b-8c24-ec882b136b52)
 
-
 # requirement
 
 - node v18
@@ -20,7 +19,7 @@ pnpm install
 
 ```bash
 pnpm dev // run dev-server
-pnpm generate // generate new page
+pnpm generate // generate new experiment page
 ```
 
 # LICENSE
