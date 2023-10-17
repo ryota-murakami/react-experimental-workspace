@@ -1,8 +1,10 @@
 import { signal } from '@preact/signals-react'
 import { Theme } from '@radix-ui/themes'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
+
+import { usStates } from '../../../mocks/usStates'
 
 type Input = {
   q: string
@@ -11,17 +13,26 @@ type Input = {
 const hit = signal([])
 
 const Search: React.FC = () => {
-  const {
-    // formState: { errors },
-    handleSubmit,
-    register,
-  } = useForm<Input>()
+  const { handleSubmit, register, watch } = useForm<Input>()
   const onSubmit: SubmitHandler<Input> = async (data) => {
     const response = await fetch(`http://localhost:3000/api/search?q=${data.q}`)
     const results = await response.json()
-    console.log(results)
     hit.value = results
   }
+
+  const [suggestions, setSuggestions] = useState<string[]>([])
+  const searchInput = watch('q')
+
+  useEffect(() => {
+    if (searchInput) {
+      const results = usStates.filter((state) =>
+        state.toLowerCase().includes(searchInput.toLowerCase()),
+      )
+      setSuggestions(results)
+    } else {
+      setSuggestions([])
+    }
+  }, [searchInput])
 
   return (
     <Theme>
@@ -35,6 +46,9 @@ const Search: React.FC = () => {
               Search
             </button>
             <input type="search" {...register('q')} />
+            {suggestions.map((suggestion, index) => (
+              <div key={index}>{suggestion}</div>
+            ))}
           </form>
         </section>
         <section className="grid place-content-center">
