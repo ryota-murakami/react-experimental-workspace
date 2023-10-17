@@ -28,7 +28,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.14.13",
-    "@mui/material": "^5.14.13",
+    "@mui/material": "^5.14.14",
     "@radix-ui/themes": "^2.0.0",
     "classnames": "^2.3.2",
     "copy-to-clipboard": "^3.3.3",
