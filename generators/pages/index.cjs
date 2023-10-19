@@ -11,7 +11,7 @@ module.exports = {
         type: 'add',
       },
       {
-        path: 'src/pages/index.jsx',
+        path: 'src/pages/Suggestion.jsx',
         pattern: /(.*)(<main>[\s\S]*)(<\/main>)/m,
         template:
           '$1$2  <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',

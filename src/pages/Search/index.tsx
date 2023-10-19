@@ -36,7 +36,7 @@ const Search: React.FC = () => {
 
   return (
     <Theme>
-      <div className="container h-screen grid place-content-center">
+      <div className="min-h-screen">
         <section className="grid place-content-center">
           <form className="flex gap-4" onSubmit={handleSubmit(onSubmit)}>
             <button
@@ -45,11 +45,13 @@ const Search: React.FC = () => {
             >
               Search
             </button>
-            <input type="search" {...register('q')} />
-            {suggestions.map((suggestion, index) => (
-              <div key={index}>{suggestion}</div>
-            ))}
+            <input autoComplete="off" type="search" {...register('q')} />
           </form>
+        </section>
+        <section className="grid place-content-center">
+          {suggestions.map((suggestion, index) => (
+            <div key={index}>{suggestion}</div>
+          ))}
         </section>
         <section className="grid place-content-center">
           <ul className="mt-4 space-y-2 list-disc list-inside">
