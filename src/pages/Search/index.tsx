@@ -36,7 +36,10 @@ const Search: React.FC = () => {
 
   return (
     <Theme>
-      <div className="min-h-screen">
+      <div className="min-h-screen flex flex-col">
+        <section className="grid place-content-center">
+          <h1 className="text-8xl font-semibold antialiased py-10">Search</h1>
+        </section>
         <section className="grid place-content-center">
           <form className="flex gap-4" onSubmit={handleSubmit(onSubmit)}>
             <button
