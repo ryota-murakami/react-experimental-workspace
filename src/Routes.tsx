@@ -5,8 +5,8 @@ import './index.css'
 import { Loading } from './components/Loading'
 import Index from './pages'
 import NotFound from './pages/NotFound'
-import SelectBox from './pages/SelectBox'
 
+const SelectBox = lazy(async () => import('./pages/SelectBox'))
 const Form = lazy(async () => import('./pages/Form'))
 const Anime = lazy(async () => import('./pages/Anime'))
 const Context = lazy(async () => import('./pages/Context'))
