@@ -1,13 +1,14 @@
 import { Component } from 'react'
 
 import { Link } from '../components/Link'
+import { PageContainer } from '../components/PageContainer'
 
 import styles from './index.module.css'
 
 class Index extends Component {
   render() {
     return (
-      <div className="container min-h-screen mx-auto px-4">
+      <PageContainer>
         <header className={styles.header}>
           <h1 className={styles.h1}>React Experimental Workspace</h1>
         </header>
@@ -25,7 +26,7 @@ class Index extends Component {
           <Link to="/search">Search</Link>
           <Link to="/use">Use</Link>
         </main>
-      </div>
+      </PageContainer>
     )
   }
 }

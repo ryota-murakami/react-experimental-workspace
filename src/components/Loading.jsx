@@ -1,11 +1,9 @@
 import { CircleLoader } from 'react-spinners'
 
-import Container from './Container'
-
 export const Loading = () => {
   return (
-    <Container>
+    <div className="min-h-screen min-w-full grid place-content-center">
       <CircleLoader size={150} color={'#36D7B7'} />
-    </Container>
+    </div>
   )
 }
