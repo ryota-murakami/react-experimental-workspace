@@ -2,16 +2,16 @@ import { Component } from 'react'
 
 import { Link } from '../components/Link'
 
-import { Layout } from './index.style'
+import styles from './index.module.css'
 
 class Index extends Component {
   render() {
     return (
-      <Layout>
-        <header>
-          <h1>React Experimental Workspace</h1>
+      <div className="container min-h-screen mx-auto px-4">
+        <header className={styles.header}>
+          <h1 className={styles.h1}>React Experimental Workspace</h1>
         </header>
-        <main>
+        <main className={styles.main}>
           <Link to="/dnd">DnD</Link>
           <Link to="/recoil">Recoil</Link>
           <Link to="/hooks">Hooks</Link>
@@ -24,7 +24,7 @@ class Index extends Component {
           <Link to="/forwardRef">ForwardRef</Link>
           <Link to="/search">Search</Link>
         </main>
-      </Layout>
+      </div>
     )
   }
 }
