@@ -23,6 +23,7 @@ class Index extends Component {
           <Link to="/tooltip">Tooltip</Link>
           <Link to="/forwardRef">ForwardRef</Link>
           <Link to="/search">Search</Link>
+          <Link to="/use">Use</Link>
         </main>
       </div>
     )

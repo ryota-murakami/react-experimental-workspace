@@ -11,24 +11,25 @@ module.exports = {
         type: 'add',
       },
       {
-        path: 'src/pages/Suggestion.jsx',
-        pattern: /(.*)(<main>[\s\S]*)(<\/main>)/m,
+        path: 'src/pages/index.jsx',
+        pattern: /(.*)(<main className={styles.main}>[\s\S]*)(<\/main>)/m,
         template:
           '$1$2  <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
         type: 'modify',
       },
       {
         path: 'src/Routes.tsx',
-        pattern: /(const Routes = \(\) => {)/,
+        pattern: /(const Router = \(\) => {)/,
         template:
           "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',
       },
       {
         path: 'src/Routes.tsx',
-        pattern: /(<Route element={<NotFound \/>\} \/>)\n\s*<\/Routes>/g,
+        pattern:
+          /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/Routes>)/s,
         template:
-          '<Route path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$1\n        </Routes>',
+          '$1<Route path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$2',
         type: 'modify',
       },
     ]

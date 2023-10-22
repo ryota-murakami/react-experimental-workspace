@@ -20,6 +20,7 @@ const DnD = lazy(async () => import('./pages/DnD'))
 const Tooltip = lazy(async () => import('./pages/Tooltip'))
 const ForwardRef = lazy(async () => import('./pages/ForwardRef'))
 const Search = lazy(async () => import('./pages/Search'))
+const Use = lazy(async () => import('./pages/Use'))
 
 const Router = () => {
   return (
@@ -41,6 +42,7 @@ const Router = () => {
           <Route path="/tooltip" element={<Tooltip />} />
           <Route path="/forwardRef" element={<ForwardRef />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/use" element={<Use />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
