@@ -25,6 +25,7 @@ class Index extends Component {
           <Link to="/forwardRef">ForwardRef</Link>
           <Link to="/search">Search</Link>
           <Link to="/use">Use</Link>
+          <Link to="/daisyui">DaisyUi</Link>
         </main>
       </PageContainer>
     )

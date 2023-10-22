@@ -22,6 +22,8 @@ const ForwardRef = lazy(async () => import('./pages/ForwardRef'))
 const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
 
+const DaisyUi = lazy(async () => import('./pages/DaisyUi'))
+
 const Router = () => {
   return (
     <BrowserRouter>
@@ -43,6 +45,7 @@ const Router = () => {
           <Route path="/forwardRef" element={<ForwardRef />} />
           <Route path="/search" element={<Search />} />
           <Route path="/use" element={<Use />} />
+          <Route path="/daisyui" element={<DaisyUi />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
