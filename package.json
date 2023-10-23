@@ -35,7 +35,7 @@
     "immer": "^10.0.3",
     "prop-types": "^15.8.1",
     "react": "0.0.0-experimental-d803f519e-20231020",
-    "react-dom": "0.0.0-experimental-d803f519e-20231020",
+    "react-dom": "0.14.1",
     "react-hook-form": "^7.47.0",
     "react-router-dom": "^6.17.0",
     "react-spinners": "^0.13.8",
