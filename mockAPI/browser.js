@@ -1,4 +1,3 @@
-// src/mocks/browser.js
 import { setupWorker } from 'msw/browser'
 
 import { routes } from './routes'

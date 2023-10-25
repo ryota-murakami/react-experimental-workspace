@@ -7,7 +7,6 @@ export enum ActionType {
   ON_DRAG_LEAVE = 'ON_DRAG_LEAVE',
   ON_DROP = 'ON_DROP',
 }
-/* eslint-enable no-unused-vars */
 
 type DragEventState =
   | ActionType.ON_DRAG

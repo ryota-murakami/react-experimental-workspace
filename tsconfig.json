@@ -14,15 +14,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react-jsx"
   },
   "include": [
     "./src",
     "./generators",
     "./@types",
-    "mocks",
+    "./mockAPI",
     "scripts",
     "./**.js",
+    "./**.cjs",
     "./**.ts",
     "plopfile.cjs",
     ".eslintrc.cjs"

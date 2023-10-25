@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import type { SubmitHandler } from 'react-hook-form'
 import { useForm } from 'react-hook-form'
 
-import { usStates } from '../../../mocks/usStates'
+import { usStates } from '../../../mockAPI/fixtures/usStates'
 
 type Input = {
   q: string

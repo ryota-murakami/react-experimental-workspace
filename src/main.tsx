@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById('root')!)
 // Setup MSW mock server in development
 if (process.env.NODE_ENV === 'development') {
   // Certify MSW's Service Worker is available before start React app.
-  import('../mocks/browser')
+  import('../mockAPI/browser')
     .then(({ worker }) => {
       worker.start()
     }) // Run <App /> when Service Worker is ready to intercept requests.

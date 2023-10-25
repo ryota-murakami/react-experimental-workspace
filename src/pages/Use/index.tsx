@@ -2,7 +2,7 @@ import { ListItem, ListItemButton, ListItemText } from '@mui/material'
 import axios from 'axios'
 import React, { use } from 'react'
 
-import type { usStates } from '../../../mocks/usStates'
+import type { usStates } from '../../../mockAPI/fixtures/usStates'
 import Header from '../../components/Header'
 import { PageContainer } from '../../components/PageContainer'
 interface Props {}

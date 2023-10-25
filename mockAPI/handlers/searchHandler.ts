@@ -1,7 +1,7 @@
 import { HttpResponse } from 'msw'
 import type { ResponseResolver } from 'msw'
 
-import { usStates } from '../usStates'
+import { usStates } from '../fixtures/usStates'
 
 export const searchHandler: ResponseResolver = async ({ request }) => {
   const url = new URL(request.url)
