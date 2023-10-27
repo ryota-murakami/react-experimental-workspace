@@ -27,8 +27,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0(@types/react-dom@18.2.14)(@types/react@18.2.31)(react-dom@0.0.0-experimental-b8e47d988-20231023)(react@0.0.0-experimental-b8e47d988-20231023)
   axios:
-    specifier: ^1.5.1
-    version: 1.5.1
+    specifier: ^1.6.0
+    version: 1.6.0
   classed-components:
     specifier: ^2.0.0
     version: 2.0.0(react@0.0.0-experimental-b8e47d988-20231023)
@@ -3170,8 +3170,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /axios@1.5.1:
-    resolution: {integrity: sha512-Q28iYCWzNHjAm+yEAot5QaAMxhMghWLFVf7rRdwhUI+c2jix2DUXjAHXVi+s1ibs3mjPO/cCgbA++3BjD0vP/A==}
+  /axios@1.6.0:
+    resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
     dependencies:
       follow-redirects: 1.15.3
       form-data: 4.0.0
