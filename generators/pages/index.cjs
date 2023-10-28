@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         path: 'src/Routes.tsx',
-        pattern: /(const Router = \(\) => {)/,
+        pattern: /(const Routes = \(\) => {)/,
         template:
           "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',

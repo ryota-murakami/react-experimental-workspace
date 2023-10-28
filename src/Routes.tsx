@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes as RouteList, Route } from 'react-router-dom'
 import './index.css'
 
 import { Loading } from './components/Loading'
@@ -24,11 +24,11 @@ const Use = lazy(async () => import('./pages/Use'))
 
 const DaisyUi = lazy(async () => import('./pages/DaisyUi'))
 
-const Router = () => {
+const Routes = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Routes>
+        <RouteList>
           <Route path="/" element={<Index />} />
           <Route path="/dnd" element={<DnD />} />
           <Route path="/recoil" element={<Recoil />} />
@@ -47,10 +47,10 @@ const Router = () => {
           <Route path="/use" element={<Use />} />
           <Route path="/daisyui" element={<DaisyUi />} />
           <Route path="*" element={<NotFound />} />
-        </Routes>
+        </RouteList>
       </Suspense>
     </BrowserRouter>
   )
 }
 
-export default Router
+export default Routes
