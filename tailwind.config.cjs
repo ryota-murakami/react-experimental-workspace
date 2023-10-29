@@ -2,7 +2,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: ['./Suggestion.html', './src/**/*.{js,ts,jsx,tsx}'],
-  // plugins: [require('@tailwindcss/forms'), require('daisyui')],
   plugins: [require('@tailwindcss/forms')],
   theme: {
     extend: {
