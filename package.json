@@ -17,8 +17,11 @@
     "clean": "rimraf node_modules pnpm-lock.yaml dist",
     "generate": "plop",
     "validate": "./scripts/validate",
-    "remove:tailwind": "scripts/remove_tailwind.js",
-    "prepare": "husky install"
+    "playwright:test": "exec playwright test",
+    "playwright:test:ui": "exec playwright test --ui",
+    "playwright:test:chromium": "exec playwright test --project=chromium",
+    "playwright:test:debug": "exec playwright test --debug",
+    "playwright:codegen": "exec playwright codegen"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -44,11 +47,13 @@
     "swr": "^2.2.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.39.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/eslint": "^8.44.6",
+    "@types/node": "^20.8.9",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
