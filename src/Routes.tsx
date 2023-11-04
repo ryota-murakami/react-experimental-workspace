@@ -21,6 +21,7 @@ const Tooltip = lazy(async () => import('./pages/Tooltip'))
 const ForwardRef = lazy(async () => import('./pages/ForwardRef'))
 const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
+const Figma = lazy(async () => import('./pages/Figma'))
 
 const Routes = () => {
   return (
@@ -43,6 +44,7 @@ const Routes = () => {
           <Route path="/forwardRef" element={<ForwardRef />} />
           <Route path="/search" element={<Search />} />
           <Route path="/use" element={<Use />} />
+          <Route path="/figma" element={<Figma />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>
