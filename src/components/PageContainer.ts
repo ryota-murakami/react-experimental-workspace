@@ -1,5 +1,7 @@
 import classed from 'classed-components'
 
-export const PageContainer = classed.div(
-  'sm:container min-h-screen mx-auto flex flex-col',
+const Page = {}
+
+Page.Container = classed.div(
+  'sm:container sm: px-4 min-h-screen mx-auto flex flex-col',
 )
