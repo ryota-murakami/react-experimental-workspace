@@ -4,13 +4,13 @@ import React, { use } from 'react'
 
 import type { usStates } from '../../../mockAPI/fixtures/usStates'
 import Header from '../../components/Header'
-import { PageContainer } from '../../components/PageContainer'
+import { Page } from '../../components/Page'
 interface Props {}
 
 const Use: React.FC<Props> = () => {
   const { data } = use(axios.get<typeof usStates>('/api/states'))
   return (
-    <PageContainer>
+    <Page.Container>
       <Header>
         <Header.H1>Use</Header.H1>
       </Header>
@@ -27,7 +27,7 @@ const Use: React.FC<Props> = () => {
             : null}
         </div>
       </div>
-    </PageContainer>
+    </Page.Container>
   )
 }
 
