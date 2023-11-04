@@ -1,7 +1,6 @@
 import Button from '@mui/material/Button'
 import { withStyles } from '@mui/material/styles'
 import classNames from 'classnames'
-import PropTypes from 'prop-types'
 import { Component } from 'react'
 import styled from 'styled-components'
 
@@ -12,10 +11,6 @@ function MaterialStyled(Component) {
       return (
         <Component className={classNames(classes.root, className)} {...other} />
       )
-    }
-    StyledComponent.propTypes = {
-      classes: PropTypes.object.isRequired,
-      className: PropTypes.string,
     }
     const styles =
       typeof style === 'function'
