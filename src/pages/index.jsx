@@ -26,6 +26,7 @@ class Index extends Component {
           <Link to="/search">Search</Link>
           <Link to="/use">Use</Link>
           <Link to="/figma">Figma</Link>
+          <Link to="/suggestinput">SuggestInput</Link>
         </main>
       </Page.Container>
     )

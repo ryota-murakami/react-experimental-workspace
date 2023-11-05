@@ -1,19 +1,19 @@
 import React from 'react'
 
 import Header from '../../components/Header'
-import { PageContainer } from '../../components/PageContainer'
+import { Page } from '../../components/Page'
 
 interface Props {}
 
 const {{properCase name}}: React.FC<Props> = () => {
   return (
-  <PageContainer>
+  <Page.Container>
     <Header>
       <Header.H1>{{properCase name}}</Header.H1>
     </Header>
     <div className="w-full grid place-content-center"></div>
-  </PageContainer>
+  </Page.Container>
   )
-  }
+}
 
-  export default {{properCase name}}
+export default {{properCase name}}

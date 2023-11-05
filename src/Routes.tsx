@@ -23,6 +23,8 @@ const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
 const Figma = lazy(async () => import('./pages/Figma'))
 
+const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -45,6 +47,7 @@ const Routes = () => {
           <Route path="/search" element={<Search />} />
           <Route path="/use" element={<Use />} />
           <Route path="/figma" element={<Figma />} />
+          <Route path="/suggestinput" element={<SuggestInput />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

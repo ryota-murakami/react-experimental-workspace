@@ -27,7 +27,7 @@ module.exports = {
       {
         path: 'src/Routes.tsx',
         pattern:
-          /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/Routes>)/s,
+          /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/RouteList>)/s,
         template:
           '$1<Route path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$2',
         type: 'modify',
