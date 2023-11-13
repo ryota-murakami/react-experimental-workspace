@@ -22,8 +22,8 @@ const ForwardRef = lazy(async () => import('./pages/ForwardRef'))
 const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
 const Figma = lazy(async () => import('./pages/Figma'))
-
 const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
+const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
 
 const Routes = () => {
   return (
@@ -48,6 +48,7 @@ const Routes = () => {
           <Route path="/use" element={<Use />} />
           <Route path="/figma" element={<Figma />} />
           <Route path="/suggestinput" element={<SuggestInput />} />
+          <Route path="/htmldaialog" element={<HtmlDaialog />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>
