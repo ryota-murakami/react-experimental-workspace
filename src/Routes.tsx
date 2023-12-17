@@ -1,6 +1,8 @@
-import { Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes as RouteList, Route } from 'react-router-dom'
 import './global.css'
+
+import Popup from '@/pages/WindowOpen/Popup'
 
 import { Loading } from './components/Loading'
 import Index from './pages'
@@ -24,7 +26,6 @@ const Use = lazy(async () => import('./pages/Use'))
 const Figma = lazy(async () => import('./pages/Figma'))
 const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
 const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
-
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 
 const Routes = () => {
@@ -52,6 +53,7 @@ const Routes = () => {
           <Route path="/suggestinput" element={<SuggestInput />} />
           <Route path="/htmldaialog" element={<HtmlDaialog />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
+          <Route path="/windowOpen/popup" element={<Popup />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
@@ -7,6 +7,20 @@ import { Button } from '@/components/ui/button'
 interface Props {}
 
 const WindowOpen: React.FC<Props> = () => {
+  const [text, setText] = useState('')
+  console.log(text)
+  useEffect(() => {
+    const handleMessage = (event: MessageEvent) => {
+      setText(event.data)
+    }
+
+    window.addEventListener('message', handleMessage)
+
+    return () => {
+      window.removeEventListener('message', handleMessage)
+    }
+  }, [])
+
   return (
     <Page.Container>
       <Header>
@@ -15,7 +29,7 @@ const WindowOpen: React.FC<Props> = () => {
       <div className="w-full grid place-content-center">
         <Button
           onClick={() => {
-            window.open()
+            window.open('/windowOpen/popup', '_blank', 'width=600,height=600')
           }}
         >
           window open
