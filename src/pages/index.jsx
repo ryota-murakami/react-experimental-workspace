@@ -28,6 +28,7 @@ class Index extends Component {
           <Link to="/figma">Figma</Link>
           <Link to="/suggestinput">SuggestInput</Link>
           <Link to="/htmldaialog">HtmlDaialog</Link>
+          <Link to="/windowOpen">WindowOpen</Link>
         </main>
       </Page.Container>
     )
