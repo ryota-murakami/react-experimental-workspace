@@ -25,7 +25,7 @@ const Figma = lazy(async () => import('./pages/Figma'))
 const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
 const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
 
-const WindowOpen = lazy(async () => import('./pages/WindowOpen'));
+const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 
 const Routes = () => {
   return (
@@ -52,7 +52,7 @@ const Routes = () => {
           <Route path="/suggestinput" element={<SuggestInput />} />
           <Route path="/htmldaialog" element={<HtmlDaialog />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
-<Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>
     </BrowserRouter>

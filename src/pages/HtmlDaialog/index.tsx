@@ -11,9 +11,7 @@ const HtmlDaialog: React.FC<Props> = () => {
       <Header>
         <Header.H1>HtmlDaialog</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
-        
-      </div>
+      <div className="w-full grid place-content-center"></div>
     </Page.Container>
   )
 }

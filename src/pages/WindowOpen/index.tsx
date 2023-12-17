@@ -7,12 +7,12 @@ interface Props {}
 
 const WindowOpen: React.FC<Props> = () => {
   return (
-  <Page.Container>
-    <Header>
-      <Header.H1>WindowOpen</Header.H1>
-    </Header>
-    <div className="w-full grid place-content-center"></div>
-  </Page.Container>
+    <Page.Container>
+      <Header>
+        <Header.H1>WindowOpen</Header.H1>
+      </Header>
+      <div className="w-full grid place-content-center"></div>
+    </Page.Container>
   )
 }
 
