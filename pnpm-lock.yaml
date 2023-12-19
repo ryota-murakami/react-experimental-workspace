@@ -15,8 +15,8 @@ dependencies:
     specifier: ^5.0.8
     version: 5.0.8
   '@mui/icons-material':
-    specifier: ^5.15.0
-    version: 5.15.0(@mui/material@5.15.1)(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102)
+    specifier: ^5.15.1
+    version: 5.15.1(@mui/material@5.15.1)(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102)
   '@mui/material':
     specifier: ^5.15.1
     version: 5.15.1(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.31)(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
@@ -1038,8 +1038,8 @@ packages:
     resolution: {integrity: sha512-y/nUEsWHyBzaKYp9zLtqJKrLod/zMNEWpMj488FuQY9QTmqBiyUhI2uh7PVaLqLewXRtdmG6JV0b6T5exyuYRw==}
     dev: false
 
-  /@mui/icons-material@5.15.0(@mui/material@5.15.1)(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102):
-    resolution: {integrity: sha512-zHY6fOkaK7VfhWeyxO8MjO3IAjEYpYMXuqUhX7TkUZJ9+TSH/9dn4ClG4K2j6hdgBU5Yrq2Z/89Bo6BHHp7AdQ==}
+  /@mui/icons-material@5.15.1(@mui/material@5.15.1)(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102):
+    resolution: {integrity: sha512-VPJdBSyap6uOxCb5BLbWbkvd6aeJCp1pQZm8DcZBITCH0NOSv8Mz9c8Zvo8xr4Od7+xyWHUAgvRSL4047pL2WQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@mui/material': ^5.0.0
