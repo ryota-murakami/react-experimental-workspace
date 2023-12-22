@@ -72,8 +72,8 @@ dependencies:
     specifier: ^0.7.7
     version: 0.7.7(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
   styled-components:
-    specifier: ^6.1.1
-    version: 6.1.1(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
+    specifier: ^6.1.2
+    version: 6.1.2(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -7029,8 +7029,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-components@6.1.1(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102):
-    resolution: {integrity: sha512-cpZZP5RrKRIClBW5Eby4JM1wElLVP4NQrJbJ0h10TidTyJf4SIIwa3zLXOoPb4gJi8MsJ8mjq5mu2IrEhZIAcQ==}
+  /styled-components@6.1.2(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102):
+    resolution: {integrity: sha512-LJjirciivbOKNuKKjheXMeNOlFspur4s2/AYW2hPyrL4RhwEFiowF9axgjeMVxX7siEoLJAitKrzpuNApJ5R/Q==}
     engines: {node: '>= 16'}
     peerDependencies:
       react: '>= 16.8.0'
