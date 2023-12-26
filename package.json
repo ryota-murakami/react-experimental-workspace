@@ -26,7 +26,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.15.2",
-    "@mui/material": "^5.15.1",
+    "@mui/material": "^5.15.2",
     "@preact/signals-react": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/themes": "^2.0.3",
