@@ -30,7 +30,7 @@
     "@preact/signals-react": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/themes": "^2.0.3",
-    "axios": "^1.6.2",
+    "axios": "^1.6.3",
     "class-variance-authority": "^0.7.0",
     "classed-components": "^2.0.0",
     "classnames": "^2.3.3",
