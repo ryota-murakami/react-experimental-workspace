@@ -33,7 +33,7 @@
     "axios": "^1.6.3",
     "class-variance-authority": "^0.7.0",
     "classed-components": "^2.0.0",
-    "classnames": "^2.4.0",
+    "classnames": "^2.5.0",
     "clsx": "^2.0.0",
     "copy-to-clipboard": "^3.3.3",
     "immer": "^10.0.3",
