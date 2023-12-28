@@ -72,8 +72,8 @@ dependencies:
     specifier: ^0.7.7
     version: 0.7.7(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
   styled-components:
-    specifier: ^6.1.4
-    version: 6.1.4(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
+    specifier: ^6.1.6
+    version: 6.1.6(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -7044,8 +7044,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /styled-components@6.1.4(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102):
-    resolution: {integrity: sha512-VFlzze2LFUgLbjrYVZIhQaIJLyIdkq+7Tm7IW+chiIhEe4LRwMk8JJw/IG+Gxeaubv29BVwxt+zgXnewyi5gOg==}
+  /styled-components@6.1.6(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102):
+    resolution: {integrity: sha512-DgTLULSC29xpabJ24bbn1+hulU6vvGFQf4RPwBOJrm8WJFnN42yXpo5voBt3jDSJBa5tBd1L6PqswJjQ0wRKdg==}
     engines: {node: '>= 16'}
     peerDependencies:
       react: '>= 16.8.0'
@@ -7060,7 +7060,7 @@ packages:
       react: 18.3.0-canary-ce2bc58a9-20231102
       react-dom: 18.3.0-canary-ce2bc58a9-20231102(react@18.3.0-canary-ce2bc58a9-20231102)
       shallowequal: 1.1.0
-      stylis: 4.3.0
+      stylis: 4.3.1
       tslib: 2.5.0
     dev: false
 
@@ -7068,8 +7068,8 @@ packages:
     resolution: {integrity: sha512-Orov6g6BB1sDfYgzWfTHDOxamtX1bE/zo104Dh9e6fqJ3PooipYyfJ0pUmrZO2wAvO8YbEyeFrkV91XTsGMSrw==}
     dev: false
 
-  /stylis@4.3.0:
-    resolution: {integrity: sha512-E87pIogpwUsUwXw7dNyU4QDjdgVMy52m+XEOPEKUn161cCzWjjhPSQhByfd1CcNvrOLnXQ6OnnZDwnJrz/Z4YQ==}
+  /stylis@4.3.1:
+    resolution: {integrity: sha512-EQepAV+wMsIaGVGX1RECzgrcqRRU/0sYOHkeLsZ3fzHaHXZy4DaOOX0vOlGQdlsjkh3mFHAIlVimpwAs4dslyQ==}
     dev: false
 
   /sucrase@3.34.0:
