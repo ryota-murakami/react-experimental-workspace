@@ -39,8 +39,8 @@ dependencies:
     specifier: ^2.0.0
     version: 2.0.0(react@18.3.0-canary-ce2bc58a9-20231102)
   classnames:
-    specifier: ^2.5.0
-    version: 2.5.0
+    specifier: ^2.5.1
+    version: 2.5.1
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
@@ -2363,7 +2363,7 @@ packages:
       '@radix-ui/react-visually-hidden': 1.0.3(@types/react-dom@18.2.14)(@types/react@18.2.31)(react-dom@18.3.0-canary-ce2bc58a9-20231102)(react@18.3.0-canary-ce2bc58a9-20231102)
       '@types/react': 18.2.31
       '@types/react-dom': 18.2.14
-      classnames: 2.5.0
+      classnames: 2.5.1
       react: 18.3.0-canary-ce2bc58a9-20231102
       react-dom: 18.3.0-canary-ce2bc58a9-20231102(react@18.3.0-canary-ce2bc58a9-20231102)
     dev: false
@@ -3518,12 +3518,12 @@ packages:
       react: '*'
     dependencies:
       '@emotion/is-prop-valid': 1.2.1
-      classnames: 2.5.0
+      classnames: 2.5.1
       react: 18.3.0-canary-ce2bc58a9-20231102
     dev: false
 
-  /classnames@2.5.0:
-    resolution: {integrity: sha512-FQuRlyKinxrb5gwJlfVASbSrDlikDJ07426TrfPsdGLvtochowmkbnSFdQGJ2aoXrSetq5KqGV9emvWpy+91xA==}
+  /classnames@2.5.1:
+    resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
     dev: false
 
   /clean-stack@4.2.0:
