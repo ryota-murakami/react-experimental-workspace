@@ -42,8 +42,8 @@ dependencies:
     specifier: ^2.5.1
     version: 2.5.1
   clsx:
-    specifier: ^2.0.0
-    version: 2.0.0
+    specifier: ^2.1.0
+    version: 2.1.0
   copy-to-clipboard:
     specifier: ^3.3.3
     version: 3.3.3
@@ -1049,7 +1049,7 @@ packages:
       '@mui/utils': 5.15.2(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102)
       '@popperjs/core': 2.11.8
       '@types/react': 18.2.31
-      clsx: 2.0.0
+      clsx: 2.1.0
       prop-types: 15.8.1
       react: 18.3.0-canary-ce2bc58a9-20231102
       react-dom: 18.3.0-canary-ce2bc58a9-20231102(react@18.3.0-canary-ce2bc58a9-20231102)
@@ -1103,7 +1103,7 @@ packages:
       '@mui/utils': 5.15.2(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102)
       '@types/react': 18.2.31
       '@types/react-transition-group': 4.4.10
-      clsx: 2.0.0
+      clsx: 2.1.0
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.3.0-canary-ce2bc58a9-20231102
@@ -1175,7 +1175,7 @@ packages:
       '@mui/types': 7.2.11(@types/react@18.2.31)
       '@mui/utils': 5.15.2(@types/react@18.2.31)(react@18.3.0-canary-ce2bc58a9-20231102)
       '@types/react': 18.2.31
-      clsx: 2.0.0
+      clsx: 2.1.0
       csstype: 3.1.2
       prop-types: 15.8.1
       react: 18.3.0-canary-ce2bc58a9-20231102
@@ -3648,6 +3648,11 @@ packages:
 
   /clsx@2.0.0:
     resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
     engines: {node: '>=6'}
     dev: false
 
