@@ -95,8 +95,8 @@ devDependencies:
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
   '@types/node':
-    specifier: ^20.11.4
-    version: 20.11.4
+    specifier: ^20.11.5
+    version: 20.11.5
   '@types/react':
     specifier: ^18.2.31
     version: 18.2.31
@@ -180,7 +180,7 @@ devDependencies:
     version: 5.3.3
   vite:
     specifier: ^5.0.11
-    version: 5.0.11(@types/node@20.11.4)
+    version: 5.0.11(@types/node@20.11.5)
   vite-plugin-environment:
     specifier: ^1.1.3
     version: 1.1.3(vite@5.0.11)
@@ -908,7 +908,7 @@ packages:
     dependencies:
       '@inquirer/type': 1.1.5
       '@types/mute-stream': 0.0.1
-      '@types/node': 20.11.4
+      '@types/node': 20.11.5
       '@types/wrap-ansi': 3.0.0
       ansi-escapes: 4.3.2
       chalk: 4.1.2
@@ -2832,17 +2832,17 @@ packages:
     resolution: {integrity: sha512-UgbL2kR5pLrWICvr8+fuSg0u43LY250q7ZMkC+XKC3E+rs/YBDEnQIzsnhU5dYsLlwMi3R75UvCL87pObP1sxw==}
     dependencies:
       '@types/fined': 1.1.3
-      '@types/node': 20.11.4
+      '@types/node': 20.11.5
     dev: true
 
   /@types/mute-stream@0.0.1:
     resolution: {integrity: sha512-0yQLzYhCqGz7CQPE3iDmYjhb7KMBFOP+tBkyw+/Y2YyDI5wpS7itXXxneN1zSsUwWx3Ji6YiVYrhAnpQGS/vkw==}
     dependencies:
-      '@types/node': 20.11.4
+      '@types/node': 20.11.5
     dev: true
 
-  /@types/node@20.11.4:
-    resolution: {integrity: sha512-6I0fMH8Aoy2lOejL3s4LhyIYX34DPwY8bl5xlNjBvUEk8OHrcuzsFt+Ied4LvJihbtXPM+8zUqdydfIti86v9g==}
+  /@types/node@20.11.5:
+    resolution: {integrity: sha512-g557vgQjUUfN76MZAN/dt1z3dzcUsimuysco0KeluHgrPdJXkP/XdAURgyO2W9fZWHRtRBiVKzKn8vyOAwlG+w==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -2894,7 +2894,7 @@ packages:
   /@types/through@0.0.31:
     resolution: {integrity: sha512-LpKpmb7FGevYgXnBXYs6HWnmiFyVG07Pt1cnbgM1IhEacITTiUaBXXvOR3Y50ksaJWGSfhbEvQFivQEFGCC55w==}
     dependencies:
-      '@types/node': 20.11.4
+      '@types/node': 20.11.5
     dev: true
 
   /@types/wrap-ansi@3.0.0:
@@ -3043,7 +3043,7 @@ packages:
       vite: ^4 || ^5
     dependencies:
       '@swc/core': 1.3.96
-      vite: 5.0.11(@types/node@20.11.4)
+      vite: 5.0.11(@types/node@20.11.5)
     transitivePeerDependencies:
       - '@swc/helpers'
     dev: true
@@ -7494,7 +7494,7 @@ packages:
     peerDependencies:
       vite: '>= 2.7'
     dependencies:
-      vite: 5.0.11(@types/node@20.11.4)
+      vite: 5.0.11(@types/node@20.11.5)
     dev: true
 
   /vite-plugin-svgr@4.2.0(typescript@5.3.3)(vite@5.0.11):
@@ -7505,14 +7505,14 @@ packages:
       '@rollup/pluginutils': 5.0.5
       '@svgr/core': 8.1.0(typescript@5.3.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0)
-      vite: 5.0.11(@types/node@20.11.4)
+      vite: 5.0.11(@types/node@20.11.5)
     transitivePeerDependencies:
       - rollup
       - supports-color
       - typescript
     dev: true
 
-  /vite@5.0.11(@types/node@20.11.4):
+  /vite@5.0.11(@types/node@20.11.5):
     resolution: {integrity: sha512-XBMnDjZcNAw/G1gEiskiM1v6yzM4GE5aMGvhWTlHAYYhxb7S3/V1s3m2LDHa8Vh6yIWYYB0iJwsEaS523c4oYA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -7540,7 +7540,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.11.4
+      '@types/node': 20.11.5
       esbuild: 0.19.7
       postcss: 8.4.33
       rollup: 4.5.0
