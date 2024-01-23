@@ -2,7 +2,7 @@
 
 # requirement
 
-- node v18
+- node v20
 - pnpm
 
 # Install
