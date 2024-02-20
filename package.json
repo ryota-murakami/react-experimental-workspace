@@ -10,9 +10,8 @@
   },
   "scripts": {
     "start": "vite",
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "serve dist",
+    "dev": "VITE_CJS_IGNORE_WARNING=true vite",
+    "build": "VITE_CJS_IGNORE_WARNING=true vite build",
     "lint": "eslint . --ext .ts,.tsx,.js,jsx",
     "lint:fix": "eslint . --ext .ts,.tsx,.js,jsx --fix",
     "typecheck": "tsc --noEmit",
