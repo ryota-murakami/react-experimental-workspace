@@ -27,6 +27,7 @@ const Figma = lazy(async () => import('./pages/Figma'))
 const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
 const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
+const RefCompare = lazy(async () => import('./pages/RefCompare'))
 
 const Routes = () => {
   return (
@@ -54,6 +55,7 @@ const Routes = () => {
           <Route path="/htmldaialog" element={<HtmlDaialog />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
           <Route path="/windowOpen/popup" element={<Popup />} />
+          <Route path="/refcompare" element={<RefCompare />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

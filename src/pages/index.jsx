@@ -29,7 +29,8 @@ class Index extends Component {
           <Link to="/suggestinput">SuggestInput</Link>
           <Link to="/htmldaialog">HtmlDaialog</Link>
           <Link to="/windowOpen">WindowOpen</Link>
-        </main>
+          <Link to="/refcompare">RefCompare</Link>
+</main>
       </Page.Container>
     )
   }
