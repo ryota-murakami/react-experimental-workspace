@@ -29,6 +29,8 @@ const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 const RefCompare = lazy(async () => import('./pages/RefCompare'))
 
+const ReRender_1 = lazy(async () => import('./pages/ReRender_1'))
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -56,6 +58,7 @@ const Routes = () => {
           <Route path="/windowOpen" element={<WindowOpen />} />
           <Route path="/windowOpen/popup" element={<Popup />} />
           <Route path="/refcompare" element={<RefCompare />} />
+          <Route path="/re-render-1" element={<ReRender_1 />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

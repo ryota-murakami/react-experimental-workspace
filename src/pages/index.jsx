@@ -30,7 +30,8 @@ class Index extends Component {
           <Link to="/htmldaialog">HtmlDaialog</Link>
           <Link to="/windowOpen">WindowOpen</Link>
           <Link to="/refcompare">RefCompare</Link>
-</main>
+          <Link to="/re-render-1">ReRender_1</Link>
+        </main>
       </Page.Container>
     )
   }
