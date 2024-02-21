@@ -31,7 +31,7 @@
     "@radix-ui/themes": "^2.0.3",
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
-    "classed-components": "^2.0.0",
+    "classed-components": "^2.0.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
     "copy-to-clipboard": "^3.3.3",
