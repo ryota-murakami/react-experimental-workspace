@@ -47,9 +47,6 @@ dependencies:
   copy-to-clipboard:
     specifier: ^3.3.3
     version: 3.3.3
-  immer:
-    specifier: ^10.0.3
-    version: 10.0.3
   lucide-react:
     specifier: ^0.335.0
     version: 0.335.0(react@18.3.0-canary-a515d753b-20240220)
@@ -68,6 +65,9 @@ dependencies:
   react-spinners:
     specifier: ^0.13.8
     version: 0.13.8(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220)
+  react-toastify:
+    specifier: ^10.0.4
+    version: 10.0.4(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220)
   recoil:
     specifier: ^0.7.7
     version: 0.7.7(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220)
@@ -4863,10 +4863,6 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
-  /immer@10.0.3:
-    resolution: {integrity: sha512-pwupu3eWfouuaowscykeckFmVTpqbzW+rXFCX8rQLkZzM9ftBmU/++Ra+o+L27mz03zJTlyV4UUr+fdKNffo4A==}
-    dev: false
-
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -6312,6 +6308,17 @@ packages:
       invariant: 2.2.4
       react: 18.3.0-canary-a515d753b-20240220
       tslib: 2.6.2
+    dev: false
+
+  /react-toastify@10.0.4(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220):
+    resolution: {integrity: sha512-etR3RgueY8pe88SA67wLm8rJmL1h+CLqUGHuAoNsseW35oTGJEri6eBTyaXnFKNQ80v/eO10hBYLgz036XRGgA==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      clsx: 2.1.0
+      react: 18.3.0-canary-a515d753b-20240220
+      react-dom: 18.3.0-canary-a515d753b-20240220(react@18.3.0-canary-a515d753b-20240220)
     dev: false
 
   /react-transition-group@4.4.5(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220):
