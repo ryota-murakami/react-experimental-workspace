@@ -44,6 +44,7 @@ async function handleSubmit(e) {
     },
   })
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-expressions
   res.message === 'ok' ? alert('Image Uploaded!') : alert('Upload Failed!')
 }
 const ImageUpload = () => {
