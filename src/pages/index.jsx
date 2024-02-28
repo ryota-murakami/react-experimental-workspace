@@ -31,7 +31,8 @@ class Index extends Component {
           <Link to="/windowOpen">WindowOpen</Link>
           <Link to="/refcompare">RefCompare</Link>
           <Link to="/re-render-1">ReRender_1</Link>
-        </main>
+          <Link to="/imageupload">ImageUpload</Link>
+</main>
       </Page.Container>
     )
   }
