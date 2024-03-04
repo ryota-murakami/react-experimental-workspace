@@ -60,8 +60,8 @@ dependencies:
     specifier: 18.3.0-canary-a515d753b-20240220
     version: 18.3.0-canary-a515d753b-20240220(react@18.3.0-canary-a515d753b-20240220)
   react-hook-form:
-    specifier: ^7.50.1
-    version: 7.50.1(react@18.3.0-canary-a515d753b-20240220)
+    specifier: ^7.51.0
+    version: 7.51.0(react@18.3.0-canary-a515d753b-20240220)
   react-router-dom:
     specifier: ^6.22.2
     version: 6.22.2(react-dom@18.3.0-canary-a515d753b-20240220)(react@18.3.0-canary-a515d753b-20240220)
@@ -6085,8 +6085,8 @@ packages:
       scheduler: 0.24.0-canary-a515d753b-20240220
     dev: false
 
-  /react-hook-form@7.50.1(react@18.3.0-canary-a515d753b-20240220):
-    resolution: {integrity: sha512-3PCY82oE0WgeOgUtIr3nYNNtNvqtJ7BZjsbxh6TnYNbXButaD5WpjOmTjdxZfheuHKR68qfeFnEDVYoSSFPMTQ==}
+  /react-hook-form@7.51.0(react@18.3.0-canary-a515d753b-20240220):
+    resolution: {integrity: sha512-BggOy5j58RdhdMzzRUHGOYhSz1oeylFAv6jUSG86OvCIvlAvS7KvnRY7yoAf2pfEiPN7BesnR0xx73nEk3qIiw==}
     engines: {node: '>=12.22.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
