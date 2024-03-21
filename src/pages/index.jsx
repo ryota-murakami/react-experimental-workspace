@@ -32,7 +32,7 @@ class Index extends Component {
           <Link to="/refcompare">RefCompare</Link>
           <Link to="/re-render-1">ReRender_1</Link>
           <Link to="/imageupload">ImageUpload</Link>
-</main>
+        </main>
       </Page.Container>
     )
   }
