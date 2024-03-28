@@ -1,6 +1,6 @@
 import path from 'node:path'
 
-import MillionCompiler from '@million/lint'
+// import MillionCompiler from '@million/lint'
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
-  plugins: [MillionCompiler.vite(), react()],
+  plugins: [react()],
   publicDir: 'public',
   server: {
     host: true,

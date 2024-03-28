@@ -1,4 +1,3 @@
-import './wdyr'
 import ReactDOM from 'react-dom/client'
 
 import '@radix-ui/themes/styles.css'
