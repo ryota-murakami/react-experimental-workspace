@@ -26,7 +26,7 @@
     "@fontsource/roboto": "^5.0.12",
     "@million/lint": "^0.0.73",
     "@mui/icons-material": "^5.15.15",
-    "@mui/material": "^5.15.14",
+    "@mui/material": "^5.15.15",
     "@preact/signals-react": "^2.0.1",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/themes": "^3.0.2",
