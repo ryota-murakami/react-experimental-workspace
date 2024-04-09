@@ -30,6 +30,7 @@ const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ReRender_1 = lazy(async () => import('./pages/ReRender_1'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
+const DateForm = lazy(async () => import('./pages/DateForm'))
 
 const Routes = () => {
   return (
@@ -60,6 +61,7 @@ const Routes = () => {
           <Route path="/refcompare" element={<RefCompare />} />
           <Route path="/re-render-1" element={<ReRender_1 />} />
           <Route path="/imageupload" element={<ImageUpload />} />
+          <Route path="/dateform" element={<DateForm />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

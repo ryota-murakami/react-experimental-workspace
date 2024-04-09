@@ -9,4 +9,8 @@ export const routes = [
   http.post('/api/imageUpload', () => {
     return HttpResponse.json({ message: 'ok', status: 201 })
   }),
+  http.post('http://localhost:3000/api/dataForm', () => {
+    
+    return HttpResponse.json({ message: 'ok', status: 201 })
+  }),
 ]
