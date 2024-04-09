@@ -1,3 +1,4 @@
+import { zodResolver } from '@hookform/resolvers/zod'
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import type { SubmitHandler } from 'react-hook-form'
@@ -7,19 +8,42 @@ import 'react-toastify/dist/ReactToastify.css'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
+import { Button } from '@/components/ui/button'
 
 import { useFormId } from '../../hooks/useFormId'
 
-const Schema = z.object({
-  startDate: z.date(),
-  endDate: z.date(),
-})
+const Schema = z
+  .object({
+    startDate: z.coerce.date(),
+    endDate: z.coerce.date(),
+  })
+  .refine(
+    (data) => {
+      if (data.startDate && data.endDate) {
+        if (data.endDate >= data.startDate) return true
+        return false
+      }
+
+      return true
+    },
+    {
+      message: 'startDate must be lesser than endDate',
+      path: ['startDate'],
+    },
+  )
 
 type SchemaType = z.infer<typeof Schema>
 
 const DateForm: React.FC = () => {
   const id = useFormId()
-  const { register, handleSubmit } = useForm<SchemaType>()
+  const {
+    formState: { errors },
+    register,
+    handleSubmit,
+  } = useForm<SchemaType>({
+    resolver: zodResolver(Schema),
+    mode: 'onBlur',
+  })
   const onSubmit: SubmitHandler<SchemaType> = (data) => {
     console.log(data)
     toast.success('Success')
@@ -44,12 +68,22 @@ const DateForm: React.FC = () => {
                 id={id('startDate')}
                 {...register('startDate')}
               />
-            </label>{' '}
+              {errors.startDate && (
+                <span className="text-red-400 block">
+                  {errors.startDate.message}
+                </span>
+              )}
+            </label>
             <label htmlFor={id('endDate')}>
               StartDate:
               <input type="date" id={id('endDate')} {...register('endDate')} />
+              {errors.endDate && (
+                <span className="text-red-400 block">
+                  {errors.endDate.message}
+                </span>
+              )}
             </label>
-            <button type="submit">Submit</button>
+            <Button type="submit">Submit</Button>
           </form>
         </div>
       </Page.Container>

@@ -14,26 +14,21 @@ class Index extends Component {
         </header>
         <main className={styles.main}>
           <Link to="/dnd">DnD</Link>
-          <Link to="/recoil">Recoil</Link>
-          <Link to="/hooks">Hooks</Link>
           <Link to="/context">Context</Link>
           <Link to="/form">Form</Link>
           <Link to="/anime">CSS Animation</Link>
           <Link to="/modal">Modal</Link>
           <Link to="/selectbox">SelectBox</Link>
           <Link to="/tooltip">Tooltip</Link>
-          <Link to="/forwardRef">ForwardRef</Link>
           <Link to="/search">Search</Link>
           <Link to="/use">Use</Link>
-          <Link to="/figma">Figma</Link>
           <Link to="/suggestinput">SuggestInput</Link>
           <Link to="/htmldaialog">HtmlDaialog</Link>
           <Link to="/windowOpen">WindowOpen</Link>
           <Link to="/refcompare">RefCompare</Link>
-          <Link to="/re-render-1">ReRender_1</Link>
           <Link to="/imageupload">ImageUpload</Link>
           <Link to="/dateform">DateForm</Link>
-</main>
+        </main>
       </Page.Container>
     )
   }
