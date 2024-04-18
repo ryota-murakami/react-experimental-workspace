@@ -76,7 +76,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^9.0.10",
     "lint-staged": "^15.2.2",
-    "msw": "^2.2.13",
+    "msw": "^2.2.14",
     "plop": "^4.0.1",
     "postcss": "^8.4.38",
     "postcss-import": "^16.1.0",
