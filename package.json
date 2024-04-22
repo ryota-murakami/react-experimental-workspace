@@ -23,7 +23,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
-    "@fontsource/roboto": "^5.0.12",
+    "@fontsource/roboto": "^5.0.13",
     "@hookform/resolvers": "^3.3.4",
     "@million/lint": "^0.0.73",
     "@mui/icons-material": "^5.15.15",
