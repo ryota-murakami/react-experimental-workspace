@@ -35,7 +35,7 @@
     "class-variance-authority": "^0.7.0",
     "classed-components": "^2.0.1",
     "classnames": "^2.5.1",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "copy-to-clipboard": "^3.3.3",
     "immer": "^10.0.4",
     "lucide-react": "^0.372.0",
