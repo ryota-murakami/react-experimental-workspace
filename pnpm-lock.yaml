@@ -87,6 +87,9 @@ importers:
         specifier: ^3.23.3
         version: 3.23.3
     devDependencies:
+      '@hookform/devtools':
+        specifier: ^4.3.1
+        version: 4.3.1(@types/react@18.2.58)(react-dom@18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322))(react@18.3.0-canary-670811593-20240322)
       '@tailwindcss/forms':
         specifier: ^0.5.7
         version: 0.5.7(tailwindcss@3.4.3)
@@ -532,6 +535,12 @@ packages:
 
   '@fontsource/roboto@5.0.13':
     resolution: {integrity: sha512-j61DHjsdUCKMXSdNLTOxcG701FWnF0jcqNNQi2iPCDxU8seN/sMxeh62dC++UiagCWq9ghTypX+Pcy7kX+QOeQ==}
+
+  '@hookform/devtools@4.3.1':
+    resolution: {integrity: sha512-CrWxEoHQZaOXJZVQ8KBgOuAa8p2LI8M0DAN5GTRTmdCieRwFVjVDEmuTAVazWVRRkpEQSgSt3KYp7VmmqXdEnw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+      react-dom: ^16.8.0 || ^17 || ^18
 
   '@hookform/resolvers@3.3.4':
     resolution: {integrity: sha512-o5cgpGOuJYrd+iMKvkttOclgwRW86EsWJZZRC23prf0uU2i48Htq4PuT73AVb9ionFyZrwYEITuOFGF+BydEtQ==}
@@ -1596,6 +1605,9 @@ packages:
 
   '@types/liftoff@4.0.3':
     resolution: {integrity: sha512-UgbL2kR5pLrWICvr8+fuSg0u43LY250q7ZMkC+XKC3E+rs/YBDEnQIzsnhU5dYsLlwMi3R75UvCL87pObP1sxw==}
+
+  '@types/lodash@4.17.0':
+    resolution: {integrity: sha512-t7dhREVv6dbNj0q17X12j7yDG4bD/DHYX7o5/DbDxobP0HnGPgpRz2Ej77aL7TZT3DSw13fqUTj8J4mMnqa7WA==}
 
   '@types/mute-stream@0.0.4':
     resolution: {integrity: sha512-CPM9nzrCPPJHQNA9keH9CVkVI+WR5kMa+7XEs5jcGQ0VoAGnLv242w8lIVgwAEfmE4oufJRaTc9PNLQl0ioAow==}
@@ -2956,6 +2968,11 @@ packages:
     resolution: {integrity: sha512-ovJXBXkKGfq+CwmKTjluEqFi3p4h8xvkxGQQAQan22YCgef4KZ1mKGjzfGh6PL6AW5Csw0QiQPNuQyH+6Xk3hA==}
     engines: {node: '>=18.0.0'}
 
+  little-state-machine@4.8.0:
+    resolution: {integrity: sha512-xfi5+iDxTLhu0hbnNubUs+qoQQqxhtEZeObP5ELjUlHnl74bbasY7mOonsGQrAouyrbag3ebNLSse5xX1T7buQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+
   locate-path@6.0.0:
     resolution: {integrity: sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw==}
     engines: {node: '>=10'}
@@ -3488,6 +3505,11 @@ packages:
     peerDependencies:
       react: '>=16.8'
 
+  react-simple-animate@3.5.2:
+    resolution: {integrity: sha512-xLE65euP920QMTOmv5haPlml+hmOPDkbIr5WeF7ADIXWBYt5kW/vwpNfWg8EKMab8aeDxIZ6QjffVh8v2dUyhg==}
+    peerDependencies:
+      react-dom: ^16.8.0 || ^17 || ^18
+
   react-spinners@0.13.8:
     resolution: {integrity: sha512-3e+k56lUkPj0vb5NDXPVFAOkPC//XyhKPJjvcGjyMNPWsBKpplfeyialP74G7H7+It7KzhtET+MvGqbKgAqpZA==}
     peerDependencies:
@@ -3949,6 +3971,12 @@ packages:
       '@types/react':
         optional: true
 
+  use-deep-compare-effect@1.8.1:
+    resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
+    engines: {node: '>=10', npm: '>=6'}
+    peerDependencies:
+      react: '>=16.13'
+
   use-sidecar@1.1.2:
     resolution: {integrity: sha512-epTbsLuzZ7lPClpz2TyryBfztm7m+28DlEv2ZCQ3MDr5ssiwyOwGH/e5F9CkfWjJ1t4clvI58yF822/GUkjjhw==}
     engines: {node: '>=10'}
@@ -3966,6 +3994,10 @@ packages:
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  uuid@8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
 
   v8flags@4.0.1:
     resolution: {integrity: sha512-fcRLaS4H/hrZk9hYwbdRM35D0U8IYMfEClhXxCivOojl+yTRAZH3Zy2sSy6qVCiGbV9YAtPssP6jaChqC9vPCg==}
@@ -4443,6 +4475,21 @@ snapshots:
   '@floating-ui/utils@0.2.1': {}
 
   '@fontsource/roboto@5.0.13': {}
+
+  '@hookform/devtools@4.3.1(@types/react@18.2.58)(react-dom@18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322))(react@18.3.0-canary-670811593-20240322)':
+    dependencies:
+      '@emotion/react': 11.11.4(@types/react@18.2.58)(react@18.3.0-canary-670811593-20240322)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.2.58)(react@18.3.0-canary-670811593-20240322))(@types/react@18.2.58)(react@18.3.0-canary-670811593-20240322)
+      '@types/lodash': 4.17.0
+      little-state-machine: 4.8.0(react@18.3.0-canary-670811593-20240322)
+      lodash: 4.17.21
+      react: 18.3.0-canary-670811593-20240322
+      react-dom: 18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322)
+      react-simple-animate: 3.5.2(react-dom@18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322))
+      use-deep-compare-effect: 1.8.1(react@18.3.0-canary-670811593-20240322)
+      uuid: 8.3.2
+    transitivePeerDependencies:
+      - '@types/react'
 
   '@hookform/resolvers@3.3.4(react-hook-form@7.51.3(react@18.3.0-canary-670811593-20240322))':
     dependencies:
@@ -5604,6 +5651,8 @@ snapshots:
     dependencies:
       '@types/fined': 1.1.5
       '@types/node': 20.12.7
+
+  '@types/lodash@4.17.0': {}
 
   '@types/mute-stream@0.0.4':
     dependencies:
@@ -7165,6 +7214,10 @@ snapshots:
       rfdc: 1.3.1
       wrap-ansi: 9.0.0
 
+  little-state-machine@4.8.0(react@18.3.0-canary-670811593-20240322):
+    dependencies:
+      react: 18.3.0-canary-670811593-20240322
+
   locate-path@6.0.0:
     dependencies:
       p-locate: 5.0.0
@@ -7652,6 +7705,10 @@ snapshots:
     dependencies:
       '@remix-run/router': 1.15.3
       react: 18.3.0-canary-670811593-20240322
+
+  react-simple-animate@3.5.2(react-dom@18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322)):
+    dependencies:
+      react-dom: 18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322)
 
   react-spinners@0.13.8(react-dom@18.3.0-canary-670811593-20240322(react@18.3.0-canary-670811593-20240322))(react@18.3.0-canary-670811593-20240322):
     dependencies:
@@ -8162,6 +8219,12 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.2.58
 
+  use-deep-compare-effect@1.8.1(react@18.3.0-canary-670811593-20240322):
+    dependencies:
+      '@babel/runtime': 7.24.4
+      dequal: 2.0.3
+      react: 18.3.0-canary-670811593-20240322
+
   use-sidecar@1.1.2(@types/react@18.2.58)(react@18.3.0-canary-670811593-20240322):
     dependencies:
       detect-node-es: 1.1.0
@@ -8175,6 +8238,8 @@ snapshots:
       react: 18.3.0-canary-670811593-20240322
 
   util-deprecate@1.0.2: {}
+
+  uuid@8.3.2: {}
 
   v8flags@4.0.1: {}
 

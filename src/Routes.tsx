@@ -23,7 +23,6 @@ const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
 const DateForm = lazy(async () => import('./pages/DateForm'))
-
 const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
 
 const Routes = () => {
