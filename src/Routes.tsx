@@ -24,6 +24,8 @@ const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
 const DateForm = lazy(async () => import('./pages/DateForm'))
 
+const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -46,6 +48,7 @@ const Routes = () => {
           <Route path="/refcompare" element={<RefCompare />} />
           <Route path="/imageupload" element={<ImageUpload />} />
           <Route path="/dateform" element={<DateForm />} />
+          <Route path="/arrayform" element={<ArrayForm />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>

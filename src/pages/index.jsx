@@ -28,6 +28,7 @@ class Index extends Component {
           <Link to="/refcompare">RefCompare</Link>
           <Link to="/imageupload">ImageUpload</Link>
           <Link to="/dateform">DateForm</Link>
+          <Link to="/arrayform">ArrayForm</Link>
         </main>
       </Page.Container>
     )
