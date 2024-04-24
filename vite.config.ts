@@ -1,7 +1,6 @@
 import path from 'node:path'
 
-// import MillionCompiler from '@million/lint'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
