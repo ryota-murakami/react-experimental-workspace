@@ -29,6 +29,7 @@ class Index extends Component {
           <Link to="/imageupload">ImageUpload</Link>
           <Link to="/dateform">DateForm</Link>
           <Link to="/arrayform">ArrayForm</Link>
+          <Link to="/contextmenu">ContextMenu</Link>
         </main>
       </Page.Container>
     )

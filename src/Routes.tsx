@@ -25,6 +25,8 @@ const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
 const DateForm = lazy(async () => import('./pages/DateForm'))
 const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
 
+const ContextMenu = lazy(async () => import('./pages/ContextMenu'))
+
 const Routes = () => {
   return (
     <BrowserRouter>
@@ -48,6 +50,7 @@ const Routes = () => {
           <Route path="/imageupload" element={<ImageUpload />} />
           <Route path="/dateform" element={<DateForm />} />
           <Route path="/arrayform" element={<ArrayForm />} />
+          <Route path="/contextmenu" element={<ContextMenu />} />
           <Route path="*" element={<NotFound />} />
         </RouteList>
       </Suspense>
