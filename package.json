@@ -27,7 +27,7 @@
     "@hookform/resolvers": "^3.6.0",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.19",
-    "@preact/signals-react": "^2.0.1",
+    "@preact/signals-react": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/themes": "^3.0.5",
     "axios": "^1.7.2",
