@@ -69,8 +69,8 @@ importers:
         specifier: ^6.24.0
         version: 6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-spinners:
-        specifier: ^0.14.0
-        version: 0.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^0.14.1
+        version: 0.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-toastify:
         specifier: ^10.0.5
         version: 10.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3488,8 +3488,8 @@ packages:
     peerDependencies:
       react-dom: ^16.8.0 || ^17 || ^18
 
-  react-spinners@0.14.0:
-    resolution: {integrity: sha512-7d/uAqas0Eg+2vyEewb+xkeMmzDqtWHB9elyFeWqp9+PwLOg0U0GOyWkwUzpwy/z9pNAG074ZAtJnTSji9jv8A==}
+  react-spinners@0.14.1:
+    resolution: {integrity: sha512-2Izq+qgQ08HTofCVEdcAQCXFEYfqTDdfeDQJeo/HHQiQJD4imOicNLhkfN2eh1NYEWVOX4D9ok2lhuDB0z3Aag==}
     peerDependencies:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
@@ -7661,7 +7661,7 @@ snapshots:
     dependencies:
       react-dom: 18.3.1(react@18.3.1)
 
-  react-spinners@0.14.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-spinners@0.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
