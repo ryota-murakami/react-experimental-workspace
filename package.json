@@ -41,7 +41,7 @@
     "react-dom": "18.3.1",
     "react-hook-form": "^7.52.0",
     "react-router-dom": "^6.24.0",
-    "react-spinners": "^0.14.0",
+    "react-spinners": "^0.15.0",
     "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",
