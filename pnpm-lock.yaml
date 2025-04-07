@@ -84,8 +84,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.4)
       use-context-menu:
-        specifier: ^0.4.13
-        version: 0.4.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^0.5.1
+        version: 0.5.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -732,6 +732,7 @@ packages:
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
     engines: {node: '>=12.0.0'}
+    deprecated: This package has been replaced by @base-ui-components/react
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
       react: ^17.0.0 || ^18.0.0
@@ -3153,6 +3154,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -4171,11 +4173,11 @@ packages:
       '@types/react':
         optional: true
 
-  use-context-menu@0.4.13:
-    resolution: {integrity: sha512-J4VMguGGVz7FGEjGWHcAVnTEJBfXjni/6jD25zfndY/Ypiz8XtSzSrHAVVZOlM4x7pzWOhhDRX7POhZCKJr/3g==}
+  use-context-menu@0.5.1:
+    resolution: {integrity: sha512-PDDkeHInUqaLpPbu2OATgnnP7MUQTE3pBMBoBNCvmDlL3WCvVNKKpE/FzhGU/qNvI6uaupbvZHPjW3g0Wt6Kqg==}
     peerDependencies:
-      react: ^16.14.0 || ^17 || ^18
-      react-dom: ^16.14.0 || ^17 || ^18
+      react: ^16.14.0 || ^17 || ^18 || ^19
+      react-dom: ^16.14.0 || ^17 || ^18 || ^19
 
   use-deep-compare-effect@1.8.1:
     resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
@@ -8518,7 +8520,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.1.0
 
-  use-context-menu@0.4.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  use-context-menu@0.5.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
