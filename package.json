@@ -35,7 +35,7 @@
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
     "copy-to-clipboard": "^3.3.3",
-    "lucide-react": "^0.411.0",
+    "lucide-react": "^0.487.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.52.0",
