@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react'
-import { BrowserRouter, Routes as RouteList, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './global.css'
 
 import Popup from '@/pages/WindowOpen/Popup'
@@ -24,14 +24,13 @@ const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
 const DateForm = lazy(async () => import('./pages/DateForm'))
 const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
-
 const ContextMenu = lazy(async () => import('./pages/ContextMenu'))
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <RouteList>
+        <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/dnd" element={<DnD />} />
           <Route path="/form" element={<Form />} />
@@ -52,10 +51,10 @@ const Routes = () => {
           <Route path="/arrayform" element={<ArrayForm />} />
           <Route path="/contextmenu" element={<ContextMenu />} />
           <Route path="*" element={<NotFound />} />
-        </RouteList>
+        </Routes>
       </Suspense>
     </BrowserRouter>
   )
 }
 
-export default Routes
+export default AppRoutes

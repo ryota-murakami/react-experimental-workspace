@@ -7,7 +7,7 @@ import '@fontsource/roboto/400.css'
 import '@fontsource/roboto/500.css'
 import '@fontsource/roboto/700.css'
 
-import App from './Routes'
+import AppRoutes from './Routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 
@@ -17,11 +17,11 @@ if (process.env.NODE_ENV === 'development') {
   import('../mockAPI/browser')
     .then(({ worker }) => {
       worker.start()
-    }) // Run <App /> when Service Worker is ready to intercept requests.
+    }) // Run <AppRoutes /> when Service Worker is ready to intercept requests.
     .then(() => {
-      root.render(<App />)
+      root.render(<AppRoutes />)
     })
   // Never setup MSW mock server in production
 } else if (process.env.NODE_ENV === 'production') {
-  root.render(<App />)
+  root.render(<AppRoutes />)
 }
