@@ -43,7 +43,7 @@ const Search: React.FC = () => {
         <section className="grid place-content-center">
           <form className="flex gap-4" onSubmit={handleSubmit(onSubmit)}>
             <button
-              className="text-xl px-4 py-2 font-semibold bg-white text-slate-700 dark:bg-slate-700 dark:text-white rounded-md shadow-sm ring-1 ring-slate-900/5 border-indigo-500 dark:border-sky-500 border-2 border-solid"
+              className="text-xl px-4 py-2 font-semibold bg-white text-slate-700 dark:bg-slate-700 dark:text-white rounded-md shadow-xs ring-1 ring-slate-900/5 border-indigo-500 dark:border-sky-500 border-2 border-solid"
               type="submit"
             >
               Search
