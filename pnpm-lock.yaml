@@ -84,8 +84,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.4)
       use-context-menu:
-        specifier: ^0.4.13
-        version: 0.4.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: ^0.5.1
+        version: 0.5.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -4208,11 +4208,11 @@ packages:
       '@types/react':
         optional: true
 
-  use-context-menu@0.4.13:
-    resolution: {integrity: sha512-J4VMguGGVz7FGEjGWHcAVnTEJBfXjni/6jD25zfndY/Ypiz8XtSzSrHAVVZOlM4x7pzWOhhDRX7POhZCKJr/3g==}
+  use-context-menu@0.5.1:
+    resolution: {integrity: sha512-PDDkeHInUqaLpPbu2OATgnnP7MUQTE3pBMBoBNCvmDlL3WCvVNKKpE/FzhGU/qNvI6uaupbvZHPjW3g0Wt6Kqg==}
     peerDependencies:
-      react: ^16.14.0 || ^17 || ^18
-      react-dom: ^16.14.0 || ^17 || ^18
+      react: ^16.14.0 || ^17 || ^18 || ^19
+      react-dom: ^16.14.0 || ^17 || ^18 || ^19
 
   use-deep-compare-effect@1.8.1:
     resolution: {integrity: sha512-kbeNVZ9Zkc0RFGpfMN3MNfaKNvcLNyxOAAd9O4CBZ+kCBXXscn9s/4I+8ytUER4RDpEYs5+O6Rs4PqiZ+rHr5Q==}
@@ -8599,7 +8599,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.1.0
 
-  use-context-menu@0.4.13(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
+  use-context-menu@0.5.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0):
     dependencies:
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
