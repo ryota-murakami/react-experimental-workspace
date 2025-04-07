@@ -29,6 +29,7 @@
     "scripts",
     "./**.js",
     "./**.cjs",
+    "./**.mjs",
     "./**.ts",
     "plopfile.cjs",
     ".eslintrc.cjs"
