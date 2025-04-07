@@ -7,7 +7,7 @@ interface Props {}
 
 const RefCompare: React.FC<Props> = () => {
   const [renderIndex, setRenderIndex] = useState(1)
-  const fromUseRef = useRef<number>()
+  const fromUseRef = useRef<number>(renderIndex)
   const byCreateRef = createRef<number>()
   if (!fromUseRef.current) {
     fromUseRef.current = renderIndex
