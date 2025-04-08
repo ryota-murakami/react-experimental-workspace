@@ -14,7 +14,6 @@ const Context = lazy(async () => import('./pages/Context'))
 const Modal = lazy(async () => import('./pages/Modal'))
 const DnD = lazy(async () => import('./pages/DnD'))
 const Search = lazy(async () => import('./pages/Search'))
-const Use = lazy(async () => import('./pages/Use'))
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
@@ -35,7 +34,6 @@ const AppRoutes = () => {
           <Route path="/context" element={<Context />} />
           <Route path="/modal" element={<Modal />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/use" element={<Use />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
           <Route path="/windowOpen/popup" element={<Popup />} />
           <Route path="/refcompare" element={<RefCompare />} />

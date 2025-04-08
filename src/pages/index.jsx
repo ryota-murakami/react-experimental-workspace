@@ -19,7 +19,6 @@ class Index extends Component {
           <Link to="/anime">CSS Animation</Link>
           <Link to="/modal">Modal</Link>
           <Link to="/search">Search</Link>
-          <Link to="/use">Use</Link>
           <Link to="/windowOpen">WindowOpen</Link>
           <Link to="/refcompare">RefCompare</Link>
           <Link to="/imageupload">ImageUpload</Link>
