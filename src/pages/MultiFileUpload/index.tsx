@@ -98,7 +98,7 @@ const FileUpload: React.FC = () => {
   return (
     <Page.Container>
       <Header>
-        <Header.H1>サムネイルアップロード</Header.H1>
+        <Header.H1>MultiFileUpload</Header.H1>
       </Header>
       <div className="w-full max-w-md mx-auto p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">

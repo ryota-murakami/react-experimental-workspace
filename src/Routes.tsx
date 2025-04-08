@@ -13,7 +13,6 @@ const Anime = lazy(async () => import('./pages/Anime'))
 const Context = lazy(async () => import('./pages/Context'))
 const Modal = lazy(async () => import('./pages/Modal'))
 const DnD = lazy(async () => import('./pages/DnD'))
-const Tooltip = lazy(async () => import('./pages/Tooltip'))
 const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
@@ -22,7 +21,7 @@ const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
 const DateForm = lazy(async () => import('./pages/DateForm'))
 const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
 const ContextMenu = lazy(async () => import('./pages/ContextMenu'))
-const FileUpload = lazy(async () => import('./pages/FileUpload'))
+const MultiFileUpload = lazy(async () => import('./pages/MultiFileUpload'))
 
 const AppRoutes = () => {
   return (
@@ -35,7 +34,6 @@ const AppRoutes = () => {
           <Route path="/anime" element={<Anime />} />
           <Route path="/context" element={<Context />} />
           <Route path="/modal" element={<Modal />} />
-          <Route path="/tooltip" element={<Tooltip />} />
           <Route path="/search" element={<Search />} />
           <Route path="/use" element={<Use />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
@@ -45,7 +43,7 @@ const AppRoutes = () => {
           <Route path="/dateform" element={<DateForm />} />
           <Route path="/arrayform" element={<ArrayForm />} />
           <Route path="/contextmenu" element={<ContextMenu />} />
-          <Route path="/fileupload" element={<FileUpload />} />
+          <Route path="/multi-file-upload" element={<MultiFileUpload />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
