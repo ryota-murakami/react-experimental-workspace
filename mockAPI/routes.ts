@@ -12,18 +12,26 @@ export const routes = [
   http.post('http://localhost:3000/api/dataForm', () => {
     return HttpResponse.json({ message: 'ok', status: 201 })
   }),
-  // サムネイルアップロード用のモックAPI
+  // 複数サムネイルアップロード用のモックAPI
   http.post('/api/thumbnailUpload', async ({ request }) => {
     try {
       const formData = await request.formData()
-      const thumbnail = formData.get('thumbnail') as File
-      const title = formData.get('title')
+      const uploadedFiles: { name: string; size: number; type: string }[] = []
 
-      console.log('サムネイルアップロード:', {
-        title,
-        fileName: thumbnail.name,
-        fileSize: thumbnail.size,
-        fileType: thumbnail.type
+      // FormDataから全てのファイルを取得
+      for (const [key, value] of formData.entries()) {
+        if (key.startsWith('thumbnail') && value instanceof File) {
+          uploadedFiles.push({
+            name: value.name,
+            size: value.size,
+            type: value.type
+          })
+        }
+      }
+
+      console.log('複数サムネイルアップロード:', {
+        fileCount: uploadedFiles.length,
+        files: uploadedFiles
       })
 
       // 実際のアップロード処理をシミュレート
@@ -31,12 +39,13 @@ export const routes = [
         setTimeout(() => {
           resolve(HttpResponse.json({ 
             success: true,
-            message: 'サムネイルのアップロードに成功しました',
+            message: `${uploadedFiles.length}個の画像のアップロードに成功しました`,
             data: {
-              id: Math.floor(Math.random() * 10000),
-              title: title,
-              filename: thumbnail.name,
-              url: `https://example.com/thumbnails/${thumbnail.name}`
+              files: uploadedFiles.map((file, index) => ({
+                id: Math.floor(Math.random() * 10000),
+                filename: file.name,
+                url: `https://example.com/thumbnails/${file.name}`
+              }))
             }
           }, { status: 201 }))
         }, 800) // 0.8秒の遅延を追加してアップロード処理をシミュレート
