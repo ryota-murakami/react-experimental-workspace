@@ -1,4 +1,4 @@
-import { Link as _Link } from 'react-router-dom'
+import { Link as _Link } from 'react-router'
 import styled from 'styled-components'
 
 const LinkWrapper = styled.div`

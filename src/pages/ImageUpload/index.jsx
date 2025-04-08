@@ -53,9 +53,9 @@ const ImageUpload = () => {
       <Header>
         <Header.H1>ImageUpload</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
+      <div className="grid w-full place-content-center">
         <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-4">
-          <label htmlFor="file" className="flex gap-4 items-baseline">
+          <label htmlFor="file" className="flex items-baseline gap-4">
             Image
             <input
               type="file"
@@ -67,7 +67,7 @@ const ImageUpload = () => {
             />
           </label>
 
-          <label htmlFor="description" className="flex gap-4 items-baseline">
+          <label htmlFor="description" className="flex items-baseline gap-4">
             Description
             <textarea
               id="description"
@@ -77,7 +77,7 @@ const ImageUpload = () => {
             />
           </label>
 
-          <button type="submit" className="p-2 border rounded border-slate-400">
+          <button type="submit" className="rounded border border-slate-400 p-2">
             Submit
           </button>
         </form>
