@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button'
-import { withStyles } from '@mui/material/styles'
+import { withStyles } from '@mui/styles'
 import classNames from 'classnames'
 import { Component } from 'react'
 import styled from 'styled-components'
@@ -48,17 +48,17 @@ const Circle = styled.div`
   height: 200px;
   background-color: #434343;
   border-radius: 50%;
-  opacity: ${(props) => (props.toggle ? '1' : '0')};
+  opacity: ${(props) => (props.visible ? '1' : '0')};
   transition: opacity 0.3s linear;
 `
 
 export class HideShow extends Component {
   state = {
-    toggle: false,
+    visible: false,
   }
 
   handleClick = () => {
-    this.setState({ toggle: !this.state.toggle })
+    this.setState({ visible: !this.state.visible })
   }
 
   render() {
@@ -67,7 +67,7 @@ export class HideShow extends Component {
         <ButtonContainer>
           <StyledButton onClick={this.handleClick}>Toggle</StyledButton>
         </ButtonContainer>
-        <Circle toggle={this.state.toggle} />
+        <Circle visible={this.state.visible ? 'visible' : undefined} />
       </Container>
     )
   }

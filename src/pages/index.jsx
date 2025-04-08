@@ -18,12 +18,8 @@ class Index extends Component {
           <Link to="/form">Form</Link>
           <Link to="/anime">CSS Animation</Link>
           <Link to="/modal">Modal</Link>
-          <Link to="/selectbox">SelectBox</Link>
-          <Link to="/tooltip">Tooltip</Link>
           <Link to="/search">Search</Link>
           <Link to="/use">Use</Link>
-          <Link to="/suggestinput">SuggestInput</Link>
-          <Link to="/htmldaialog">HtmlDaialog</Link>
           <Link to="/windowOpen">WindowOpen</Link>
           <Link to="/refcompare">RefCompare</Link>
           <Link to="/imageupload">ImageUpload</Link>
