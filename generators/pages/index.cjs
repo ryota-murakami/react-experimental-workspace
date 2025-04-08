@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         path: 'src/Routes.tsx',
-        pattern: /(const Routes = \(\) => {)/,
+        pattern: /(const AppRoutes = \(\) => {)/,
         template:
           "const {{properCase name}} = lazy(async () => import('./pages/{{properCase name}}'));\n\n$1",
         type: 'modify',
@@ -27,7 +27,7 @@ module.exports = {
       {
         path: 'src/Routes.tsx',
         pattern:
-          /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/RouteList>)/s,
+          /(.*)(<Route path="\*" element={<NotFound \/>} \/>\s*<\/Routes>)/s,
         template:
           '$1<Route path="/{{lowerCase name}}" element={<{{properCase name}} />} />\n$2',
         type: 'modify',
