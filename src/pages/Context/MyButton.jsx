@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button'
-import { withStyles } from '@mui/material/styles'
+import { withStyles } from '@mui/styles'
 import classNames from 'classnames'
 
 const styles = {
