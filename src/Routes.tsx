@@ -8,7 +8,6 @@ import { Loading } from './components/Loading'
 import Index from './pages'
 import NotFound from './pages/NotFound'
 
-const SelectBox = lazy(async () => import('./pages/SelectBox'))
 const Form = lazy(async () => import('./pages/Form'))
 const Anime = lazy(async () => import('./pages/Anime'))
 const Context = lazy(async () => import('./pages/Context'))
@@ -17,8 +16,6 @@ const DnD = lazy(async () => import('./pages/DnD'))
 const Tooltip = lazy(async () => import('./pages/Tooltip'))
 const Search = lazy(async () => import('./pages/Search'))
 const Use = lazy(async () => import('./pages/Use'))
-const SuggestInput = lazy(async () => import('./pages/SuggestInput'))
-const HtmlDaialog = lazy(async () => import('./pages/HtmlDaialog'))
 const WindowOpen = lazy(async () => import('./pages/WindowOpen'))
 const RefCompare = lazy(async () => import('./pages/RefCompare'))
 const ImageUpload = lazy(async () => import('./pages/ImageUpload'))
@@ -38,12 +35,9 @@ const AppRoutes = () => {
           <Route path="/anime" element={<Anime />} />
           <Route path="/context" element={<Context />} />
           <Route path="/modal" element={<Modal />} />
-          <Route path="/selectbox" element={<SelectBox />} />
           <Route path="/tooltip" element={<Tooltip />} />
           <Route path="/search" element={<Search />} />
           <Route path="/use" element={<Use />} />
-          <Route path="/suggestinput" element={<SuggestInput />} />
-          <Route path="/htmldaialog" element={<HtmlDaialog />} />
           <Route path="/windowOpen" element={<WindowOpen />} />
           <Route path="/windowOpen/popup" element={<Popup />} />
           <Route path="/refcompare" element={<RefCompare />} />

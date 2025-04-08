@@ -11,17 +11,11 @@ import AppRoutes from './Routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root')!)
 
-// Setup MSW mock server in development
-if (process.env.NODE_ENV === 'development') {
-  // Certify MSW's Service Worker is available before start React app.
-  import('../mockAPI/browser')
-    .then(({ worker }) => {
-      worker.start()
-    }) // Run <AppRoutes /> when Service Worker is ready to intercept requests.
-    .then(() => {
-      root.render(<AppRoutes />)
-    })
-  // Never setup MSW mock server in production
-} else if (process.env.NODE_ENV === 'production') {
-  root.render(<AppRoutes />)
-}
+// Certify MSW's Service Worker is available before start React app.
+import('../mockAPI/browser')
+  .then(({ worker }) => {
+    worker.start()
+  }) // Run <AppRoutes /> when Service Worker is ready to intercept requests.
+  .then(() => {
+    root.render(<AppRoutes />)
+  })
