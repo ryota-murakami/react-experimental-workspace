@@ -27,8 +27,8 @@ importers:
         specifier: ^5.15.20
         version: 5.15.20(@emotion/react@11.11.4(@types/react@19.1.0)(react@19.1.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react@19.1.0))(@types/react@19.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@preact/signals-react':
-        specifier: ^2.0.2
-        version: 2.0.2(react@19.1.0)
+        specifier: ^3.0.1
+        version: 3.0.1(react@19.1.0)
       '@radix-ui/react-slot':
         specifier: ^1.1.0
         version: 1.1.0(@types/react@19.1.0)(react@19.1.0)
@@ -722,6 +722,7 @@ packages:
   '@mui/base@5.0.0-beta.40':
     resolution: {integrity: sha512-I/lGHztkCzvwlXpjD2+SNmvNQvB4227xBXhISPjEaJUXGImOQ9f3D2Yj/T3KasSI/h0MLWy74X0J6clhPmsRbQ==}
     engines: {node: '>=12.0.0'}
+    deprecated: This package has been replaced by @base-ui-components/react
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
       react: ^17.0.0 || ^18.0.0
@@ -849,13 +850,13 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@preact/signals-core@1.6.1':
-    resolution: {integrity: sha512-KXEEmJoKDlo0Igju/cj9YvKIgyaWFDgnprShQjzimUd5VynAAdTWMshawEOjUVeKbsI0aR58V6WOQp+DNcKApw==}
+  '@preact/signals-core@1.8.0':
+    resolution: {integrity: sha512-OBvUsRZqNmjzCZXWLxkZfhcgT+Fk8DDcT/8vD6a1xhDemodyy87UJRJfASMuSD8FaAIeGgGm85ydXhm7lr4fyA==}
 
-  '@preact/signals-react@2.0.2':
-    resolution: {integrity: sha512-JcqkrRJtYmSlVy89DL65ruFEGv4rTreQWVE/fmGQ+FtN86TaYUcwIesE4lR6IkuX33ZpGjdoh8a+0auDePD5UA==}
+  '@preact/signals-react@3.0.1':
+    resolution: {integrity: sha512-HkM5Q2IsETO1M0bUzy4JB0EPQCf99SMbWP9K6GYlYVHfOX1HLKJ6Dl9L1/1rQnmrQpUsTw0R+IJQDh6tYWar2g==}
     peerDependencies:
-      react: ^16.14.0 || 17.x || 18.x
+      react: ^16.14.0 || 17.x || 18.x || 19.x
 
   '@radix-ui/colors@3.0.0':
     resolution: {integrity: sha512-FUOsGBkHrYJwCSEtWRCIfQbZG7q1e6DgxCIOe1SUQzDe/7rXXeA47s8yCn6fuTNQAj1Zq4oTFi9Yjp3wzElcxg==}
@@ -3244,6 +3245,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -4230,10 +4232,10 @@ packages:
       '@types/react':
         optional: true
 
-  use-sync-external-store@1.2.2:
-    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
+  use-sync-external-store@1.5.0:
+    resolution: {integrity: sha512-Rb46I4cGGVBmjamjphe8L/UnvJD+uPPtTkNvX5mZgqdbavhI4EbgIWJiIHXJ8bc/i9EQGPRh4DwEURJ552Do0A==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -5102,13 +5104,13 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@preact/signals-core@1.6.1': {}
+  '@preact/signals-core@1.8.0': {}
 
-  '@preact/signals-react@2.0.2(react@19.1.0)':
+  '@preact/signals-react@3.0.1(react@19.1.0)':
     dependencies:
-      '@preact/signals-core': 1.6.1
+      '@preact/signals-core': 1.8.0
       react: 19.1.0
-      use-sync-external-store: 1.2.2(react@19.1.0)
+      use-sync-external-store: 1.5.0(react@19.1.0)
 
   '@radix-ui/colors@3.0.0': {}
 
@@ -8555,7 +8557,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 19.1.0
 
-  use-sync-external-store@1.2.2(react@19.1.0):
+  use-sync-external-store@1.5.0(react@19.1.0):
     dependencies:
       react: 19.1.0
 
