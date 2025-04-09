@@ -1,0 +1,11 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Project Overview
+
+- Use pnpm
+- src/pages directory has invididual page components along with [Routes.tsx](mdc:src/Routes.tsx)
+- mockAPI has msw handlers
