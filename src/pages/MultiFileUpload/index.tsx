@@ -7,6 +7,7 @@ import { Image, FileText, X } from 'lucide-react'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
+import { UploadFileResponse } from 'mockAPI/handlers/uploadFileHandler'
 
 // Zodバリデーションスキーマの定義
 const uploadFilesSchema = z.object({
@@ -18,22 +19,23 @@ const uploadFilesSchema = z.object({
     .refine((files) => files.length <= 10, {
       message: '一度にアップロードできるのは10個までです。',
     })
-    .refine((files) => {
-      return Array.from(files).every((file) => file.size <= 5 * 1024 * 1024)
-    }, {
-      message: '各ファイルのサイズは5MB以下にしてください。',
-    })
+    .refine(
+      (files) => {
+        return Array.from(files).every((file) => file.size <= 5 * 1024 * 1024)
+      },
+      {
+        message: '各ファイルのサイズは5MB以下にしてください。',
+      },
+    ),
 })
 
 // 型定義
 type UploadFilesFormValues = z.infer<typeof uploadFilesSchema>
 
 const FileUpload: React.FC = () => {
-  const [files, setFiles] = useState<File[]>([])
-  const [uploadResult, setUploadResult] = useState<{
-    success: boolean
-    message: string
-  } | null>(null)
+  const [uploadResult, setUploadResult] = useState<UploadFileResponse | null>(
+    null,
+  )
 
   const {
     register,
@@ -42,14 +44,16 @@ const FileUpload: React.FC = () => {
     reset,
     setValue,
     getValues,
+    watch,
   } = useForm<UploadFilesFormValues>({
     resolver: zodResolver(uploadFilesSchema),
   })
 
+  // ファイルリストを監視
+  const files = watch('uploadFiles') || new DataTransfer().files
+
   // ファイル削除
   const handleFileRemove = (index: number) => {
-    setFiles((prev) => prev.filter((_, i) => i !== index))
-    
     // 現在のファイルリストを取得
     const currentFiles = getValues('uploadFiles')
     if (!currentFiles) return
@@ -61,7 +65,7 @@ const FileUpload: React.FC = () => {
         dataTransfer.items.add(file)
       }
     })
-    
+
     // react-hook-formの値を更新
     setValue('uploadFiles', dataTransfer.files)
   }
@@ -69,26 +73,29 @@ const FileUpload: React.FC = () => {
   const onSubmit = async (data: UploadFilesFormValues) => {
     try {
       setUploadResult(null)
-      
+
       const formData = new FormData()
       Array.from(data.uploadFiles).forEach((file, index) => {
         formData.append(`uploadFile${index}`, file as Blob)
       })
-      
-      const response = await axios.post('/api/uploadFiles', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
+
+      const { data: response } = await axios.post<UploadFileResponse>(
+        '/api/v1/uploadFiles',
+        formData,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+          },
         },
-      })
-      
+      )
+
       setUploadResult({
-        success: true,
-        message: 'ファイルが正常にアップロードされました',
+        success: response.success,
+        message: response.message,
       })
-      
-      // フォームとプレビューのリセット
+
+      // フォームのリセット
       reset()
-      setFiles([])
     } catch (error) {
       console.error('Upload error:', error)
       setUploadResult({
@@ -117,12 +124,6 @@ const FileUpload: React.FC = () => {
               accept="image/jpeg,image/jpg,image/png,image/gif,.xlsx,.xls,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
               {...register('uploadFiles')}
-              onChange={(e) => {
-                const files = e.target.files
-                if (files) {
-                  setFiles(Array.from(files))
-                }
-              }}
             />
             {errors.uploadFiles && (
               <p className="text-sm text-red-500">
@@ -136,7 +137,7 @@ const FileUpload: React.FC = () => {
             <div className="mt-4">
               <p className="mb-2 text-sm font-medium">ファイル一覧</p>
               <ul className="space-y-2">
-                {files.map((file, index) => (
+                {Array.from(files).map((file, index) => (
                   <li key={index} className="flex items-center justify-between">
                     <span className="flex items-center">
                       {/* ファイル形式に応じたアイコンを表示 */}

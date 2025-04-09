@@ -9,3 +9,4 @@ alwaysApply: true
 - Use pnpm
 - src/pages directory has invididual page components along with [Routes.tsx](mdc:src/Routes.tsx)
 - mockAPI has msw handlers
+- @types directory stored typedefinition files.
