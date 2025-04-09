@@ -28,7 +28,7 @@ const thumbnailSchema = z.object({
 type ThumbnailFormValues = z.infer<typeof thumbnailSchema>
 
 const FileUpload: React.FC = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false)
+  // const [isSubmitting, setIsSubmitting] = useState(false)
   const [previewUrls, setPreviewUrls] = useState<string[]>([])
   const [uploadResult, setUploadResult] = useState<{
     success: boolean
@@ -38,7 +38,7 @@ const FileUpload: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm<ThumbnailFormValues>({
     resolver: zodResolver(thumbnailSchema),
@@ -57,7 +57,6 @@ const FileUpload: React.FC = () => {
 
   const onSubmit = async (data: ThumbnailFormValues) => {
     try {
-      setIsSubmitting(true)
       setUploadResult(null)
       
       const formData = new FormData()
@@ -85,8 +84,6 @@ const FileUpload: React.FC = () => {
         success: false,
         message: 'アップロード中にエラーが発生しました',
       })
-    } finally {
-      setIsSubmitting(false)
     }
   }
 
