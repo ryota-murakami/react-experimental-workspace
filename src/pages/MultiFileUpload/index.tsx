@@ -22,13 +22,6 @@ const thumbnailSchema = z.object({
     }, {
       message: '各ファイルのサイズは5MB以下にしてください。',
     })
-    .refine((files) => {
-      return Array.from(files).every((file) =>
-        ['image/jpeg', 'image/jpg', 'image/png', 'image/gif'].includes(file.type)
-      )
-    }, {
-      message: 'JPG、PNG、GIF形式のファイルを選択してください。',
-    }),
 })
 
 // 型定義
