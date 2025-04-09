@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import axios from 'axios'
+import { Image, FileText, X } from 'lucide-react'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
@@ -12,7 +13,7 @@ const thumbnailSchema = z.object({
   thumbnails: z
     .instanceof(FileList)
     .refine((files) => files.length > 0, {
-      message: '画像を選択してください。',
+      message: 'ファイルを選択してください。',
     })
     .refine((files) => files.length <= 10, {
       message: '一度にアップロードできるのは10個までです。',
@@ -28,8 +29,7 @@ const thumbnailSchema = z.object({
 type ThumbnailFormValues = z.infer<typeof thumbnailSchema>
 
 const FileUpload: React.FC = () => {
-  // const [isSubmitting, setIsSubmitting] = useState(false)
-  const [previewUrls, setPreviewUrls] = useState<string[]>([])
+  const [files, setFiles] = useState<File[]>([])
   const [uploadResult, setUploadResult] = useState<{
     success: boolean
     message: string
@@ -44,15 +44,9 @@ const FileUpload: React.FC = () => {
     resolver: zodResolver(thumbnailSchema),
   })
 
-  // ファイル選択時にプレビュー表示
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files
-    if (files) {
-      const urls = Array.from(files).map((file) => URL.createObjectURL(file))
-      setPreviewUrls(urls)
-    } else {
-      setPreviewUrls([])
-    }
+  // ファイル削除
+  const handleFileRemove = (index: number) => {
+    setFiles((prev) => prev.filter((_, i) => i !== index))
   }
 
   const onSubmit = async (data: ThumbnailFormValues) => {
@@ -72,12 +66,12 @@ const FileUpload: React.FC = () => {
       
       setUploadResult({
         success: true,
-        message: '画像が正常にアップロードされました',
+        message: 'ファイルが正常にアップロードされました',
       })
       
       // フォームとプレビューのリセット
       reset()
-      setPreviewUrls([])
+      setFiles([])
     } catch (error) {
       console.error('Upload error:', error)
       setUploadResult({
@@ -94,39 +88,50 @@ const FileUpload: React.FC = () => {
       </Header>
       <div className="w-full max-w-md mx-auto p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* サムネイルアップロード */}
+          {/* ファイルアップロード */}
           <div className="space-y-2">
             <label htmlFor="thumbnails" className="block text-sm font-medium">
-              画像（最大10枚まで）
+              画像、Excel、Word（最大10枚まで）
             </label>
             <input
               id="thumbnails"
               type="file"
               multiple
-              accept="image/jpeg,image/jpg,image/png,image/gif"
+              accept="image/jpeg,image/jpg,image/png,image/gif,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
               {...register('thumbnails')}
-              onChange={handleFileChange}
+              onChange={(e) => {
+                const files = e.target.files
+                if (files) {
+                  setFiles(Array.from(files))
+                }
+              }}
             />
             {errors.thumbnails && (
               <p className="text-sm text-red-500">{errors.thumbnails.message}</p>
             )}
           </div>
 
-          {/* プレビュー */}
-          {previewUrls.length > 0 && (
+          {/* ファイル一覧 */}
+          {files.length > 0 && (
             <div className="mt-4">
-              <p className="text-sm font-medium mb-2">プレビュー</p>
-              <div className="grid grid-cols-2 gap-2">
-                {previewUrls.map((url, index) => (
-                  <img
-                    key={index}
-                    src={url}
-                    alt={`プレビュー ${index + 1}`}
-                    className="w-full h-32 object-cover rounded border border-gray-300"
-                  />
+              <p className="text-sm font-medium mb-2">ファイル一覧</p>
+              <ul className="space-y-2">
+                {files.map((file, index) => (
+                  <li key={index} className="flex items-center justify-between">
+                    <span className="flex items-center">
+                      {/* ファイル形式に応じたアイコンを表示 */}
+                      {file.name.endsWith('.jpg') || file.name.endsWith('.jpeg') || file.name.endsWith('.png') || file.name.endsWith('.gif') ? <Image className="w-4 h-4 mr-2" /> : null}
+                      {file.name.endsWith('.xlsx') ? <FileText className="w-4 h-4 mr-2" /> : null}
+                      {file.name.endsWith('.docx') ? <FileText className="w-4 h-4 mr-2" /> : null}
+                      {file.name}
+                    </span>
+                    <button type="button" onClick={() => handleFileRemove(index)} className="text-red-500 hover:text-red-700">
+                      <X className="w-4 h-4" />
+                    </button>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           )}
 
