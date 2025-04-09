@@ -40,6 +40,8 @@ const FileUpload: React.FC = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
+    setValue,
+    getValues,
   } = useForm<UploadFilesFormValues>({
     resolver: zodResolver(uploadFilesSchema),
   })
@@ -47,6 +49,21 @@ const FileUpload: React.FC = () => {
   // ファイル削除
   const handleFileRemove = (index: number) => {
     setFiles((prev) => prev.filter((_, i) => i !== index))
+    
+    // 現在のファイルリストを取得
+    const currentFiles = getValues('uploadFiles')
+    if (!currentFiles) return
+
+    // 削除対象のファイルを除外した新しいFileListを作成
+    const dataTransfer = new DataTransfer()
+    Array.from(currentFiles).forEach((file, i) => {
+      if (i !== index) {
+        dataTransfer.items.add(file)
+      }
+    })
+    
+    // react-hook-formの値を更新
+    setValue('uploadFiles', dataTransfer.files)
   }
 
   const onSubmit = async (data: UploadFilesFormValues) => {
