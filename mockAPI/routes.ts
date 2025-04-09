@@ -13,49 +13,57 @@ export const routes = [
     return HttpResponse.json({ message: 'ok', status: 201 })
   }),
   // 複数サムネイルアップロード用のモックAPI
-  http.post('/api/thumbnailUpload', async ({ request }) => {
+  http.post('/api/uploadFiles', async ({ request }) => {
     try {
       const formData = await request.formData()
       const uploadedFiles: { name: string; size: number; type: string }[] = []
 
       // FormDataから全てのファイルを取得
       for (const [key, value] of formData.entries()) {
-        if (key.startsWith('thumbnail') && value instanceof File) {
+        if (key.startsWith('uploadFile') && value instanceof File) {
           uploadedFiles.push({
             name: value.name,
             size: value.size,
-            type: value.type
+            type: value.type,
           })
         }
       }
 
-      console.log('複数サムネイルアップロード:', {
+      console.log('複数ファイルアップロード:', {
         fileCount: uploadedFiles.length,
-        files: uploadedFiles
+        files: uploadedFiles,
       })
 
       // 実際のアップロード処理をシミュレート
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         setTimeout(() => {
-          resolve(HttpResponse.json({ 
-            success: true,
-            message: `${uploadedFiles.length}個の画像のアップロードに成功しました`,
-            data: {
-              files: uploadedFiles.map((file, index) => ({
-                id: Math.floor(Math.random() * 10000),
-                filename: file.name,
-                url: `https://example.com/thumbnails/${file.name}`
-              }))
-            }
-          }, { status: 201 }))
+          resolve(
+            HttpResponse.json(
+              {
+                success: true,
+                message: `${uploadedFiles.length}個の画像のアップロードに成功しました`,
+                data: {
+                  files: uploadedFiles.map((file, index) => ({
+                    id: Math.floor(Math.random() * 10000),
+                    filename: file.name,
+                    url: `https://example.com/uploadFiles/${file.name}`,
+                  })),
+                },
+              },
+              { status: 201 },
+            ),
+          )
         }, 800) // 0.8秒の遅延を追加してアップロード処理をシミュレート
       })
     } catch (error) {
-      console.error('サムネイルアップロードエラー:', error)
-      return HttpResponse.json({ 
-        success: false,
-        message: 'サムネイルのアップロードに失敗しました'
-      }, { status: 500 })
+      console.error('ファイルアップロードエラー:', error)
+      return HttpResponse.json(
+        {
+          success: false,
+          message: 'ファイルのアップロードに失敗しました',
+        },
+        { status: 500 },
+      )
     }
   }),
 ]

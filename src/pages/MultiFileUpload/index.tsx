@@ -9,8 +9,8 @@ import Header from '@/components/Header'
 import { Page } from '@/components/Page'
 
 // Zodバリデーションスキーマの定義
-const thumbnailSchema = z.object({
-  thumbnails: z
+const uploadFilesSchema = z.object({
+  uploadFiles: z
     .instanceof(FileList)
     .refine((files) => files.length > 0, {
       message: 'ファイルを選択してください。',
@@ -26,7 +26,7 @@ const thumbnailSchema = z.object({
 })
 
 // 型定義
-type ThumbnailFormValues = z.infer<typeof thumbnailSchema>
+type UploadFilesFormValues = z.infer<typeof uploadFilesSchema>
 
 const FileUpload: React.FC = () => {
   const [files, setFiles] = useState<File[]>([])
@@ -40,8 +40,8 @@ const FileUpload: React.FC = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-  } = useForm<ThumbnailFormValues>({
-    resolver: zodResolver(thumbnailSchema),
+  } = useForm<UploadFilesFormValues>({
+    resolver: zodResolver(uploadFilesSchema),
   })
 
   // ファイル削除
@@ -49,16 +49,16 @@ const FileUpload: React.FC = () => {
     setFiles((prev) => prev.filter((_, i) => i !== index))
   }
 
-  const onSubmit = async (data: ThumbnailFormValues) => {
+  const onSubmit = async (data: UploadFilesFormValues) => {
     try {
       setUploadResult(null)
       
       const formData = new FormData()
-      Array.from(data.thumbnails).forEach((file, index) => {
-        formData.append(`thumbnail${index}`, file)
+      Array.from(data.uploadFiles).forEach((file, index) => {
+        formData.append(`uploadFile${index}`, file as Blob)
       })
       
-      const response = await axios.post('/api/thumbnailUpload', formData, {
+      const response = await axios.post('/api/uploadFiles', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -90,16 +90,16 @@ const FileUpload: React.FC = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* ファイルアップロード */}
           <div className="space-y-2">
-            <label htmlFor="thumbnails" className="block text-sm font-medium">
+            <label htmlFor="uploadFiles" className="block text-sm font-medium">
               画像、Excel、Word（最大10枚まで）
             </label>
             <input
-              id="thumbnails"
+              id="uploadFiles"
               type="file"
               multiple
               accept="image/jpeg,image/jpg,image/png,image/gif,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
-              {...register('thumbnails')}
+              {...register('uploadFiles')}
               onChange={(e) => {
                 const files = e.target.files
                 if (files) {
@@ -107,8 +107,8 @@ const FileUpload: React.FC = () => {
                 }
               }}
             />
-            {errors.thumbnails && (
-              <p className="text-sm text-red-500">{errors.thumbnails.message}</p>
+            {errors.uploadFiles && (
+              <p className="text-sm text-red-500">{errors.uploadFiles.message}</p>
             )}
           </div>
 
