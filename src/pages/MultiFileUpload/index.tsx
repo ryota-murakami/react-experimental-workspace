@@ -47,10 +47,13 @@ const FileUpload: React.FC = () => {
     watch,
   } = useForm<UploadFilesFormValues>({
     resolver: zodResolver(uploadFilesSchema),
+    defaultValues: {
+      uploadFiles: new DataTransfer().files,
+    },
   })
 
   // ファイルリストを監視
-  const files = watch('uploadFiles') || new DataTransfer().files
+  const files = watch('uploadFiles')
 
   // ファイル削除
   const handleFileRemove = (index: number) => {
