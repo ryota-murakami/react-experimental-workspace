@@ -86,7 +86,7 @@ const FileUpload: React.FC = () => {
       <Header>
         <Header.H1>MultiFileUpload</Header.H1>
       </Header>
-      <div className="w-full max-w-md mx-auto p-4">
+      <div className="mx-auto w-full max-w-md p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           {/* ファイルアップロード */}
           <div className="space-y-2">
@@ -97,7 +97,7 @@ const FileUpload: React.FC = () => {
               id="uploadFiles"
               type="file"
               multiple
-              accept="image/jpeg,image/jpg,image/png,image/gif,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+              accept="image/jpeg,image/jpg,image/png,image/gif,.xlsx,.xls,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
               className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
               {...register('uploadFiles')}
               onChange={(e) => {
@@ -108,26 +108,41 @@ const FileUpload: React.FC = () => {
               }}
             />
             {errors.uploadFiles && (
-              <p className="text-sm text-red-500">{errors.uploadFiles.message}</p>
+              <p className="text-sm text-red-500">
+                {errors.uploadFiles.message}
+              </p>
             )}
           </div>
 
           {/* ファイル一覧 */}
           {files.length > 0 && (
             <div className="mt-4">
-              <p className="text-sm font-medium mb-2">ファイル一覧</p>
+              <p className="mb-2 text-sm font-medium">ファイル一覧</p>
               <ul className="space-y-2">
                 {files.map((file, index) => (
                   <li key={index} className="flex items-center justify-between">
                     <span className="flex items-center">
                       {/* ファイル形式に応じたアイコンを表示 */}
-                      {file.name.endsWith('.jpg') || file.name.endsWith('.jpeg') || file.name.endsWith('.png') || file.name.endsWith('.gif') ? <Image className="w-4 h-4 mr-2" /> : null}
-                      {file.name.endsWith('.xlsx') ? <FileText className="w-4 h-4 mr-2" /> : null}
-                      {file.name.endsWith('.docx') ? <FileText className="w-4 h-4 mr-2" /> : null}
+                      {file.name.endsWith('.jpg') ||
+                      file.name.endsWith('.jpeg') ||
+                      file.name.endsWith('.png') ||
+                      file.name.endsWith('.gif') ? (
+                        <Image className="mr-2 h-4 w-4" />
+                      ) : null}
+                      {file.name.endsWith('.xlsx') ? (
+                        <FileText className="mr-2 h-4 w-4" />
+                      ) : null}
+                      {file.name.endsWith('.docx') ? (
+                        <FileText className="mr-2 h-4 w-4" />
+                      ) : null}
                       {file.name}
                     </span>
-                    <button type="button" onClick={() => handleFileRemove(index)} className="text-red-500 hover:text-red-700">
-                      <X className="w-4 h-4" />
+                    <button
+                      type="button"
+                      onClick={() => handleFileRemove(index)}
+                      className="text-red-500 hover:text-red-700"
+                    >
+                      <X className="h-4 w-4" />
                     </button>
                   </li>
                 ))}
@@ -148,8 +163,10 @@ const FileUpload: React.FC = () => {
         {/* 結果メッセージ */}
         {uploadResult && (
           <div
-            className={`mt-4 p-3 rounded ${
-              uploadResult.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+            className={`mt-4 rounded p-3 ${
+              uploadResult.success
+                ? 'bg-green-100 text-green-800'
+                : 'bg-red-100 text-red-800'
             }`}
           >
             {uploadResult.message}
