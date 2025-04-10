@@ -8,6 +8,7 @@ import { Image, FileText, X } from 'lucide-react'
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
 import { UploadFileResponse } from 'mockAPI/handlers/uploadFileHandler'
+import FileUploadZone from '@/pages/MultiFileUpload/FileUploadZone'
 
 // Zodバリデーションスキーマの定義
 const uploadFilesSchema = z.object({
@@ -52,7 +53,7 @@ const FileUpload: React.FC = () => {
     },
   })
 
-  // ファイルリストを監視
+  // リアルタイムのファイルリストを取得
   const files = watch('uploadFiles')
 
   // ファイル削除
@@ -120,12 +121,12 @@ const FileUpload: React.FC = () => {
             <label htmlFor="uploadFiles" className="block text-sm font-medium">
               画像、Excel、Word（最大10枚まで）
             </label>
-            <input
-              id="uploadFiles"
-              type="file"
-              multiple
+            <FileUploadZone
               accept="image/jpeg,image/jpg,image/png,image/gif,.xlsx,.xls,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-              className="w-full rounded border border-gray-300 px-3 py-2 focus:border-blue-500 focus:outline-none"
+              multiple
+              onFilesSelected={(files) => {
+                setValue('uploadFiles', files)
+              }}
               {...register('uploadFiles')}
             />
             {errors.uploadFiles && (
