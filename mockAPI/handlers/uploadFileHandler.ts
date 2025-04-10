@@ -2,28 +2,28 @@ import type { ResponseResolver } from 'msw'
 import { HttpResponse } from 'msw'
 
 /**
- * アップロードされたファイルの情報を表す型
+ * Type representing uploaded file information
  */
 export type UploadedFile = {
-  /** ファイルID */
+  /** File ID */
   id: number
-  /** ファイル名 */
+  /** File name */
   filename: string
-  /** ファイルのURL */
+  /** File URL */
   url: string
 }
 
 /**
- * ファイルアップロードAPIのレスポンス型
+ * Response type for file upload API
  */
 export type UploadFileResponse = {
-  /** アップロードの成功/失敗 */
+  /** Upload success/failure */
   success: boolean
-  /** レスポンスメッセージ */
+  /** Response message */
   message: string
-  /** アップロードされたファイルのデータ */
+  /** Uploaded file data */
   data?: {
-    /** アップロードされたファイルの一覧 */
+    /** List of uploaded files */
     files: UploadedFile[]
   }
 } 
@@ -45,19 +45,19 @@ export const uploadFileHandler: ResponseResolver = async ({ request }) => {
       }
     }
 
-    console.log('複数ファイルアップロード:', {
+    console.log('Multiple file upload:', {
       fileCount: uploadedFiles.length,
       files: uploadedFiles,
     })
 
-    // 実際のアップロード処理をシミュレート
+    // Simulate actual upload process
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(
           HttpResponse.json(
             {
               success: true,
-              message: `${uploadedFiles.length}個の画像のアップロードに成功しました`,
+              message: `Successfully uploaded ${uploadedFiles.length} files`,
               data: {
                 files: uploadedFiles.map((file, index) => ({
                   id: Math.floor(Math.random() * 10000),
@@ -69,14 +69,14 @@ export const uploadFileHandler: ResponseResolver = async ({ request }) => {
             { status: 201 },
           ),
         )
-      }, 800) // 0.8秒の遅延を追加してアップロード処理をシミュレート
+      }, 800) // Add 0.8 second delay to simulate upload process
     })
   } catch (error) {
-    console.error('ファイルアップロードエラー:', error)
+    console.error('File upload error:', error)
     return HttpResponse.json(
       {
         success: false,
-        message: 'ファイルのアップロードに失敗しました',
+        message: 'Failed to upload files',
       },
       { status: 500 },
     )

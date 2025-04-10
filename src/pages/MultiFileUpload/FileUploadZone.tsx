@@ -70,9 +70,9 @@ export default function FileUploadZone({
       />
       <Upload className="mx-auto mb-4 h-12 w-12 text-gray-400" />
       <p className="mb-1 text-gray-700">
-        ここにファイルをドロップするか、クリックしてファイルを選択します。
+        Drop files here or click to select files
       </p>
-      <p className="text-sm text-gray-500">複数のファイルを選択できます。</p>
+      <p className="text-sm text-gray-500">You can select multiple files.</p>
     </div>
   )
 }

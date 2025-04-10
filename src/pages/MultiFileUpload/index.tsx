@@ -10,27 +10,27 @@ import { Page } from '@/components/Page'
 import { UploadFileResponse } from 'mockAPI/handlers/uploadFileHandler'
 import FileUploadZone from '@/pages/MultiFileUpload/FileUploadZone'
 
-// Zodバリデーションスキーマの定義
+// Define Zod validation schema
 const uploadFilesSchema = z.object({
   uploadFiles: z
     .instanceof(FileList)
     .refine((files) => files.length > 0, {
-      message: 'ファイルを選択してください。',
+      message: 'Please select at least one file.',
     })
     .refine((files) => files.length <= 10, {
-      message: '一度にアップロードできるのは10個までです。',
+      message: 'You can upload up to 10 files at once.',
     })
     .refine(
       (files) => {
         return Array.from(files).every((file) => file.size <= 5 * 1024 * 1024)
       },
       {
-        message: '各ファイルのサイズは5MB以下にしてください。',
+        message: 'Each file must be 5MB or smaller.',
       },
     ),
 })
 
-// 型定義
+// Type definition
 type UploadFilesFormValues = z.infer<typeof uploadFilesSchema>
 
 const FileUpload: React.FC = () => {
@@ -53,16 +53,16 @@ const FileUpload: React.FC = () => {
     },
   })
 
-  // リアルタイムのファイルリストを取得
+  // Get real-time file list
   const files = watch('uploadFiles')
 
-  // ファイル削除
+  // File removal
   const handleFileRemove = (index: number) => {
-    // 現在のファイルリストを取得
+    // Get current file list
     const currentFiles = getValues('uploadFiles')
     if (!currentFiles) return
 
-    // 削除対象のファイルを除外した新しいFileListを作成
+    // Create new FileList excluding the file to be removed
     const dataTransfer = new DataTransfer()
     Array.from(currentFiles).forEach((file, i) => {
       if (i !== index) {
@@ -70,7 +70,7 @@ const FileUpload: React.FC = () => {
       }
     })
 
-    // react-hook-formの値を更新
+    // Update react-hook-form value
     setValue('uploadFiles', dataTransfer.files)
   }
 
@@ -98,13 +98,13 @@ const FileUpload: React.FC = () => {
         message: response.message,
       })
 
-      // フォームのリセット
+      // Reset form
       reset()
     } catch (error) {
       console.error('Upload error:', error)
       setUploadResult({
         success: false,
-        message: 'アップロード中にエラーが発生しました',
+        message: 'An error occurred during upload',
       })
     }
   }
@@ -116,10 +116,10 @@ const FileUpload: React.FC = () => {
       </Header>
       <div className="mx-auto w-full max-w-md p-4">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          {/* ファイルアップロード */}
+          {/* File upload */}
           <div className="space-y-2">
             <label htmlFor="uploadFiles" className="block text-sm font-medium">
-              画像、Excel、Word（最大10枚まで）
+              Images, Excel, Word (up to 10 files)
             </label>
             <FileUploadZone
               accept="image/jpeg,image/jpg,image/png,image/gif,.xlsx,.xls,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
@@ -136,15 +136,15 @@ const FileUpload: React.FC = () => {
             )}
           </div>
 
-          {/* ファイル一覧 */}
+          {/* File list */}
           {files.length > 0 && (
             <div className="mt-4">
-              <p className="mb-2 text-sm font-medium">ファイル一覧</p>
+              <p className="mb-2 text-sm font-medium">File List</p>
               <ul className="space-y-2">
                 {Array.from(files).map((file, index) => (
                   <li key={index} className="flex items-center justify-between">
                     <span className="flex items-center">
-                      {/* ファイル形式に応じたアイコンを表示 */}
+                      {/* Display icon based on file type */}
                       {file.name.endsWith('.jpg') ||
                       file.name.endsWith('.jpeg') ||
                       file.name.endsWith('.png') ||
@@ -172,17 +172,17 @@ const FileUpload: React.FC = () => {
             </div>
           )}
 
-          {/* 送信ボタン */}
+          {/* Submit button */}
           <button
             type="submit"
             disabled={isSubmitting}
             className="w-full rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none disabled:bg-blue-300"
           >
-            {isSubmitting ? 'アップロード中...' : 'アップロード'}
+            {isSubmitting ? 'Uploading...' : 'Upload'}
           </button>
         </form>
 
-        {/* 結果メッセージ */}
+        {/* Result message */}
         {uploadResult && (
           <div
             className={`mt-4 rounded p-3 ${
