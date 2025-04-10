@@ -14,29 +14,30 @@ test.describe('Top Page', () => {
     await expect(title).toHaveText('React Experimental Workspace')
     
     // Check if all expected links are present
-    const links = [
-      'DnD',
-      'Context',
-      'Form',
-      'CSS Animation',
-      'Modal',
-      'Search',
-      'WindowOpen',
-      'RefCompare',
-      'ImageUpload',
-      'DateForm',
-      'ArrayForm',
-      'ContextMenu',
-      'MultiFileUpload'
+    // Using exact: true to avoid ambiguous matches like 'Context' and 'ContextMenu'
+    const expectedLinks = [
+      { name: 'DnD', exact: true },
+      { name: 'Context', exact: true },
+      { name: 'Form', exact: true },
+      { name: 'CSS Animation', exact: true },
+      { name: 'Modal', exact: true },
+      { name: 'Search', exact: true },
+      { name: 'WindowOpen', exact: true },
+      { name: 'RefCompare', exact: true },
+      { name: 'ImageUpload', exact: true },
+      { name: 'DateForm', exact: true },
+      { name: 'ArrayForm', exact: true },
+      { name: 'ContextMenu', exact: true },
+      { name: 'MultiFileUpload', exact: true }
     ]
     
-    for (const linkText of links) {
-      const link = page.getByRole('link', { name: linkText })
+    for (const linkInfo of expectedLinks) {
+      const link = page.getByRole('link', linkInfo)
       await expect(link).toBeVisible()
     }
     
     // Test a navigation (e.g., clicking on Form link)
-    await page.getByRole('link', { name: 'Form' }).click()
+    await page.getByRole('link', { name: 'Form', exact: true }).click()
     
     // Verify navigation was successful
     await expect(page).toHaveURL(/\/form$/)
