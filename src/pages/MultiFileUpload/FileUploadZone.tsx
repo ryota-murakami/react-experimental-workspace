@@ -9,17 +9,16 @@ import { Upload } from 'lucide-react'
 
 type FileUploadZoneProps = {
   onFilesSelected: (files: FileList) => void
-  acceptet?: string
-} & ComponentProps<'input'>
+} & Omit<ComponentProps<'input'>, 'id' | 'type' | 'className'>
 
 export default function FileUploadZone({
   onFilesSelected,
-  acceptet = '*',
+  accept = '*',
   ...props
 }: FileUploadZoneProps) {
   const [isDragging, setIsDragging] = useState(false)
   const id = useId()
-  
+
   const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault()
     e.stopPropagation()
@@ -66,7 +65,7 @@ export default function FileUploadZone({
         type="file"
         className="hidden"
         onChange={handleFileInputChange}
-        accept={acceptet}
+        accept={accept}
         {...props}
       />
       <Upload className="mx-auto mb-4 h-12 w-12 text-gray-400" />
