@@ -4,9 +4,10 @@ globs:
 alwaysApply: true
 ---
 
-# Project Overview
+# Project Guidance
 
-- Use pnpm
+- Use pnpm.
 - src/pages directory has invididual page components along with [Routes.tsx](mdc:src/Routes.tsx)
-- mockAPI has msw handlers
+- mockAPI has msw handlers.
+- You must check that there is a relivant msw handers when you modify any pages.
 - @types directory stored typedefinition files.
