@@ -4,6 +4,7 @@
   "msw": {
     "workerDirectory": "public"
   },
+  "type": "module",
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
   },
