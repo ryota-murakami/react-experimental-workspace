@@ -8,7 +8,6 @@
   "lint-staged": {
     "*": "prettier --ignore-unknown --write"
   },
-  "packageManager": "pnpm@10.9.0",
   "scripts": {
     "start": "vite",
     "dev": "vite",
