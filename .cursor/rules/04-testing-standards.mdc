@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Testing Standards
+
+## E2E Testing
+- Use Playwright for end-to-end testing
+- Tests should be in the `e2e` directory
+- Follow the [playwright.config.ts](mdc:playwright.config.ts) configuration
+
+## Test Structure
+- Tests should cover both happy paths and negative cases
+- Use descriptive test names that explain what is being tested
+- Group related tests with describe blocks
+- For complex interactions, use page objects

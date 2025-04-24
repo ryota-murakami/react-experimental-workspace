@@ -1,0 +1,24 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Coding Standards
+
+## Language
+- The project uses TypeScript for type safety
+- Comments and test names should be in English by default
+
+## Libraries
+- React 19.1.0 - Latest React version with new features like cache and memoization APIs
+- React Router v7 - For routing
+- Tailwind CSS v4 - For styling
+- React Hook Form - For form handling
+- Zod - For schema validation
+- MSW - For API mocking
+
+## Code Style
+- Follow ESLint and Prettier configurations
+- Use React hooks and functional components
+- Prefer named exports for components
+- File names should match component names

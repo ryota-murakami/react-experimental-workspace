@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Project Structure
+
+This is a React experimental workspace with various example components and functionality.
+
+- [src/main.tsx](mdc:src/main.tsx) - Main entry point that renders the application
+- [src/Routes.tsx](mdc:src/Routes.tsx) - Defines all routes for the application
+- [src/pages/](mdc:src/pages) - Contains all page components
+- [src/components/](mdc:src/components) - Reusable components
+- [src/hooks/](mdc:src/hooks) - Custom React hooks
+- [src/lib/](mdc:src/lib) - Utility functions and library code
+- [mockAPI/](mdc:mockAPI) - Mock API implementation using MSW

@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Component Patterns
+
+## Structure
+- Each page component should be in its own file in the `src/pages` directory
+- Reusable components should be in the `src/components` directory
+- UI components should be in the `src/components/ui` directory
+
+## Patterns
+- Use React.lazy for code splitting page components
+- Use Suspense for loading states
+- Pages should follow a consistent structure
+- Form handling should use react-hook-form with zod validation
+- API calls should use axios
+- For complex state management, use signals from @preact/signals-react
