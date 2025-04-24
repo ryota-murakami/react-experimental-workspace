@@ -24,12 +24,12 @@
     "test:e2e:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.2.5",
     "@hookform/resolvers": "^5.0.1",
-    "@mui/icons-material": "^5.17.1",
-    "@mui/material": "^5.17.1",
+    "@mui/icons-material": "^7.0.2",
+    "@mui/material": "^7.0.2",
     "@mui/styles": "^6.4.11",
     "@preact/signals-react": "^3.0.1",
     "@radix-ui/react-slot": "^1.2.0",
