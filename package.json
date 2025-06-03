@@ -27,7 +27,7 @@
     "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.2.5",
     "@hookform/resolvers": "^5.0.1",
-    "@mui/icons-material": "^7.1.0",
+    "@mui/icons-material": "^7.1.1",
     "@mui/material": "^7.1.0",
     "@mui/styles": "^6.4.11",
     "@preact/signals-react": "^3.0.1",
