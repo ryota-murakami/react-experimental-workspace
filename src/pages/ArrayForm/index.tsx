@@ -19,7 +19,7 @@ const ArrayForm: React.FC<Props> = () => {
       <Header>
         <Header.H1>ArrayForm</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
+      <div className="grid w-full place-content-center">
         <form
           className="flex flex-col gap-4"
           onSubmit={handleSubmit((data) => console.log(data))}

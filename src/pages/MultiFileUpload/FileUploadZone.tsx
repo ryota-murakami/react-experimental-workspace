@@ -1,3 +1,4 @@
+import { Upload } from 'lucide-react'
 import {
   useState,
   useId,
@@ -5,7 +6,6 @@ import {
   type ChangeEvent,
   type ComponentProps,
 } from 'react'
-import { Upload } from 'lucide-react'
 
 type FileUploadZoneProps = {
   onFilesSelected: (files: FileList) => void
@@ -48,6 +48,13 @@ export default function FileUploadZone({
     document.getElementById(`${id}-file-input`)?.click()
   }
 
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      openFileSelector()
+    }
+  }
+
   return (
     <div
       className={`cursor-pointer rounded-lg border-2 border-dashed p-8 text-center transition-colors ${
@@ -59,6 +66,10 @@ export default function FileUploadZone({
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
       onClick={openFileSelector}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label="Click or drag files to upload"
     >
       <input
         id={`${id}-file-input`}

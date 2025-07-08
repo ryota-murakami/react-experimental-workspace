@@ -36,14 +36,14 @@ const Search: React.FC = () => {
 
   return (
     <Theme>
-      <div className="min-h-screen flex flex-col">
+      <div className="flex min-h-screen flex-col">
         <section className="grid place-content-center">
-          <h1 className="text-8xl font-semibold antialiased py-10">Search</h1>
+          <h1 className="py-10 text-8xl font-semibold antialiased">Search</h1>
         </section>
         <section className="grid place-content-center">
           <form className="flex gap-4" onSubmit={handleSubmit(onSubmit)}>
             <button
-              className="text-xl px-4 py-2 font-semibold bg-white text-slate-700 dark:bg-slate-700 dark:text-white rounded-md shadow-xs ring-1 ring-slate-900/5 border-indigo-500 dark:border-sky-500 border-2 border-solid"
+              className="rounded-md border-2 border-solid border-indigo-500 bg-white px-4 py-2 text-xl font-semibold text-slate-700 shadow-xs ring-1 ring-slate-900/5 dark:border-sky-500 dark:bg-slate-700 dark:text-white"
               type="submit"
             >
               Search
@@ -57,7 +57,7 @@ const Search: React.FC = () => {
           ))}
         </section>
         <section className="grid place-content-center">
-          <ul className="mt-4 space-y-2 list-disc list-inside">
+          <ul className="mt-4 list-inside list-disc space-y-2">
             {hit.value.length
               ? hit.value.map((v) => (
                   <li key={v} className="text-gray-700">

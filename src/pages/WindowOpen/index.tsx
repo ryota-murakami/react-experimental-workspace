@@ -26,7 +26,7 @@ const WindowOpen: React.FC<Props> = () => {
       <Header>
         <Header.H1>WindowOpen</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
+      <div className="grid w-full place-content-center">
         <Button
           onClick={() => {
             window.open('/windowOpen/popup', '_blank', 'width=600,height=600')

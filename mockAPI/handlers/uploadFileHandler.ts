@@ -26,8 +26,7 @@ export type UploadFileResponse = {
     /** List of uploaded files */
     files: UploadedFile[]
   }
-} 
-
+}
 
 export const uploadFileHandler: ResponseResolver = async ({ request }) => {
   try {
@@ -59,7 +58,7 @@ export const uploadFileHandler: ResponseResolver = async ({ request }) => {
               success: true,
               message: `Successfully uploaded ${uploadedFiles.length} files`,
               data: {
-                files: uploadedFiles.map((file, index) => ({
+                files: uploadedFiles.map((file, _index) => ({
                   id: Math.floor(Math.random() * 10000),
                   filename: file.name,
                   url: `https://example.com/uploadFiles/${file.name}`,

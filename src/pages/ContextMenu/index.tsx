@@ -34,7 +34,7 @@ const ContextMenu: React.FC<Props> = () => {
       <Header>
         <Header.H1>ContextMenu</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
+      <div className="grid w-full place-content-center">
         <>
           <button
             onClick={onContextMenu}

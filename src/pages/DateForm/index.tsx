@@ -56,7 +56,7 @@ const DateForm: React.FC = () => {
         <Header>
           <Header.H1>DateForm</Header.H1>
         </Header>
-        <div className="w-full grid place-content-center">
+        <div className="grid w-full place-content-center">
           <form
             className="flex flex-col gap-4"
             onSubmit={handleSubmit(onSubmit)}
@@ -69,7 +69,7 @@ const DateForm: React.FC = () => {
                 {...register('startDate')}
               />
               {errors.startDate && (
-                <span className="text-red-400 block">
+                <span className="block text-red-400">
                   {errors.startDate.message}
                 </span>
               )}
@@ -78,7 +78,7 @@ const DateForm: React.FC = () => {
               StartDate:
               <input type="date" id={id('endDate')} {...register('endDate')} />
               {errors.endDate && (
-                <span className="text-red-400 block">
+                <span className="block text-red-400">
                   {errors.endDate.message}
                 </span>
               )}

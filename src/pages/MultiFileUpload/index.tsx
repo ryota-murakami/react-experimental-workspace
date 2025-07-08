@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
 import axios from 'axios'
 import { Image, FileText, X } from 'lucide-react'
+import React, { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
-import { UploadFileResponse } from 'mockAPI/handlers/uploadFileHandler'
 import FileUploadZone from '@/pages/MultiFileUpload/FileUploadZone'
+import type { UploadFileResponse } from 'mockAPI/handlers/uploadFileHandler'
 
 // Define Zod validation schema
 const uploadFilesSchema = z.object({

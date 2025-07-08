@@ -21,7 +21,7 @@ const RefCompare: React.FC<Props> = () => {
       <Header>
         <Header.H1>RefCompare</Header.H1>
       </Header>
-      <div className="w-full grid place-content-center">
+      <div className="grid w-full place-content-center">
         <div className="App">
           Current render index: {renderIndex}
           <br />
