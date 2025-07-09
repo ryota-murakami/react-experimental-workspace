@@ -14,7 +14,7 @@ const Sandbox: React.FC<Props> = () => {
       </Header>
       <div className="grid w-full appearance-none place-content-center">
         <button
-          className="focus:boder-3 focus:border-wite forcus:border-solid rounded-lg border-none bg-cyan-700 p-2 text-amber-50 hover:bg-cyan-950"
+          className="transform rounded-lg border-none bg-cyan-700 p-2 text-amber-50 transition-all duration-150 hover:bg-cyan-950 active:scale-95 active:bg-cyan-800"
           onClick={() => {
             toast('Hello Sonner')
           }}
