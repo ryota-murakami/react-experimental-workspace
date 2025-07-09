@@ -26,6 +26,7 @@ class Index extends Component {
           <Link to="/arrayform">ArrayForm</Link>
           <Link to="/contextmenu">ContextMenu</Link>
           <Link to="/multi-file-upload">MultiFileUpload</Link>
+          <Link to="/sandbox">Sandbox</Link>
         </main>
       </Page.Container>
     )

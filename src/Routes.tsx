@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
+import { Toaster } from 'sonner'
 import './global.css'
 
 import Popup from '@/pages/WindowOpen/Popup'
@@ -22,6 +23,8 @@ const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
 const ContextMenu = lazy(async () => import('./pages/ContextMenu'))
 const MultiFileUpload = lazy(async () => import('./pages/MultiFileUpload'))
 
+const Sandbox = lazy(async () => import('./pages/Sandbox'))
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -42,9 +45,11 @@ const AppRoutes = () => {
           <Route path="/arrayform" element={<ArrayForm />} />
           <Route path="/contextmenu" element={<ContextMenu />} />
           <Route path="/multi-file-upload" element={<MultiFileUpload />} />
+          <Route path="/sandbox" element={<Sandbox />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
+      <Toaster />
     </BrowserRouter>
   )
 }
