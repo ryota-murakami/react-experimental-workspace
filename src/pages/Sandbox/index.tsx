@@ -1,5 +1,5 @@
 import React, { useState, memo } from 'react'
-import { toast } from 'sonner'
+// import { toast } from 'sonner'
 
 import Header from '@/components/Header'
 import { Page } from '@/components/Page'
@@ -27,6 +27,7 @@ const Sandbox: React.FC<Props> = () => {
         >
           Sonner
         </button>
+        <div>{state}</div>
       </div>
     </Page.Container>
   )
