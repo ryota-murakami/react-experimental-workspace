@@ -1,25 +1,13 @@
 import Button from '@mui/material/Button'
-import { withStyles } from '@mui/styles'
-import classNames from 'classnames'
+import { styled } from '@mui/material/styles'
 
-const styles = {
-  root: {
-    height: 58,
-  },
+const MyButton = styled(Button)({
+  height: 58,
+})
+
+MyButton.defaultProps = {
+  variant: 'outlined',
+  size: 'large',
 }
 
-const MyButton = (props) => {
-  const { classes, className } = props
-  return (
-    <Button
-      variant="outlined"
-      size="large"
-      className={classNames(classes.root, className)}
-      {...props}
-    >
-      {props.children}
-    </Button>
-  )
-}
-
-export default withStyles(styles)(MyButton)
+export default MyButton
