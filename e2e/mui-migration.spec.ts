@@ -44,7 +44,7 @@ test.describe('Material UI Migration Tests', () => {
     await expect(page).toHaveURL('/context')
 
     // Wait for page to load
-    await page.waitForSelector('button:has-text("Add Frineds")')
+    await page.waitForSelector('button:has-text("Add Friend")')
 
     // Check initial friends list
     const friendsList = page.locator('ul')
@@ -53,7 +53,7 @@ test.describe('Material UI Migration Tests', () => {
     expect(initialFriendsCount).toBe(3)
 
     // Click Add Friends button (MUI Button)
-    await page.getByRole('button', { name: 'Add Frineds' }).click()
+    await page.getByRole('button', { name: 'Add Friend' }).click()
 
     // Verify new friend was added
     const newFriendsCount = await friendsList.locator('li').count()

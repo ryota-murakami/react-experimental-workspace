@@ -14,13 +14,15 @@ import { useFormId } from '../../hooks/useFormId'
 
 const Schema = z
   .object({
-    startDate: z.coerce.date(),
-    endDate: z.coerce.date(),
+    startDate: z.string().min(1, 'Start date is required'),
+    endDate: z.string().min(1, 'End date is required'),
   })
   .refine(
     (data) => {
       if (data.startDate && data.endDate) {
-        if (data.endDate >= data.startDate) return true
+        const startDate = new Date(data.startDate)
+        const endDate = new Date(data.endDate)
+        if (endDate >= startDate) return true
         return false
       }
 
@@ -45,7 +47,11 @@ const DateForm: React.FC = () => {
     mode: 'onBlur',
   })
   const onSubmit: SubmitHandler<SchemaType> = (data) => {
-    console.log(data)
+    const processedData = {
+      startDate: new Date(data.startDate),
+      endDate: new Date(data.endDate),
+    }
+    console.log(processedData)
     toast.success('Success')
   }
 
@@ -75,7 +81,7 @@ const DateForm: React.FC = () => {
               )}
             </label>
             <label htmlFor={id('endDate')}>
-              StartDate:
+              EndDate:
               <input type="date" id={id('endDate')} {...register('endDate')} />
               {errors.endDate && (
                 <span className="block text-red-400">

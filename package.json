@@ -19,8 +19,9 @@
     "clean": "rimraf node_modules pnpm-lock.yaml dist",
     "gen": "plop",
     "validate": "./scripts/validate",
-    "test:e2e": "playwright test",
-    "test:e2e:ui": "playwright test --ui"
+    "e2e": "playwright test",
+    "e2e:headed": "playwright test --headed",
+    "e2e:ui": "playwright test --ui"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

@@ -25,6 +25,8 @@ const MultiFileUpload = lazy(async () => import('./pages/MultiFileUpload'))
 
 const Sandbox = lazy(async () => import('./pages/Sandbox'))
 
+const TailwindLineClamp = lazy(async () => import('./pages/TailwindLineClamp'))
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -46,6 +48,7 @@ const AppRoutes = () => {
           <Route path="/contextmenu" element={<ContextMenu />} />
           <Route path="/multi-file-upload" element={<MultiFileUpload />} />
           <Route path="/sandbox" element={<Sandbox />} />
+          <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
