@@ -22,10 +22,9 @@ const DateForm = lazy(async () => import('./pages/DateForm'))
 const ArrayForm = lazy(async () => import('./pages/ArrayForm'))
 const ContextMenu = lazy(async () => import('./pages/ContextMenu'))
 const MultiFileUpload = lazy(async () => import('./pages/MultiFileUpload'))
-
 const Sandbox = lazy(async () => import('./pages/Sandbox'))
-
 const TailwindLineClamp = lazy(async () => import('./pages/TailwindLineClamp'))
+const ViewTransision = lazy(async () => import('./pages/ViewTransision'))
 
 const AppRoutes = () => {
   return (
@@ -49,6 +48,7 @@ const AppRoutes = () => {
           <Route path="/multi-file-upload" element={<MultiFileUpload />} />
           <Route path="/sandbox" element={<Sandbox />} />
           <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
+          <Route path="/viewtransision" element={<ViewTransision />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

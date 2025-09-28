@@ -28,7 +28,8 @@ class Index extends Component {
           <Link to="/multi-file-upload">MultiFileUpload</Link>
           <Link to="/sandbox">Sandbox</Link>
           <Link to="/tailwindlineclamp">TailwindLineClamp</Link>
-        </main>
+          <Link to="/VIEWTRANSISION">ViewTransision</Link>
+</main>
       </Page.Container>
     )
   }

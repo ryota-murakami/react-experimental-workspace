@@ -1,0 +1,253 @@
+/* View Transition CSS for smooth animations */
+
+/* Ensure view transitions are enabled when supported */
+@view-transition {
+  navigation: auto;
+}
+
+/* Default view transition animations */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+/* Video card animations */
+::view-transition-old(video-card),
+::view-transition-new(video-card) {
+  animation-duration: 0.4s;
+}
+
+::view-transition-old(video-card) {
+  animation-name: slide-out-left;
+}
+
+::view-transition-new(video-card) {
+  animation-name: slide-in-right;
+}
+
+/* Specific video transition animations */
+::view-transition-old(video-*),
+::view-transition-new(video-*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+::view-transition-old(video-*) {
+  animation-name: scale-down-fade;
+}
+
+::view-transition-new(video-*) {
+  animation-name: scale-up-fade;
+}
+
+/* Filter transition animations */
+.filter-transition-enter {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+}
+
+.filter-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: all 0.3s ease-out;
+}
+
+.filter-transition-exit {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.filter-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition: all 0.3s ease-in;
+}
+
+/* Custom keyframe animations */
+@keyframes slide-out-left {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-down-fade {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes scale-up-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Overlay animations */
+.overlay-enter {
+  animation: fade-in 0.3s ease-out;
+}
+
+.overlay-exit {
+  animation: fade-out 0.3s ease-in;
+}
+
+/* Grid layout transition support */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  transition: all 0.3s ease-out;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1441px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Search input focus animations */
+.search-input:focus {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-out;
+}
+
+/* Category button animations */
+.category-button {
+  transition: all 0.2s ease-out;
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-button.active {
+  transform: scale(1.05);
+}
+
+/* Loading state animations */
+.loading-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Ensure smooth transitions on filter changes */
+.filter-container {
+  contain: layout style paint;
+}
+
+/* Optimize for view transitions */
+.video-card {
+  contain: layout style paint;
+  will-change: transform, opacity;
+}
+
+/* Fallback for browsers without view transition support */
+@supports not (view-transition-name: auto) {
+  .video-card {
+    transition: all 0.3s ease-out;
+  }
+  
+  .video-card:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Performance optimizations */
+.video-thumbnail {
+  content-visibility: auto;
+  contain-intrinsic-size: 300px 200px;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation-duration: 0.1s;
+  }
+  
+  .video-card,
+  .category-button,
+  .search-input {
+    transition: none;
+  }
+  
+  .filter-transition-enter-active,
+  .filter-transition-exit-active {
+    transition: none;
+  }
+}
