@@ -26,6 +26,8 @@ const Sandbox = lazy(async () => import('./pages/Sandbox'))
 const TailwindLineClamp = lazy(async () => import('./pages/TailwindLineClamp'))
 const ViewTransision = lazy(async () => import('./pages/ViewTransision'))
 
+const Mixi = lazy(async () => import('./pages/Mixi'));
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -49,7 +51,8 @@ const AppRoutes = () => {
           <Route path="/sandbox" element={<Sandbox />} />
           <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
           <Route path="/viewtransision" element={<ViewTransision />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/mixi" element={<Mixi />} />
+<Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
       <Toaster />

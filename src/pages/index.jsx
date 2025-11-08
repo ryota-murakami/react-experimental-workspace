@@ -29,6 +29,7 @@ class Index extends Component {
           <Link to="/sandbox">Sandbox</Link>
           <Link to="/tailwindlineclamp">TailwindLineClamp</Link>
           <Link to="/VIEWTRANSISION">ViewTransision</Link>
+  <Link to="/mixi">Mixi</Link>
 </main>
       </Page.Container>
     )
