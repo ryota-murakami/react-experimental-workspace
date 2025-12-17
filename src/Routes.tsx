@@ -28,6 +28,8 @@ const ViewTransision = lazy(async () => import('./pages/ViewTransision'))
 
 const Mixi = lazy(async () => import('./pages/Mixi'));
 
+const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'));
+
 const AppRoutes = () => {
   return (
     <BrowserRouter>
@@ -52,6 +54,7 @@ const AppRoutes = () => {
           <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
           <Route path="/viewtransision" element={<ViewTransision />} />
           <Route path="/mixi" element={<Mixi />} />
+<Route path="/useoptimistic" element={<UseOptimistic />} />
 <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

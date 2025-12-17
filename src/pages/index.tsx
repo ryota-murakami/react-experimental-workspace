@@ -24,6 +24,7 @@ const EXPERIMENTS = [
   { path: '/tailwindlineclamp', label: 'Line Clamp' },
   { path: '/VIEWTRANSISION', label: 'View Transition' },
   { path: '/mixi', label: 'Mixi' },
+  { path: '/useoptimistic', label: 'UseOptimistic' },
 ] as const
 
 /**

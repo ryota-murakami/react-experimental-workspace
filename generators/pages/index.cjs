@@ -11,10 +11,10 @@ module.exports = {
         type: 'add',
       },
       {
-        path: 'src/pages/index.jsx',
-        pattern: /(.*)(<main className={styles.main}>[\s\S]*)(<\/main>)/m,
+        path: 'src/pages/index.tsx',
+        pattern: /(const EXPERIMENTS = \[[\s\S]*?)(] as const)/m,
         template:
-          '$1$2  <Link to="/{{lowerCase name}}">{{properCase name}}</Link>\n$3',
+          "$1  { path: '/{{lowerCase name}}', label: '{{properCase name}}' },\n$2",
         type: 'modify',
       },
       {
