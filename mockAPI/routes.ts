@@ -1,6 +1,10 @@
 import { http, HttpResponse } from 'msw'
 
 import {
+  getBlogPostsHandler,
+  toggleBlogPostLikeHandler,
+} from './handlers/blogPostsHandler'
+import {
   addThreadCommentHandler,
   addThreadReplyHandler,
   createCommunityHandler,
@@ -58,6 +62,9 @@ import {
 import { uploadFileHandler } from './handlers/uploadFileHandler'
 
 export const routes = [
+  // Blog Posts API routes (UseOptimistic experiment)
+  http.get('/api/blog/posts', getBlogPostsHandler),
+  http.put('/api/blog/posts/:id/like', toggleBlogPostLikeHandler),
   http.get('/api/search', searchHandler),
   http.get('/api/states', statesHandler),
   http.post('/api/imageUpload', () => {

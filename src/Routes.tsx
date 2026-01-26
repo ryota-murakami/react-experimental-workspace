@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react'
+import { NuqsAdapter } from 'nuqs/adapters/react-router/v7'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import { Toaster } from 'sonner'
 import './global.css'
@@ -32,34 +33,36 @@ const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'));
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/dnd" element={<DnD />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="/anime" element={<Anime />} />
-          <Route path="/context" element={<Context />} />
-          <Route path="/modal" element={<Modal />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/windowOpen" element={<WindowOpen />} />
-          <Route path="/windowOpen/popup" element={<Popup />} />
-          <Route path="/refcompare" element={<RefCompare />} />
-          <Route path="/imageupload" element={<ImageUpload />} />
-          <Route path="/dateform" element={<DateForm />} />
-          <Route path="/arrayform" element={<ArrayForm />} />
-          <Route path="/contextmenu" element={<ContextMenu />} />
-          <Route path="/multi-file-upload" element={<MultiFileUpload />} />
-          <Route path="/sandbox" element={<Sandbox />} />
-          <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
-          <Route path="/viewtransision" element={<ViewTransision />} />
-          <Route path="/mixi" element={<Mixi />} />
-<Route path="/useoptimistic" element={<UseOptimistic />} />
-<Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
-      <Toaster />
-    </BrowserRouter>
+    <NuqsAdapter>
+      <BrowserRouter>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/dnd" element={<DnD />} />
+            <Route path="/form" element={<Form />} />
+            <Route path="/anime" element={<Anime />} />
+            <Route path="/context" element={<Context />} />
+            <Route path="/modal" element={<Modal />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/windowOpen" element={<WindowOpen />} />
+            <Route path="/windowOpen/popup" element={<Popup />} />
+            <Route path="/refcompare" element={<RefCompare />} />
+            <Route path="/imageupload" element={<ImageUpload />} />
+            <Route path="/dateform" element={<DateForm />} />
+            <Route path="/arrayform" element={<ArrayForm />} />
+            <Route path="/contextmenu" element={<ContextMenu />} />
+            <Route path="/multi-file-upload" element={<MultiFileUpload />} />
+            <Route path="/sandbox" element={<Sandbox />} />
+            <Route path="/tailwindlineclamp" element={<TailwindLineClamp />} />
+            <Route path="/viewtransision" element={<ViewTransision />} />
+            <Route path="/mixi" element={<Mixi />} />
+            <Route path="/useoptimistic" element={<UseOptimistic />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+      </BrowserRouter>
+    </NuqsAdapter>
   )
 }
 
