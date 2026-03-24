@@ -26,6 +26,7 @@ const EXPERIMENTS = [
   { path: '/mixi', label: 'Mixi' },
   { path: '/useoptimistic', label: 'UseOptimistic' },
   { path: '/portfolio-design', label: 'Portfolio Design' },
+  { path: '/urlparams', label: 'Urlparams' },
 ] as const
 
 /**

@@ -26,12 +26,10 @@ const MultiFileUpload = lazy(async () => import('./pages/MultiFileUpload'))
 const Sandbox = lazy(async () => import('./pages/Sandbox'))
 const TailwindLineClamp = lazy(async () => import('./pages/TailwindLineClamp'))
 const ViewTransision = lazy(async () => import('./pages/ViewTransision'))
-
-const Mixi = lazy(async () => import('./pages/Mixi'));
-
-const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'));
-
-const PortfolioDesign = lazy(async () => import('./pages/PortfolioDesign'));
+const Mixi = lazy(async () => import('./pages/Mixi'))
+const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'))
+const PortfolioDesign = lazy(async () => import('./pages/PortfolioDesign'))
+const Urlparams = lazy(async () => import('./pages/Urlparams'))
 
 const AppRoutes = () => {
   return (
@@ -60,6 +58,7 @@ const AppRoutes = () => {
             <Route path="/mixi" element={<Mixi />} />
             <Route path="/useoptimistic" element={<UseOptimistic />} />
             <Route path="/portfolio-design" element={<PortfolioDesign />} />
+            <Route path="/urlparams" element={<Urlparams />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
