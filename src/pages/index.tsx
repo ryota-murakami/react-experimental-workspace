@@ -25,6 +25,7 @@ const EXPERIMENTS = [
   { path: '/VIEWTRANSISION', label: 'View Transition' },
   { path: '/mixi', label: 'Mixi' },
   { path: '/useoptimistic', label: 'UseOptimistic' },
+  { path: '/portfolio-design', label: 'Portfolio Design' },
 ] as const
 
 /**

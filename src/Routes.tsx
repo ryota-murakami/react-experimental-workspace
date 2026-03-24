@@ -31,6 +31,8 @@ const Mixi = lazy(async () => import('./pages/Mixi'));
 
 const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'));
 
+const PortfolioDesign = lazy(async () => import('./pages/PortfolioDesign'));
+
 const AppRoutes = () => {
   return (
     <NuqsAdapter>
@@ -57,6 +59,7 @@ const AppRoutes = () => {
             <Route path="/viewtransision" element={<ViewTransision />} />
             <Route path="/mixi" element={<Mixi />} />
             <Route path="/useoptimistic" element={<UseOptimistic />} />
+            <Route path="/portfolio-design" element={<PortfolioDesign />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
