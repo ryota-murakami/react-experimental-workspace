@@ -31,6 +31,8 @@ const UseOptimistic = lazy(async () => import('./pages/UseOptimistic'))
 const PortfolioDesign = lazy(async () => import('./pages/PortfolioDesign'))
 const Urlparams = lazy(async () => import('./pages/Urlparams'))
 
+const FormObservatory = lazy(async () => import('./pages/FormObservatory'))
+
 const AppRoutes = () => {
   return (
     <NuqsAdapter>
@@ -59,6 +61,7 @@ const AppRoutes = () => {
             <Route path="/useoptimistic" element={<UseOptimistic />} />
             <Route path="/portfolio-design" element={<PortfolioDesign />} />
             <Route path="/urlparams" element={<Urlparams />} />
+            <Route path="/formobservatory" element={<FormObservatory />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
