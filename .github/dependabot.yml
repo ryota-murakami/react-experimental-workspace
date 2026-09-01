@@ -10,3 +10,8 @@ updates:
       all-dependencies:
         patterns:
           - "*"
+    ignore:
+      # typescript-eslint peer-caps TypeScript at <6.1.0; TS 7 breaks `pnpm lint`
+      # outright. Unpin once typescript-eslint ships TS 7 support (issue #10940).
+      - dependency-name: 'typescript'
+        versions: ['>=6.1.0']

@@ -47,7 +47,7 @@ const STRATEGY_COPY: Record<Strategy, { title: string; summary: string }> = {
 export function Section02Heatmap({ onParentRender }: Props) {
   const [strategy, setStrategy] = useState<Strategy>('watch')
   const { register, control, getValues } = useForm<FieldShape>({
-    defaultValues: Object.fromEntries(FIELD_KEYS.map((k) => [k, ''])) as FieldShape,
+    defaultValues: Object.fromEntries(FIELD_KEYS.map((k) => [k, ''])),
   })
 
   useRenderCount(onParentRender)

@@ -18,8 +18,8 @@ export function useClipboard(text: string, timeout = 1500): ReturnType {
   const [hasCopied, setHasCopied] = useState(false)
 
   const onCopy = useCallback(() => {
-    const didCopy = copy(text)
-    setHasCopied(didCopy)
+    // copy-to-clipboard v4 resolves asynchronously; flip the flag on the result.
+    void copy(text).then(setHasCopied)
   }, [text])
 
   useEffect(() => {
