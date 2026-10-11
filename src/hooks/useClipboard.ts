@@ -2,24 +2,40 @@
 import copy from 'copy-to-clipboard'
 import { useState, useCallback, useEffect } from 'react'
 
-interface ReturnType {
+import { DEFAULT_CLIPBOARD_RESET_TIMEOUT_MS } from './constants'
+
+interface UseClipboardResult {
   hasCopied: boolean
   onCopy: () => void
   value: string
 }
 
 /**
- * React hook to copy content to clipboard
- *
- * @param text the text or value to copy
- * @param timeout delay (in ms) to switch back to initial state once copied.
+ * Tracks clipboard copy state for buttons that call onCopy after a user click.
+ * @param text - The text or value to copy.
+ * @param timeout - Delay in ms before copied state resets.
+ * @returns
+ * - hasCopied: true while the copy feedback should be visible
+ * - onCopy: starts the clipboard write and updates feedback state
+ * - value: the text currently wired to the hook
+ * @example
+ * const { hasCopied, onCopy } = useClipboard('https://laststance.io')
  */
-export function useClipboard(text: string, timeout = 1500): ReturnType {
+export function useClipboard(
+  text: string,
+  timeout = DEFAULT_CLIPBOARD_RESET_TIMEOUT_MS
+): UseClipboardResult {
   const [hasCopied, setHasCopied] = useState(false)
 
   const onCopy = useCallback(() => {
-    // copy-to-clipboard v4 resolves asynchronously; flip the flag on the result.
-    void copy(text).then(setHasCopied)
+    // Copy runs after a click; keep the handler void while the async API reports success.
+    void copy(text)
+      .then((didCopy) => {
+        setHasCopied(didCopy)
+      })
+      .catch(() => {
+        setHasCopied(false)
+      })
   }, [text])
 
   useEffect(() => {
