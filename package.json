@@ -69,7 +69,7 @@
     "@typescript-eslint/parser": "^8.71.0",
     "@vitejs/plugin-react-swc": "^4.3.3",
     "code-inspector-plugin": "^2.0.9",
-    "concurrently": "^10.0.5",
+    "concurrently": "^10.0.6",
     "eslint": "^10.12.0",
     "eslint-config-ts-prefixer": "^5.1.0",
     "eslint-import-resolver-typescript": "^4.4.5",

@@ -5,3 +5,7 @@ allowBuilds:
   msw: true
   node-pty: true
   unrs-resolver: true
+overrides:
+  # @hookform/devtools@4.4.0 (latest) still pins uuid ^8, which is flagged as vulnerable below 14.0.0.
+  # It only calls v4(), whose API is unchanged. Drop once devtools bumps its own range.
+  '@hookform/devtools>uuid': ^14.0.0
