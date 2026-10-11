@@ -10,13 +10,13 @@ const WindowOpen: React.FC<Props> = () => {
   const [text, setText] = useState('')
   console.log(text)
   useEffect(() => {
-    const handleMessage = (event: MessageEvent) => {
+    const handleMessage = (event: MessageEvent): void => {
       setText(event.data)
     }
 
     window.addEventListener('message', handleMessage)
 
-    return () => {
+    return (): void => {
       window.removeEventListener('message', handleMessage)
     }
   }, [])

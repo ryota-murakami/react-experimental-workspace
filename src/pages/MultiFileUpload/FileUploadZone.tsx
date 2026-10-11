@@ -19,36 +19,36 @@ export default function FileUploadZone({
   const [isDragging, setIsDragging] = useState(false)
   const id = useId()
 
-  const handleDragOver = (e: DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (e: DragEvent<HTMLDivElement>): void => {
     e.preventDefault()
     e.stopPropagation()
     setIsDragging(true)
   }
 
-  const handleDragLeave = (e: DragEvent<HTMLDivElement>) => {
+  const handleDragLeave = (e: DragEvent<HTMLDivElement>): void => {
     e.preventDefault()
     e.stopPropagation()
     setIsDragging(false)
   }
 
-  const handleDrop = (e: DragEvent<HTMLDivElement>) => {
+  const handleDrop = (e: DragEvent<HTMLDivElement>): void => {
     e.preventDefault()
     e.stopPropagation()
     setIsDragging(false)
     onFilesSelected(e.dataTransfer.files)
   }
 
-  const handleFileInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleFileInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
     if (e.target.files) {
       onFilesSelected(e.target.files)
     }
   }
 
-  const openFileSelector = () => {
+  const openFileSelector = (): void => {
     document.getElementById(`${id}-file-input`)?.click()
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent): void => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
       openFileSelector()

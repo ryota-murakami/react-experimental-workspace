@@ -8,20 +8,20 @@ import { Container, Layout } from './style'
 const DnDPage: React.FC = () => {
   const [state, dispatch] = useReducer(reducer, defaulState)
 
-  const onDragStart = () => {
+  const onDragStart = (): void => {
     dispatch({ payload: null, type: ActionType.ON_DRAG_START })
   }
 
-  const onDragEnter = () => {
+  const onDragEnter = (): void => {
     dispatch({ payload: null, type: ActionType.ON_DRAG_ENTER })
   }
 
-  const onDragOver = (e: React.DragEvent) => {
+  const onDragOver = (e: React.DragEvent): void => {
     e.preventDefault()
     dispatch({ payload: null, type: ActionType.ON_DRAG_OVER })
   }
 
-  const onDrop = () => {
+  const onDrop = (): void => {
     dispatch({ payload: null, type: ActionType.ON_DROP })
   }
 

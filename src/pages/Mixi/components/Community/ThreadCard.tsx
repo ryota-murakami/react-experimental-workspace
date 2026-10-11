@@ -27,7 +27,7 @@ const ThreadCard: React.FC<ThreadCardProps> = ({ thread, onClick }) => {
     return date.toLocaleDateString()
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent): void => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
       onClick()

@@ -25,7 +25,7 @@ const ConversationCard: React.FC<ConversationCardProps> = ({ conversation, onCli
     return date.toLocaleDateString()
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent): void => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault()
       onClick()

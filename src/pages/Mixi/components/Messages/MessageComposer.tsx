@@ -12,7 +12,7 @@ interface MessageComposerProps {
 const MessageComposer: React.FC<MessageComposerProps> = ({ onSend, disabled }) => {
   const [content, setContent] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!content.trim() || disabled) return
 
@@ -20,7 +20,7 @@ const MessageComposer: React.FC<MessageComposerProps> = ({ onSend, disabled }) =
     setContent('')
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>): void => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
       handleSubmit(e)

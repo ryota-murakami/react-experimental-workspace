@@ -8,15 +8,15 @@ interface Props {}
 
 import 'use-context-menu/styles.css'
 
-const selectOne = () => {
+const selectOne = (): void => {
   console.log('selectOne')
 }
 
-const selectTwo = () => {
+const selectTwo = (): void => {
   console.log('selectTwo')
 }
 
-const selectThree = () => {
+const selectThree = (): void => {
   console.log('selectThree')
 }
 

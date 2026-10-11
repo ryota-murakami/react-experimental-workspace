@@ -270,7 +270,7 @@ function SubscribeStrategyPanel() {
   useEffect(() => {
     // Seed the DOM with whatever values are currently in the form. We can't
     // rely on the callback to fire on mount — it only fires on *change*.
-    const paint = (values: Profile, changedName?: string) => {
+    const paint = (values: Profile, changedName?: string): void => {
       if (nameRef.current) {
         nameRef.current.textContent = values.name || '— no name yet —'
       }
@@ -298,7 +298,7 @@ function SubscribeStrategyPanel() {
       },
     })
 
-    return () => unsubscribe()
+    return (): void => unsubscribe()
   }, [subscribe, getValues])
 
   return (

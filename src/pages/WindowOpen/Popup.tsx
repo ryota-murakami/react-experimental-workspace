@@ -5,10 +5,11 @@ interface Props {}
 const Popup: React.FC<Props> = memo(() => {
   const [text, setText] = useState('')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setText(e.target.value)
     if (window.opener) {
-      window.opener.postMessage(e.target.value, '*')
+      // Popup is opened same-origin via window.open('/windowOpen/popup'), so pin the target to our own origin
+      window.opener.postMessage(e.target.value, window.location.origin)
     }
   }
 

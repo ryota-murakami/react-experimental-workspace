@@ -61,7 +61,7 @@ export function Section05FormState({ onParentRender }: Props) {
 
   useRenderCount(onParentRender)
 
-  const toggle = (key: keyof Subs) => setSubs((prev) => ({ ...prev, [key]: !prev[key] }))
+  const toggle = (key: keyof Subs): void => setSubs((prev) => ({ ...prev, [key]: !prev[key] }))
   const activeCount = Object.values(subs).filter(Boolean).length
 
   return (

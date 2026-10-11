@@ -50,7 +50,7 @@ export function SectionNav({ entries, globalCountNodeRef }: Props) {
       if (el) observer.observe(el)
     }
 
-    return () => observer.disconnect()
+    return (): void => observer.disconnect()
   }, [entries])
 
   return (

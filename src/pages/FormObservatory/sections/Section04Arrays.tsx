@@ -36,7 +36,7 @@ export function Section04Arrays({ onParentRender }: Props) {
 
   useRenderCount(onParentRender)
 
-  const handleAdd = () => append({ name: '', quantity: 1 })
+  const handleAdd = (): void => append({ name: '', quantity: 1 })
 
   return (
     <section className={styles.section}>

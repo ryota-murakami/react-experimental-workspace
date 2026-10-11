@@ -18,7 +18,7 @@ const ProfileEditor: React.FC<ProfileEditorProps> = ({ profile, onSave, onCancel
   const [hobbies, setHobbies] = useState(profile.hobbies)
   const [icon, setIcon] = useState(profile.icon)
 
-  const handleSave = () => {
+  const handleSave = (): void => {
     onSave({
       bio,
       hobbies,

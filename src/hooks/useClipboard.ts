@@ -44,7 +44,7 @@ export function useClipboard(
         setHasCopied(false)
       }, timeout)
 
-      return () => clearTimeout(id)
+      return (): void => clearTimeout(id)
     }
   }, [timeout, hasCopied])
 

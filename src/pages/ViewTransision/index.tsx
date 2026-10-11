@@ -5,7 +5,7 @@ import { Page } from '@/components/Page'
 import styles from './ViewTransision.module.css'
 
 // Utility function to handle View Transitions
-const withViewTransition = (callback: () => void) => {
+const withViewTransition = (callback: () => void): void => {
   if ('startViewTransition' in document) {
     (document as any).startViewTransition(callback)
   } else {

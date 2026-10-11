@@ -38,16 +38,16 @@ const FriendSearch: React.FC<FriendSearchProps> = ({
       }
     }, 300)
 
-    return () => clearTimeout(timeoutId)
+    return (): void => clearTimeout(timeoutId)
   }, [query, searchUsers])
 
-  const handleAddFriend = (userId: string) => {
+  const handleAddFriend = (userId: string): void => {
     onAddFriend(userId)
     // Remove from results after sending request
     setResults((prev) => prev.filter((u) => u.id !== userId))
   }
 
-  const handleCancelRequest = (userId: string) => {
+  const handleCancelRequest = (userId: string): void => {
     onCancelRequest(userId)
     // Update status in results
     setResults((prev) =>
@@ -90,10 +90,10 @@ const FriendSearch: React.FC<FriendSearchProps> = ({
               key={user.id}
               user={user}
               onAddFriend={
-                user.friendStatus === 'none' ? () => handleAddFriend(user.id) : undefined
+                user.friendStatus === 'none' ? (): void => handleAddFriend(user.id) : undefined
               }
               onCancelRequest={
-                user.friendStatus === 'pending_sent' ? () => handleCancelRequest(user.id) : undefined
+                user.friendStatus === 'pending_sent' ? (): void => handleCancelRequest(user.id) : undefined
               }
               showMutualFriends
             />

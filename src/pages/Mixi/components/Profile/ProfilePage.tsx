@@ -30,7 +30,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false)
 
-  const handleSave = (updates: Partial<Profile>) => {
+  const handleSave = (updates: Partial<Profile>): void => {
     onUpdateProfile(updates)
     setIsEditing(false)
   }

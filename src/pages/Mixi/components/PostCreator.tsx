@@ -17,7 +17,7 @@ const PostCreator: React.FC<PostCreatorProps> = ({ onCreate }) => {
   const [visibility, setVisibility] = useState<Visibility>('public')
   const [isExpanded, setIsExpanded] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!content.trim()) return
 

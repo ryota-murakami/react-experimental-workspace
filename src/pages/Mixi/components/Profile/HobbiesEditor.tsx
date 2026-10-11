@@ -17,7 +17,7 @@ const HobbiesEditor: React.FC<HobbiesEditorProps> = ({
 }) => {
   const [inputValue, setInputValue] = useState('')
 
-  const handleAdd = () => {
+  const handleAdd = (): void => {
     const trimmed = inputValue.trim()
     if (
       trimmed &&
@@ -30,11 +30,11 @@ const HobbiesEditor: React.FC<HobbiesEditorProps> = ({
     }
   }
 
-  const handleRemove = (hobby: string) => {
+  const handleRemove = (hobby: string): void => {
     onChange(hobbies.filter((h) => h !== hobby))
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>): void => {
     if (e.key === 'Enter') {
       e.preventDefault()
       handleAdd()

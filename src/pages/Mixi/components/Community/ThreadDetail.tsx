@@ -38,7 +38,7 @@ const ThreadDetail: React.FC<ThreadDetailProps> = ({
     return date.toLocaleDateString()
   }
 
-  const handleCommentSubmit = (e: React.FormEvent) => {
+  const handleCommentSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!commentInput.trim()) return
     onCommentAdd(commentInput.trim())

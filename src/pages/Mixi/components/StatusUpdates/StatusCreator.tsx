@@ -19,7 +19,7 @@ const StatusCreator: React.FC<StatusCreatorProps> = ({ onCreate }) => {
   const remainingChars = MAX_LENGTH - content.length
   const isNearLimit = remainingChars < 20
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!content.trim() || content.length > MAX_LENGTH) return
 

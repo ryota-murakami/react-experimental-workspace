@@ -57,7 +57,7 @@ const FileUpload: React.FC = () => {
   const files = watch('uploadFiles')
 
   // File removal
-  const handleFileRemove = (index: number) => {
+  const handleFileRemove = (index: number): void => {
     // Get current file list
     const currentFiles = getValues('uploadFiles')
     if (!currentFiles) return
@@ -74,7 +74,7 @@ const FileUpload: React.FC = () => {
     setValue('uploadFiles', dataTransfer.files)
   }
 
-  const onSubmit = async (data: UploadFilesFormValues) => {
+  const onSubmit = async (data: UploadFilesFormValues): Promise<void> => {
     try {
       setUploadResult(null)
 

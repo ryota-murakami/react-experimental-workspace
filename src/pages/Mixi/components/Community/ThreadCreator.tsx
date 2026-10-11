@@ -13,7 +13,7 @@ const ThreadCreator: React.FC<ThreadCreatorProps> = ({ onCreate, onCancel }) => 
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!title.trim() || !content.trim()) return
 

@@ -52,7 +52,7 @@ export function LikeButton({ postId, likes, liked, onLike }: LikeButtonProps) {
    * Handle click event
    * Uses startTransition to wrap the async action, enabling optimistic updates
    */
-  const handleClick = () => {
+  const handleClick = (): void => {
     startTransition(async () => {
       // Apply optimistic update immediately
       setOptimistic('toggle')

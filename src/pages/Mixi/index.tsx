@@ -105,7 +105,7 @@ const Mixi: React.FC<Props> = () => {
 
   // Fetch posts and statuses on mount
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchData = async (): Promise<void> => {
       try {
         setLoading(true)
         setStatusesLoading(true)
@@ -130,7 +130,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch communities when community tab is active
   useEffect(() => {
     if (activeTab === 'community' && communities.length === 0) {
-      const fetchCommunities = async () => {
+      const fetchCommunities = async (): Promise<void> => {
         try {
           setCommunitiesLoading(true)
           const response = await getCommunities()
@@ -148,7 +148,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch threads when a community is selected
   useEffect(() => {
     if (selectedCommunityId) {
-      const fetchThreads = async () => {
+      const fetchThreads = async (): Promise<void> => {
         try {
           const response = await getCommunityThreads(selectedCommunityId, { limit: 50 })
           setThreads(response.threads)
@@ -163,7 +163,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch friends when mymixi tab is active
   useEffect(() => {
     if (activeTab === 'mymixi') {
-      const fetchFriendsData = async () => {
+      const fetchFriendsData = async (): Promise<void> => {
         try {
           setFriendsLoading(true)
           const [friendsResponse, requestsResponse] = await Promise.all([
@@ -185,7 +185,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch footprints when profile tab is active
   useEffect(() => {
     if (activeTab === 'profile') {
-      const fetchFootprintsData = async () => {
+      const fetchFootprintsData = async (): Promise<void> => {
         try {
           setFootprintsLoading(true)
           const [footprintsResponse, settingsResponse] = await Promise.all([
@@ -207,7 +207,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch profile when profile tab is active
   useEffect(() => {
     if (activeTab === 'profile' && !profile) {
-      const fetchProfile = async () => {
+      const fetchProfile = async (): Promise<void> => {
         try {
           setProfileLoading(true)
           const response = await getProfile()
@@ -225,7 +225,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch conversations when messages tab is active
   useEffect(() => {
     if (activeTab === 'messages' && conversations.length === 0) {
-      const fetchConversations = async () => {
+      const fetchConversations = async (): Promise<void> => {
         try {
           setMessagesLoading(true)
           const response = await getConversations({ limit: 50 })
@@ -243,7 +243,7 @@ const Mixi: React.FC<Props> = () => {
   // Fetch messages when a conversation is selected
   useEffect(() => {
     if (selectedConversationId) {
-      const fetchMessages = async () => {
+      const fetchMessages = async (): Promise<void> => {
         try {
           const response = await getConversationMessages(selectedConversationId, { limit: 100 })
           setConversationMessages(response.messages)
@@ -267,7 +267,7 @@ const Mixi: React.FC<Props> = () => {
 
   const handlePostCreate = async (
     postData: Omit<Post, 'id' | 'createdAt' | 'likes' | 'liked' | 'comments'>
-  ) => {
+  ): Promise<void> => {
     try {
       const response = await createPost({
         ...postData,
@@ -283,7 +283,7 @@ const Mixi: React.FC<Props> = () => {
     }
   }
 
-  const handlePostLike = async (postId: string) => {
+  const handlePostLike = async (postId: string): Promise<void> => {
     try {
       const response = await toggleLike(postId)
       setPosts(
@@ -294,7 +294,7 @@ const Mixi: React.FC<Props> = () => {
     }
   }
 
-  const handleCommentAdd = async (postId: string, content: string) => {
+  const handleCommentAdd = async (postId: string, content: string): Promise<void> => {
     try {
       const response = await addComment(postId, {
         content,
@@ -316,7 +316,7 @@ const Mixi: React.FC<Props> = () => {
     }
   }
 
-  const handleReplyAdd = async (postId: string, commentId: string, content: string) => {
+  const handleReplyAdd = async (postId: string, commentId: string, content: string): Promise<void> => {
     try {
       const response = await addReply(postId, commentId, {
         content,

@@ -15,7 +15,7 @@ Suggestion.displayName = 'Suggestion'
 
 export default Suggestion
 
-function suggest() {
+function suggest(): void {
   // @ts-expect-error @TODO override HTMLElement
   const query = document.getElementById('search')!.value
   const suggestionsBox = document.getElementById('suggestions')!
@@ -42,7 +42,7 @@ function suggest() {
       const suggestionItem = document.createElement('div')
       suggestionItem.className = 'suggestion-item'
       suggestionItem.textContent = item
-      suggestionItem.onclick = function () {
+      suggestionItem.onclick = function (): void {
         // @ts-expect-error @TODO override HTMLElement
         document.getElementById('search')!.value = item
         suggestionsBox.innerHTML = '' // Clear suggestions after selection

@@ -99,7 +99,7 @@ export default function UseOptimistic() {
   /**
    * Navigate to previous page
    */
-  const handlePrevPage = () => {
+  const handlePrevPage = (): void => {
     if (page > 1) {
       setPage(page - 1)
     }
@@ -108,7 +108,7 @@ export default function UseOptimistic() {
   /**
    * Navigate to next page
    */
-  const handleNextPage = () => {
+  const handleNextPage = (): void => {
     if (page < totalPages) {
       setPage(page + 1)
     }
@@ -118,7 +118,7 @@ export default function UseOptimistic() {
    * Navigate to specific page
    * @param pageNumber - Target page number
    */
-  const handlePageClick = (pageNumber: number) => {
+  const handlePageClick = (pageNumber: number): void => {
     setPage(pageNumber)
   }
 

@@ -30,7 +30,7 @@ const CommentThread: React.FC<CommentThreadProps> = ({ comment, onReply }) => {
     return date.toLocaleDateString()
   }
 
-  const handleReplySubmit = (e: React.FormEvent) => {
+  const handleReplySubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!replyContent.trim()) return
     onReply(replyContent.trim())

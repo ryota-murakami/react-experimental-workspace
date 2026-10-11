@@ -17,7 +17,7 @@ const CommunityCreator: React.FC<CommunityCreatorProps> = ({ onCreate, onCancel 
   const [icon, setIcon] = useState('')
   const [category, setCategory] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent): void => {
     e.preventDefault()
     if (!name.trim() || !description.trim()) return
 
