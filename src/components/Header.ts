@@ -1,4 +1,5 @@
-import classed from 'classed-components'
+// Named import: the package is CJS, and Vite 8 no longer unwraps its `exports.default` for a default import
+import { classed } from 'classed-components'
 const Header = classed.header('w-full min-h-[150px] grid place-content-center')
 
 const H1 = classed.h1('text-5xl font-bold subpixel-antialiased')
